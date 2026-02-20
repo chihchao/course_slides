@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <meta name="description" content="這是一個存放課程投影片的專屬網頁，提供高品質的學習資源。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary: #6366f1;
@@ -56,8 +59,13 @@
         }
 
         @keyframes move {
-            from { transform: translate(-10%, -10%); }
-            to { transform: translate(20%, 20%); }
+            from {
+                transform: translate(-10%, -10%);
+            }
+
+            to {
+                transform: translate(20%, 20%);
+            }
         }
 
         nav {
@@ -193,18 +201,25 @@
 
         /* 響應式微調 */
         @media (max-width: 640px) {
-            main { padding: 2rem 1.5rem; }
-            header { margin-bottom: 3rem; }
+            main {
+                padding: 2rem 1.5rem;
+            }
+
+            header {
+                margin-bottom: 3rem;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="bg-gradient"></div>
     <div class="blob"></div>
-    
+
     <nav>
         <div class="logo">Course Slides</div>
-        <a href="https://github.com/chihchao/course_slides" class="btn" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(5px);">GitHub</a>
+        <a href="https://github.com/chihchao/course_slides" class="btn"
+            style="background: rgba(255,255,255,0.1); backdrop-filter: blur(5px);">GitHub</a>
     </nav>
 
     <main>
@@ -214,10 +229,15 @@
         </header>
 
         <section id="content">
-            <!-- 這裡可以動態加入投影片卡片 -->
-            <div class="empty-state">
-                <h3 style="color: var(--text-main);">目前尚未上傳投影片</h3>
-                <p>上傳檔案到 repo 後，這裡將會列出所有的課程連結。</p>
+            <div class="grid">
+                <!-- Course Card -->
+                <div class="card">
+                    <div>
+                        <h3>GEAE2627-114B</h3>
+                        <p>課程引言與介紹 (Introduction)</p>
+                    </div>
+                    <a href="GEAE2627-114B/00-Introduction.html" class="btn">查看投影片</a>
+                </div>
             </div>
         </section>
     </main>
@@ -230,4 +250,5 @@
         // 未來可以在這裡加入自動讀取目錄或動態生成的邏輯
     </script>
 </body>
+
 </html>
