@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+<rect width="600" height="400" fill="#f8f9fa"/>
+
+<g font-family="Arial, sans-serif" font-size="13">
+  <!-- Phone frame -->
+  <rect x="150" y="30" width="300" height="340" rx="18" fill="#ffffff" stroke="#343a40" stroke-width="2"/>
+  <!-- Content -->
+  <rect x="150" y="30" width="300" height="280" fill="#f8f9fa"/>
+  <text x="265" y="170" fill="#adb5bd" font-size="14">App 畫面內容</text>
+
+  <!-- Tab bar -->
+  <rect x="150" y="310" width="300" height="60" fill="#ffffff"/>
+  <line x1="150" y1="310" x2="450" y2="310" stroke="#e9ecef"/>
+
+  <!-- Home (active) -->
+  <g transform="translate(180,320)">
+    <polygon points="12,4 22,14 22,26 2,26 2,14" fill="#0d6efd"/>
+    <text x="12" y="42" text-anchor="middle" fill="#0d6efd" font-weight="700" font-size="11">首頁</text>
+  </g>
+
+  <!-- Search -->
+  <g transform="translate(240,320)">
+    <circle cx="12" cy="13" r="8" fill="none" stroke="#adb5bd" stroke-width="2"/>
+    <line x1="18" y1="19" x2="23" y2="24" stroke="#adb5bd" stroke-width="2"/>
+    <text x="12" y="42" text-anchor="middle" fill="#6c757d" font-size="11">搜尋</text>
+  </g>
+
+  <!-- Add -->
+  <g transform="translate(300,320)">
+    <circle cx="12" cy="13" r="10" fill="none" stroke="#adb5bd" stroke-width="2"/>
+    <line x1="12" y1="8" x2="12" y2="18" stroke="#adb5bd" stroke-width="2"/>
+    <line x1="7" y1="13" x2="17" y2="13" stroke="#adb5bd" stroke-width="2"/>
+    <text x="12" y="42" text-anchor="middle" fill="#6c757d" font-size="11">新增</text>
+  </g>
+
+  <!-- Notifications -->
+  <g transform="translate(360,320)">
+    <path d="M 12 3 L 16 8 L 16 16 L 18 18 L 6 18 L 8 16 L 8 8 Z" fill="none" stroke="#adb5bd" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="18" cy="5" r="4" fill="#dc3545"/>
+    <text x="12" y="42" text-anchor="middle" fill="#6c757d" font-size="11">通知</text>
+  </g>
+
+  <!-- Profile -->
+  <g transform="translate(420,320)">
+    <circle cx="12" cy="10" r="5" fill="none" stroke="#adb5bd" stroke-width="2"/>
+    <path d="M 3 24 Q 12 16 21 24" fill="none" stroke="#adb5bd" stroke-width="2"/>
+    <text x="12" y="42" text-anchor="middle" fill="#6c757d" font-size="11">我的</text>
+  </g>
+</g>
+
+</svg>

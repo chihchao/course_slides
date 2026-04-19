@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+<rect width="600" height="400" fill="#f8f9fa"/>
+
+<g font-family="Arial, sans-serif" font-size="14">
+  <!-- Linear progress -->
+  <text x="80" y="75" fill="#495057" font-weight="600">表單填寫進度</text>
+  <text x="470" y="75" fill="#0d6efd" font-weight="700">60%</text>
+  <rect x="80" y="90" width="440" height="12" rx="6" fill="#e9ecef"/>
+  <rect x="80" y="90" width="264" height="12" rx="6" fill="#0d6efd"/>
+
+  <!-- Stepper progress -->
+  <text x="80" y="160" fill="#495057" font-weight="600">結帳流程</text>
+
+  <circle cx="130" cy="210" r="18" fill="#198754"/>
+  <polyline points="123,210 128,215 137,205" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <text x="100" y="250" fill="#198754" font-size="12" font-weight="600">購物車</text>
+
+  <line x1="150" y1="210" x2="230" y2="210" stroke="#198754" stroke-width="3"/>
+
+  <circle cx="250" cy="210" r="18" fill="#198754"/>
+  <polyline points="243,210 248,215 257,205" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <text x="220" y="250" fill="#198754" font-size="12" font-weight="600">配送資訊</text>
+
+  <line x1="270" y1="210" x2="350" y2="210" stroke="#0d6efd" stroke-width="3"/>
+
+  <circle cx="370" cy="210" r="18" fill="#0d6efd"/>
+  <text x="365" y="215" fill="#ffffff" font-weight="700">3</text>
+  <text x="340" y="250" fill="#0d6efd" font-size="12" font-weight="600">付款方式</text>
+
+  <line x1="390" y1="210" x2="470" y2="210" stroke="#dee2e6" stroke-width="3"/>
+
+  <circle cx="490" cy="210" r="18" fill="#dee2e6"/>
+  <text x="485" y="215" fill="#6c757d" font-weight="700">4</text>
+  <text x="470" y="250" fill="#6c757d" font-size="12">確認訂單</text>
+
+  <!-- Circular -->
+  <text x="80" y="320" fill="#495057" font-weight="600">上傳中</text>
+  <circle cx="200" cy="350" r="24" fill="none" stroke="#e9ecef" stroke-width="5"/>
+  <circle cx="200" cy="350" r="24" fill="none" stroke="#0d6efd" stroke-width="5" stroke-dasharray="110 150" transform="rotate(-90 200 350)"/>
+  <text x="184" y="356" fill="#0d6efd" font-size="14" font-weight="700">73%</text>
+</g>
+
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+<rect width="600" height="400" fill="#f8f9fa"/>
+
+<g font-family="Arial, sans-serif" font-size="15">
+  <!-- Default -->
+  <text x="80" y="75" fill="#495057" font-weight="600" font-size="13">使用者名稱</text>
+  <rect x="80" y="85" width="440" height="44" rx="6" fill="#ffffff" stroke="#dee2e6" stroke-width="1.5"/>
+  <text x="100" y="113" fill="#adb5bd">請輸入使用者名稱</text>
+
+  <!-- Active / focused -->
+  <text x="80" y="165" fill="#0d6efd" font-weight="600" font-size="13">電子郵件 (啟用中)</text>
+  <rect x="80" y="175" width="440" height="44" rx="6" fill="#ffffff" stroke="#0d6efd" stroke-width="2"/>
+  <text x="100" y="203" fill="#212529">user@example.com</text>
+  <rect x="270" y="182" width="1.5" height="30" fill="#0d6efd"/>
+
+  <!-- Error -->
+  <text x="80" y="255" fill="#dc3545" font-weight="600" font-size="13">密碼 (錯誤)</text>
+  <rect x="80" y="265" width="440" height="44" rx="6" fill="#ffffff" stroke="#dc3545" stroke-width="2"/>
+  <text x="100" y="293" fill="#212529">•••••</text>
+  <text x="80" y="328" fill="#dc3545" font-size="12">密碼長度必須至少 8 個字元</text>
+
+  <!-- Success -->
+  <text x="80" y="360" fill="#198754" font-weight="600" font-size="13">確認密碼 (成功)</text>
+  <rect x="80" y="370" width="440" height="20" rx="4" fill="none" stroke="#198754" stroke-width="2" stroke-dasharray="0"/>
+</g>
+
+</svg>

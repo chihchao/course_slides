@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+<rect width="600" height="400" fill="#f8f9fa"/>
+
+<g font-family="Arial, sans-serif" font-size="15">
+  <!-- List rows -->
+  <rect x="80" y="60" width="440" height="50" rx="4" fill="#ffffff" stroke="#e9ecef"/>
+  <circle cx="108" cy="85" r="14" fill="#74c0fc"/>
+  <text x="136" y="90" fill="#212529">文件 01 - 專案規劃</text>
+  <circle cx="490" cy="80" r="2.5" fill="#6c757d"/>
+  <circle cx="490" cy="87" r="2.5" fill="#6c757d"/>
+  <circle cx="490" cy="94" r="2.5" fill="#6c757d"/>
+
+  <rect x="80" y="120" width="440" height="50" rx="4" fill="#ffffff" stroke="#0d6efd" stroke-width="1.5"/>
+  <circle cx="108" cy="145" r="14" fill="#ffd43b"/>
+  <text x="136" y="150" fill="#212529" font-weight="600">文件 02 - 會議記錄</text>
+  <circle cx="490" cy="140" r="3" fill="#0d6efd"/>
+  <circle cx="490" cy="147" r="3" fill="#0d6efd"/>
+  <circle cx="490" cy="154" r="3" fill="#0d6efd"/>
+
+  <!-- Popup menu -->
+  <rect x="380" y="175" width="160" height="160" rx="6" fill="#ffffff" stroke="#dee2e6" filter="url(#k_shadow)"/>
+  <defs>
+    <filter id="k_shadow"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.2"/></filter>
+  </defs>
+  <text x="400" y="200" fill="#212529">編輯</text>
+  <line x1="390" y1="212" x2="530" y2="212" stroke="#f1f3f5"/>
+  <text x="400" y="235" fill="#212529">複製</text>
+  <line x1="390" y1="247" x2="530" y2="247" stroke="#f1f3f5"/>
+  <text x="400" y="270" fill="#212529">分享</text>
+  <line x1="390" y1="282" x2="530" y2="282" stroke="#f1f3f5"/>
+  <text x="400" y="305" fill="#dc3545" font-weight="600">刪除</text>
+
+  <rect x="80" y="180" width="440" height="50" rx="4" fill="#ffffff" stroke="#e9ecef"/>
+  <circle cx="108" cy="205" r="14" fill="#ff8787"/>
+  <text x="136" y="210" fill="#212529">文件 03 - 設計稿</text>
+
+  <rect x="80" y="240" width="440" height="50" rx="4" fill="#ffffff" stroke="#e9ecef"/>
+  <circle cx="108" cy="265" r="14" fill="#69db7c"/>
+  <text x="136" y="270" fill="#212529">文件 04 - 報表</text>
+</g>
+
+</svg>

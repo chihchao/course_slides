@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+<rect width="600" height="400" fill="#f8f9fa"/>
+
+<g font-family="Arial, sans-serif" font-size="14">
+  <!-- Main image -->
+  <rect x="80" y="60" width="440" height="220" rx="8" fill="#74c0fc"/>
+  <circle cx="300" cy="170" r="50" fill="#ffffff" opacity="0.85"/>
+  <polygon points="288,150 288,190 318,170" fill="#0d6efd"/>
+
+  <!-- Arrows -->
+  <circle cx="110" cy="170" r="22" fill="#000000" opacity="0.45"/>
+  <polygon points="118,158 118,182 102,170" fill="#ffffff"/>
+  <circle cx="490" cy="170" r="22" fill="#000000" opacity="0.45"/>
+  <polygon points="482,158 482,182 498,170" fill="#ffffff"/>
+
+  <!-- Counter -->
+  <rect x="460" y="250" width="50" height="24" rx="12" fill="#000000" opacity="0.55"/>
+  <text x="472" y="267" fill="#ffffff" font-size="12">2/5</text>
+
+  <!-- Thumbnails -->
+  <rect x="100" y="300" width="70" height="60" rx="4" fill="#ced4da"/>
+  <rect x="180" y="296" width="74" height="68" rx="4" fill="#74c0fc" stroke="#0d6efd" stroke-width="3"/>
+  <rect x="264" y="300" width="70" height="60" rx="4" fill="#ced4da"/>
+  <rect x="344" y="300" width="70" height="60" rx="4" fill="#ced4da"/>
+  <rect x="424" y="300" width="70" height="60" rx="4" fill="#ced4da"/>
+</g>
+
+</svg>

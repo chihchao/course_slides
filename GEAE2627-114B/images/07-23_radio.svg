@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+<rect width="600" height="400" fill="#f8f9fa"/>
+
+<g font-family="Arial, sans-serif" font-size="15">
+  <text x="80" y="75" fill="#495057" font-weight="600">選擇付款方式</text>
+
+  <rect x="80" y="90" width="440" height="55" rx="6" fill="#ffffff" stroke="#dee2e6"/>
+  <circle cx="105" cy="118" r="10" fill="#ffffff" stroke="#adb5bd" stroke-width="2"/>
+  <text x="130" y="124" fill="#212529">信用卡付款</text>
+
+  <rect x="80" y="155" width="440" height="55" rx="6" fill="#e7f1ff" stroke="#0d6efd" stroke-width="2"/>
+  <circle cx="105" cy="183" r="10" fill="#ffffff" stroke="#0d6efd" stroke-width="2.5"/>
+  <circle cx="105" cy="183" r="5" fill="#0d6efd"/>
+  <text x="130" y="189" fill="#212529" font-weight="700">LINE Pay</text>
+  <text x="200" y="189" fill="#6c757d" font-size="12">(推薦)</text>
+
+  <rect x="80" y="220" width="440" height="55" rx="6" fill="#ffffff" stroke="#dee2e6"/>
+  <circle cx="105" cy="248" r="10" fill="#ffffff" stroke="#adb5bd" stroke-width="2"/>
+  <text x="130" y="254" fill="#212529">ATM 轉帳</text>
+
+  <rect x="80" y="285" width="440" height="55" rx="6" fill="#ffffff" stroke="#dee2e6"/>
+  <circle cx="105" cy="313" r="10" fill="#ffffff" stroke="#adb5bd" stroke-width="2"/>
+  <text x="130" y="319" fill="#212529">超商付款</text>
+</g>
+
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+<rect width="600" height="400" fill="#f8f9fa"/>
+
+<g font-family="Arial, sans-serif" font-size="15">
+  <!-- Phone frame -->
+  <rect x="150" y="30" width="300" height="340" rx="18" fill="#ffffff" stroke="#343a40" stroke-width="2"/>
+  <!-- Top bar -->
+  <rect x="150" y="30" width="300" height="50" fill="#0d6efd"/>
+  <!-- Hamburger icon -->
+  <line x1="175" y1="48" x2="200" y2="48" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <line x1="175" y1="57" x2="200" y2="57" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <line x1="175" y1="66" x2="200" y2="66" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <text x="270" y="62" fill="#ffffff" font-weight="700" font-size="16">My App</text>
+
+  <!-- Slide-out drawer -->
+  <rect x="150" y="80" width="200" height="290" fill="#212529"/>
+  <text x="170" y="115" fill="#ffffff" font-weight="700">選單</text>
+  <line x1="170" y1="130" x2="330" y2="130" stroke="#495057"/>
+  <text x="170" y="160" fill="#ffffff">首頁</text>
+  <text x="170" y="195" fill="#ffffff">我的帳號</text>
+  <text x="170" y="230" fill="#0d6efd" font-weight="600">訂單查詢</text>
+  <text x="170" y="265" fill="#ffffff">收藏清單</text>
+  <text x="170" y="300" fill="#ffffff">設定</text>
+  <text x="170" y="335" fill="#ffffff">登出</text>
+
+  <!-- Overlay -->
+  <rect x="350" y="80" width="100" height="290" fill="#000000" opacity="0.35"/>
+</g>
+
+</svg>

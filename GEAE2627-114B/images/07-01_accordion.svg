@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+<rect width="600" height="400" fill="#f8f9fa"/>
+
+<g font-family="Arial, sans-serif" font-size="16">
+  <rect x="100" y="60" width="400" height="50" rx="6" fill="#ffffff" stroke="#dee2e6" stroke-width="1.5"/>
+  <text x="120" y="90" fill="#212529" font-weight="600">Q1. 如何註冊帳號？</text>
+  <polygon points="470,85 480,85 475,92" fill="#6c757d"/>
+
+  <rect x="100" y="120" width="400" height="130" rx="6" fill="#ffffff" stroke="#0d6efd" stroke-width="1.5"/>
+  <text x="120" y="150" fill="#212529" font-weight="600">Q2. 如何重設密碼？</text>
+  <polygon points="470,140 480,148 470,156" fill="#0d6efd"/>
+  <line x1="120" y1="170" x2="480" y2="170" stroke="#e9ecef"/>
+  <text x="120" y="195" fill="#495057" font-size="14">點擊登入頁面的「忘記密碼」連結，</text>
+  <text x="120" y="215" fill="#495057" font-size="14">輸入註冊信箱後，系統會寄送重設信件。</text>
+  <text x="120" y="235" fill="#495057" font-size="14">請在 24 小時內完成重設。</text>
+
+  <rect x="100" y="260" width="400" height="50" rx="6" fill="#ffffff" stroke="#dee2e6" stroke-width="1.5"/>
+  <text x="120" y="290" fill="#212529" font-weight="600">Q3. 可以更改會員等級嗎？</text>
+  <polygon points="470,285 480,285 475,292" fill="#6c757d"/>
+
+  <rect x="100" y="320" width="400" height="50" rx="6" fill="#ffffff" stroke="#dee2e6" stroke-width="1.5"/>
+  <text x="120" y="350" fill="#212529" font-weight="600">Q4. 如何聯絡客服？</text>
+  <polygon points="470,345 480,345 475,352" fill="#6c757d"/>
+</g>
+
+</svg>

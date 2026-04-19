@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+<rect width="600" height="400" fill="#f8f9fa"/>
+
+<g font-family="Arial, sans-serif" font-size="14">
+  <!-- App page background -->
+  <rect x="40" y="40" width="520" height="320" rx="6" fill="#ffffff" stroke="#dee2e6"/>
+  <rect x="60" y="60" width="200" height="20" rx="3" fill="#e9ecef"/>
+  <rect x="60" y="100" width="480" height="14" rx="3" fill="#e9ecef"/>
+  <rect x="60" y="128" width="440" height="14" rx="3" fill="#e9ecef"/>
+  <rect x="60" y="156" width="400" height="14" rx="3" fill="#e9ecef"/>
+
+  <!-- Success toast (top) -->
+  <rect x="280" y="60" width="260" height="60" rx="6" fill="#198754" filter="url(#t_shadow)"/>
+  <defs>
+    <filter id="t_shadow"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-opacity="0.25"/></filter>
+  </defs>
+  <circle cx="310" cy="90" r="13" fill="#ffffff"/>
+  <polyline points="303,90 309,96 318,84" fill="none" stroke="#198754" stroke-width="2.5"/>
+  <text x="335" y="85" fill="#ffffff" font-weight="700">儲存成功</text>
+  <text x="335" y="104" fill="#ffffff" font-size="12" opacity="0.9">您的變更已同步至雲端</text>
+  <text x="520" y="80" fill="#ffffff" font-size="16">×</text>
+
+  <!-- Error toast (bottom) -->
+  <rect x="60" y="290" width="260" height="60" rx="6" fill="#dc3545" filter="url(#t_shadow)"/>
+  <circle cx="90" cy="320" r="13" fill="#ffffff"/>
+  <text x="86" y="326" fill="#dc3545" font-weight="700" font-size="18">!</text>
+  <text x="115" y="315" fill="#ffffff" font-weight="700">上傳失敗</text>
+  <text x="115" y="334" fill="#ffffff" font-size="12" opacity="0.9">檔案大小超過限制 10MB</text>
+  <text x="300" y="310" fill="#ffffff" font-size="16">×</text>
+
+  <!-- Info toast (middle) -->
+  <rect x="170" y="200" width="260" height="60" rx="6" fill="#212529" filter="url(#t_shadow)"/>
+  <circle cx="200" cy="230" r="13" fill="#ffffff"/>
+  <text x="197" y="236" fill="#212529" font-weight="700" font-size="16">i</text>
+  <text x="225" y="225" fill="#ffffff" font-weight="700">3 則新訊息</text>
+  <text x="225" y="244" fill="#ffffff" font-size="12" opacity="0.85">點此查看最新通知</text>
+  <text x="410" y="220" fill="#ffffff" font-size="16">×</text>
+</g>
+
+</svg>

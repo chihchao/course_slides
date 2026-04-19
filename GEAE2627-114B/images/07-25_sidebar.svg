@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+<rect width="600" height="400" fill="#f8f9fa"/>
+
+<g font-family="Arial, sans-serif" font-size="13">
+  <!-- Full window -->
+  <rect x="40" y="40" width="520" height="320" rx="6" fill="#ffffff" stroke="#dee2e6"/>
+
+  <!-- Sidebar (left) -->
+  <rect x="40" y="40" width="160" height="320" rx="6" fill="#212529"/>
+  <text x="60" y="72" fill="#ffffff" font-weight="700" font-size="15">MyApp</text>
+  <line x1="55" y1="85" x2="185" y2="85" stroke="#495057"/>
+
+  <rect x="50" y="100" width="140" height="34" rx="4" fill="#0d6efd"/>
+  <text x="65" y="121" fill="#ffffff" font-weight="700">儀表板</text>
+
+  <text x="65" y="158" fill="#ced4da">專案</text>
+  <text x="65" y="188" fill="#ced4da">團隊</text>
+  <text x="65" y="218" fill="#ced4da">報表</text>
+  <text x="65" y="248" fill="#ced4da">訊息</text>
+  <text x="65" y="278" fill="#ced4da">設定</text>
+
+  <line x1="55" y1="310" x2="185" y2="310" stroke="#495057"/>
+  <circle cx="70" cy="335" r="12" fill="#74c0fc"/>
+  <text x="90" y="332" fill="#ffffff" font-size="12" font-weight="600">Chih-Chao</text>
+  <text x="90" y="345" fill="#adb5bd" font-size="10">管理員</text>
+
+  <!-- Main content -->
+  <text x="230" y="75" font-weight="700" fill="#212529" font-size="18">儀表板</text>
+  <rect x="220" y="100" width="150" height="80" rx="6" fill="#e7f1ff"/>
+  <text x="235" y="125" fill="#0d6efd" font-size="11">本月訂單</text>
+  <text x="235" y="155" fill="#0d6efd" font-weight="700" font-size="22">1,248</text>
+
+  <rect x="380" y="100" width="150" height="80" rx="6" fill="#fff4e6"/>
+  <text x="395" y="125" fill="#fd7e14" font-size="11">營收</text>
+  <text x="395" y="155" fill="#fd7e14" font-weight="700" font-size="20">$84,320</text>
+
+  <rect x="220" y="195" width="310" height="150" rx="6" fill="#f8f9fa" stroke="#e9ecef"/>
+  <polyline points="240,320 280,290 320,300 360,260 400,275 440,240 480,250 510,220" fill="none" stroke="#0d6efd" stroke-width="2.5"/>
+  <text x="235" y="215" fill="#495057" font-size="11" font-weight="600">近 30 日趨勢</text>
+</g>
+
+</svg>

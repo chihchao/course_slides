@@ -1,50 +1,3283 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>06 - Information Architecture & Flow Chart</title>
-    <style>
-        body {
-            background: #0f172a;
-            color: #f8fafc;
-            font-family: system-ui, -apple-system, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
-        }
-        .slide {
-            text-align: center;
-            padding: 4rem;
-            border-radius: 2rem;
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            max-width: 800px;
-        }
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(to right, #818cf8, #38bdf8);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        p {
-            font-size: 1.5rem;
-            color: #94a3b8;
-        }
-    </style>
-</head>
-<body>
-    <div class="slide">
-        <h1>資訊架構與流程圖</h1>
-        <h3>Information Architecture & Flow Chart</h3>
-        <p>內容正在整備中 (Work in Progress)...</p>
-        <p>請參考 images/06-* 以獲取初步素材。</p>
-    </div>
-</body>
-</html>
+<!DOCTYPE html><html lang="C"><head><title>永續生活理念 UX/UI 設計實務</title><meta property="og:title" content="永續生活理念 UX/UI 設計實務"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=overview] button.bespoke-marp-overview-close,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{appearance:none;background-color:initial;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNNDAgNzBIMjBWNTBtMjAgMEwyMCA3MG00MC00MGgyMHYyMG0tMjAgMCAyMC0yMCIgY2xhc3M9ImEiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNMjAgNTBoMjB2MjBtLTIwIDAgMjAtMjBtNDAgMEg2MFYzMG0yMCAwTDYwIDUwIiBjbGFzcz0iYSIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=overview] button.bespoke-marp-overview-close,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-bigger{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODBNNTIgOTBWMTAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-smaller{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4O3J4OjVweDtyeTo1cHg7d2lkdGg6MjVweDtoZWlnaHQ6MjVweH08L3N0eWxlPjwvZGVmcz48cmVjdCB4PSIyMCIgeT0iMjAiIGNsYXNzPSJhIi8+PHJlY3QgeD0iNTUiIHk9IjIwIiBjbGFzcz0iYSIvPjxyZWN0IHg9IjIwIiB5PSI1NSIgY2xhc3M9ImEiLz48cmVjdCB4PSI1NSIgeT0iNTUiIGNsYXNzPSJhIi8+PC9zdmc+") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}@keyframes __bespoke_marp_transition_reduced_outgoing__{0%{opacity:1}to{opacity:0}}@keyframes __bespoke_marp_transition_reduced_incoming__{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{::view-transition-group(*){animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-timing-function:ease}::view-transition-new(*),::view-transition-old(*){animation-delay:0s;animation-direction:var(--marp-bespoke-transition-animation-direction,normal);animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-fill-mode:both;animation-name:var(--marp-bespoke-transition-animation-name,var(--marp-bespoke-transition-animation-name-fallback,__bespoke_marp_transition_no_animation__));mix-blend-mode:normal}::view-transition-old(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_outgoing__;animation-timing-function:ease}::view-transition-new(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_incoming__;animation-timing-function:ease}::view-transition-new(root),::view-transition-old(root){animation-timing-function:linear}::view-transition-new(__bespoke_marp_transition_osc__),::view-transition-old(__bespoke_marp_transition_osc__){animation-duration:0s!important;animation-name:__bespoke_marp_transition_osc__!important}::view-transition-new(__bespoke_marp_transition_osc__){opacity:0!important}.bespoke-marp-transition-warming-up::view-transition-group(*),.bespoke-marp-transition-warming-up::view-transition-new(*),.bespoke-marp-transition-warming-up::view-transition-old(*){animation-play-state:paused!important}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;interactivity:inert;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide:not(.bespoke-marp-active) *{view-transition-name:none!important}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;interactivity:auto;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}}@media screen and (prefers-reduced-motion:reduce){svg.bespoke-marp-slide *{view-transition-name:none!important}}@media screen{[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{inset:0;position:absolute}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:#000000a6;border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;user-select:none;view-transition-name:__bespoke_marp_transition_osc__;white-space:nowrap;will-change:transform;z-index:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:where(*),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:where(*){margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:where(*):where(:first-child),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:where(*):where(:first-child){margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+:where(.bespoke-marp-parent){top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:#0000}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current dragbar next" minmax(140px,1fr) "current dragbar note" 2fr "info    dragbar note" 3em;grid-template-columns:minmax(3px,var(--bespoke-marp-presenter-split-ratio,66%)) 0 minmax(3px,1fr);height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent){grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent) :where(svg.bespoke-marp-slide){height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent) :where(svg.bespoke-marp-slide).bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container{background:#0288d1;cursor:col-resize;grid-area:dragbar;margin-left:-3px;opacity:0;position:relative;transition:opacity .4s linear .1s;width:6px;z-index:10}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container:hover{opacity:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container.active{opacity:1;transition-delay:0s}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:#0000;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;interactivity:inert;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note;position:relative;z-index:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper{display:block;inset:0;position:absolute}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons{background:#000000a6;border-radius:4px;bottom:0;display:flex;gap:4px;margin:12px;opacity:0;padding:6px;pointer-events:none;position:absolute;right:0;transition:opacity .2s linear}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons:focus-within,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper:focus-within+.bespoke-marp-presenter-note-buttons,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container:hover .bespoke-marp-presenter-note-buttons{opacity:1;pointer-events:auto}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{box-sizing:border-box;font-size:calc(1.1em*var(--bespoke-marp-note-font-scale, 1));height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;white-space:pre-wrap;width:calc(100% - 40px);word-wrap:break-word;scrollbar-color:#eeeeee80 #0000;scrollbar-width:thin}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:#0000}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:#eeeeee80;border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;overflow:hidden;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer:hover{cursor:pointer}body[data-bespoke-view=overview]{background:#161616;overflow:auto}body[data-bespoke-view=overview] [data-bespoke-marp-fragment=inactive]{visibility:visible}body[data-bespoke-view=overview] .bespoke-marp-overview-header{backdrop-filter:blur(4px);background:#222222d9;box-shadow:0 3px 10px #00000080;box-sizing:border-box;display:flex;height:48px;inset:0 0 auto;justify-content:flex-end;padding:10px;position:fixed;z-index:1}body[data-bespoke-view=overview] button.bespoke-marp-overview-close{height:28px;line-height:28px;transform:rotate(45deg);width:28px}body[data-bespoke-view=overview] .bespoke-marp-parent{display:grid;gap:40px;grid-template-columns:repeat(auto-fit,minmax(0,240px));justify-content:space-around;padding:30px}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide{--bov-selected:#0000;--bov-focus:#161616;--bov-focus-outline:#0000;background-image:conic-gradient(#161616 0 0),conic-gradient(var(--bov-focus) 0 0),conic-gradient(var(--bov-focus-outline) 0 0),conic-gradient(var(--bov-selected) 0 0);background-position:5px 5px,3px 3px,2px 2px,0 0;background-repeat:no-repeat;background-size:calc(100% - 10px) calc(100% - 10px),calc(100% - 6px) calc(100% - 6px),calc(100% - 4px) calc(100% - 4px),100% 100%;content-visibility:visible;cursor:pointer;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));margin:-6px;padding:6px;interactivity:auto;opacity:1;outline:0;pointer-events:auto;scroll-margin-block:30px;width:100%;z-index:0}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide *,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active *{pointer-events:none;interactivity:inert}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:active,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:focus-visible,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:hover{--bov-focus-outline:#161616}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:focus-visible,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:hover{--bov-focus:#999}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:active{--bov-focus:#eee}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{--bov-selected:#0288d1}body[data-bespoke-view=overview]:has(.bespoke-marp-overview-header) .bespoke-marp-parent{padding-top:78px}body[data-bespoke-view=overview]:has(.bespoke-marp-overview-header) .bespoke-marp-parent svg.bespoke-marp-slide{scroll-margin-top:78px}.bespoke-marp-overview{background:#000000a6;inset:0;opacity:0;pointer-events:none;position:fixed;transition:opacity .1s ease;z-index:10}.bespoke-marp-overview iframe{background:#222;border:0;display:block;height:100%;left:0;position:absolute;top:0;width:100%}.bespoke-marp-overview[data-open="1"]{opacity:1;pointer-events:auto}}@media print{.bespoke-marp-overview,.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@charset "UTF-8";@import "https://fonts.bunny.net/css?family=Lato:400,900|Roboto+Mono:400,700&display=swap";div#\:\$p > svg > foreignObject > section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center;-webkit-text-size-adjust:100%;text-size-adjust:100%}div#\:\$p > svg > foreignObject > section::after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#\:\$p > svg > foreignObject > section:not([data-marpit-pagination])::after{display:none}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:2em;margin-block:0.67em}div#\:\$p > svg > foreignObject > section video::-webkit-media-controls{will-change:transform}@page {size:1280px 720px;margin:0}@media print{html, body{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#\:\$p > svg > foreignObject > section{page-break-before:always;break-before:page}div#\:\$p > svg > foreignObject > section, div#\:\$p > svg > foreignObject > section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;print-color-adjust:exact!important;transition:none!important}div#\:\$p > svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#\:\$p > svg > foreignObject > :where(section){container-type:size}div#\:\$p > svg > foreignObject > section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}/*!
+ * Marp / Marpit Gaia theme.
+ *
+ * @theme gaia
+ * @author Yuki Hattori
+ *
+ * @auto-scaling true
+ * @size 16:9 1280px 720px
+ * @size 4:3 960px 720px
+ */div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) code.hljs{display:block;overflow-x:auto;padding:1em}div#\:\$p > svg > foreignObject > section code.hljs{padding:3px 5px}div#\:\$p > svg > foreignObject > section .hljs{background:#000;color:#f8f8f8}div#\:\$p > svg > foreignObject > section .hljs-comment,div#\:\$p > svg > foreignObject > section .hljs-quote{color:#aeaeae;font-style:italic}div#\:\$p > svg > foreignObject > section .hljs-keyword,div#\:\$p > svg > foreignObject > section .hljs-selector-tag,div#\:\$p > svg > foreignObject > section .hljs-type{color:#e28964}div#\:\$p > svg > foreignObject > section .hljs-string{color:#65b042}div#\:\$p > svg > foreignObject > section .hljs-subst{color:#daefa3}div#\:\$p > svg > foreignObject > section .hljs-link,div#\:\$p > svg > foreignObject > section .hljs-regexp{color:#e9c062}div#\:\$p > svg > foreignObject > section .hljs-name,div#\:\$p > svg > foreignObject > section .hljs-section,div#\:\$p > svg > foreignObject > section .hljs-tag,div#\:\$p > svg > foreignObject > section .hljs-title{color:#89bdff}div#\:\$p > svg > foreignObject > section .hljs-class .hljs-title,div#\:\$p > svg > foreignObject > section .hljs-doctag,div#\:\$p > svg > foreignObject > section .hljs-title.class_{text-decoration:underline}div#\:\$p > svg > foreignObject > section .hljs-bullet,div#\:\$p > svg > foreignObject > section .hljs-number,div#\:\$p > svg > foreignObject > section .hljs-symbol{color:#3387cc}div#\:\$p > svg > foreignObject > section .hljs-params,div#\:\$p > svg > foreignObject > section .hljs-template-variable,div#\:\$p > svg > foreignObject > section .hljs-variable{color:#3e87e3}div#\:\$p > svg > foreignObject > section .hljs-attribute{color:#cda869}div#\:\$p > svg > foreignObject > section .hljs-meta{color:#8996a8}div#\:\$p > svg > foreignObject > section .hljs-formula{background-color:#0e2231;color:#f8f8f8;font-style:italic}div#\:\$p > svg > foreignObject > section .hljs-addition{background-color:#253b22;color:#f8f8f8}div#\:\$p > svg > foreignObject > section .hljs-deletion{background-color:#420e09;color:#f8f8f8}div#\:\$p > svg > foreignObject > section .hljs-selector-class{color:#9b703f}div#\:\$p > svg > foreignObject > section .hljs-selector-id{color:#8b98ab}div#\:\$p > svg > foreignObject > section .hljs-emphasis{font-style:italic}div#\:\$p > svg > foreignObject > section .hljs-strong{font-weight:700}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1),div#\:\$p > svg > foreignObject > section :is(h2, marp-h2),div#\:\$p > svg > foreignObject > section :is(h3, marp-h3),div#\:\$p > svg > foreignObject > section :is(h4, marp-h4),div#\:\$p > svg > foreignObject > section :is(h5, marp-h5),div#\:\$p > svg > foreignObject > section :is(h6, marp-h6){margin:.5em 0 0}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1) strong,div#\:\$p > svg > foreignObject > section :is(h2, marp-h2) strong,div#\:\$p > svg > foreignObject > section :is(h3, marp-h3) strong,div#\:\$p > svg > foreignObject > section :is(h4, marp-h4) strong,div#\:\$p > svg > foreignObject > section :is(h5, marp-h5) strong,div#\:\$p > svg > foreignObject > section :is(h6, marp-h6) strong{font-weight:inherit}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h2, marp-h2)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h3, marp-h3)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h4, marp-h4)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h5, marp-h5)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h6, marp-h6)::part(auto-scaling){max-height:580px}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:1.8em}div#\:\$p > svg > foreignObject > section :is(h2, marp-h2){font-size:1.5em}div#\:\$p > svg > foreignObject > section :is(h3, marp-h3){font-size:1.3em}div#\:\$p > svg > foreignObject > section :is(h4, marp-h4){font-size:1.1em}div#\:\$p > svg > foreignObject > section :is(h5, marp-h5){font-size:1em}div#\:\$p > svg > foreignObject > section :is(h6, marp-h6){font-size:.9em}div#\:\$p > svg > foreignObject > section blockquote,div#\:\$p > svg > foreignObject > section p{margin:1em 0 0}div#\:\$p > svg > foreignObject > section ol>li,div#\:\$p > svg > foreignObject > section ul>li{margin:.3em 0 0}div#\:\$p > svg > foreignObject > section ol>li>p,div#\:\$p > svg > foreignObject > section ul>li>p{margin:.6em 0 0}div#\:\$p > svg > foreignObject > section code{display:inline-block;font-family:Roboto Mono,monospace;font-size:.8em;letter-spacing:0;margin:-.1em .15em;padding:.1em .2em;vertical-align:baseline}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){display:block;margin:1em 0 0;overflow:visible}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) code{box-sizing:border-box;font-size:.7em;margin:0;min-width:100%;padding:.5em}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre)::part(auto-scaling){max-height:calc(580px - 1em)}div#\:\$p > svg > foreignObject > section blockquote{margin:1em 0 0;padding:0 1em;position:relative}div#\:\$p > svg > foreignObject > section blockquote:after,div#\:\$p > svg > foreignObject > section blockquote:before{content:"“";display:block;font-family:Times New Roman,serif;font-weight:700;position:absolute}div#\:\$p > svg > foreignObject > section blockquote:before{left:0;top:0}div#\:\$p > svg > foreignObject > section blockquote:after{bottom:0;right:0;transform:rotate(180deg)}div#\:\$p > svg > foreignObject > section blockquote>:first-child{margin-top:0}div#\:\$p > svg > foreignObject > section mark{background:transparent}div#\:\$p > svg > foreignObject > section table{border-collapse:collapse;border-spacing:0;margin:1em 0 0}div#\:\$p > svg > foreignObject > section table td,div#\:\$p > svg > foreignObject > section table th{border-style:solid;border-width:1px;padding:.2em .4em}div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header,div#\:\$p > svg > foreignObject > section:after{box-sizing:border-box;font-size:66%;height:70px;line-height:50px;overflow:hidden;padding:10px 25px;position:absolute}div#\:\$p > svg > foreignObject > section:after{--marpit-root-font-size:66%}div#\:\$p > svg > foreignObject > section header{top:0}div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header{left:0;right:0}div#\:\$p > svg > foreignObject > section footer{bottom:0}div#\:\$p > svg > foreignObject > section{--color-background:light-dark(#fff8e1, #455a64);--color-background-stripe:light-dark(
+    rgba(69,90,100,.1),
+    rgba(255,248,225,.1)
+  );--color-foreground:light-dark(#455a64, #fff8e1);--color-dimmed:light-dark(
+    #6a7a7d,
+    #dad8c8
+  );--color-highlight:light-dark(#0288d1, #81d4fa);background-color:var(--color-background);background-image:linear-gradient(135deg, hsla(0,0%,53%,0), hsla(0,0%,53%,.02) 50%, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,.05));color:var(--color-foreground);color-scheme:light;font-family:Lato,Avenir Next,Avenir,Trebuchet MS,Segoe UI,sans-serif;font-size:35px;height:720px;letter-spacing:1.25px;line-height:1.35;overflow-wrap:break-word;padding:70px;width:1280px}div#\:\$p > svg > foreignObject > section{--marpit-root-font-size:35px}div#\:\$p > svg > foreignObject > section:after{bottom:0;font-size:80%;right:0}div#\:\$p > svg > foreignObject > section:after{--marpit-root-font-size:80%}div#\:\$p > svg > foreignObject > section a,div#\:\$p > svg > foreignObject > section mark{color:var(--color-highlight)}div#\:\$p > svg > foreignObject > section code{background:var(--color-dimmed);color:var(--color-background)}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1) strong,div#\:\$p > svg > foreignObject > section :is(h2, marp-h2) strong,div#\:\$p > svg > foreignObject > section :is(h3, marp-h3) strong,div#\:\$p > svg > foreignObject > section :is(h4, marp-h4) strong,div#\:\$p > svg > foreignObject > section :is(h5, marp-h5) strong,div#\:\$p > svg > foreignObject > section :is(h6, marp-h6) strong{color:var(--color-highlight)}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){background:var(--color-foreground)}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre)>code{background:transparent}div#\:\$p > svg > foreignObject > section blockquote:after,div#\:\$p > svg > foreignObject > section blockquote:before,div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header,div#\:\$p > svg > foreignObject > section section:after{color:var(--color-dimmed)}div#\:\$p > svg > foreignObject > section table td,div#\:\$p > svg > foreignObject > section table th{border-color:var(--color-foreground)}div#\:\$p > svg > foreignObject > section table thead th{background:var(--color-foreground);color:var(--color-background)}div#\:\$p > svg > foreignObject > section table tbody>tr:nth-child(odd) td,div#\:\$p > svg > foreignObject > section table tbody>tr:nth-child(odd) th{background:var(--color-background-stripe, transparent)}div#\:\$p > svg > foreignObject > section>:first-child,div#\:\$p > svg > foreignObject > section>header:first-child+*{margin-top:0}div#\:\$p > svg > foreignObject > section:where(.invert){color-scheme:dark}div#\:\$p > svg > foreignObject > section:where(.gaia){--color-background:#0288d1;--color-background-stripe:rgba(255,248,225,.1);--color-foreground:#fff8e1;--color-dimmed:#cce2de;--color-highlight:#81d4fa;}div#\:\$p > svg > foreignObject > section:where(.lead){align-items:stretch;flex-flow:column nowrap;place-content:safe center center}div#\:\$p > svg > foreignObject > section:where(.lead) :is(h1, marp-h1),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h2, marp-h2),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h3, marp-h3),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h4, marp-h4),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h5, marp-h5),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h6, marp-h6){text-align:center}div#\:\$p > svg > foreignObject > section:where(.lead) p{text-align:center}div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h1, marp-h1),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h2, marp-h2),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h3, marp-h3),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h4, marp-h4),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h5, marp-h5),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h6, marp-h6),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>p{text-align:left}div#\:\$p > svg > foreignObject > section:where(.lead) ol>li>p,div#\:\$p > svg > foreignObject > section:where(.lead) ul>li>p{text-align:left}div#\:\$p > svg > foreignObject > section:where(.lead) table{margin-left:auto;margin-right:auto}div#\:\$p > svg > foreignObject > section{width:1280px;height:720px}div#\:\$p > svg > foreignObject > :where(section):not([\20 root]){--color-background: #fff;--color-foreground: #333;--color-highlight: #69f;--color-dimmed: #888;}div#\:\$p > svg > foreignObject > section p, div#\:\$p > svg > foreignObject > section li{font-size:0.9em}div#\:\$p > svg > foreignObject > section footer{font-size:0.5em}div#\:\$p > svg > foreignObject > section th, div#\:\$p > svg > foreignObject > section td{font-size:0.65em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-rDYpo8O9] p{text-align:center;font-size:0.7em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-PDN4dah8] p{text-align:center;font-size:0.7em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-F1H3fLVO] p{text-align:center;font-size:0.7em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-pRdfoW6u] p{text-align:center;font-size:0.7em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-hAW9EtwM] p{text-align:center;font-size:0.7em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-MDwjAplq] table th, div#\:\$p > svg > foreignObject > section[data-marpit-scope-MDwjAplq] td{font-size:0.65em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-LAB3n36C] p{text-align:center;font-size:0.7em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-BS9rPyAt] p{text-align:center;font-size:0.7em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-9X8SDtRB] p{text-align:center;font-size:0.7em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-DteriD47] p{text-align:center;font-size:0.7em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-RxZASQmM] p{text-align:center;font-size:0.7em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-YcwLLFgl] p{text-align:center;font-size:0.7em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-4EM9XRG1] p{text-align:center;font-size:0.7em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-da7tQHle] table th, div#\:\$p > svg > foreignObject > section[data-marpit-scope-da7tQHle] td{font-size:0.75em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-qK7LBbsz] p{text-align:center;font-size:0.7em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-ieSPjg59] p{text-align:center;font-size:0.7em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-6HQMbvO6] p{text-align:center;font-size:0.7em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-BNkAYrFX] table th, div#\:\$p > svg > foreignObject > section[data-marpit-scope-BNkAYrFX] td{font-size:0.75em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FQyRGaww] p{text-align:center;font-size:0.7em}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::after, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::after{display:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction="vertical"]{flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split] > div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split, 50%)}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split="right"] > div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure > figcaption{position:absolute;border:0;clip:rect(0, 0, 0, 0);height:1px;margin:-1px;overflow:hidden;padding:0;white-space:nowrap;width:1px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"], div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"]{background:transparent!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"], div#\:\$p > svg[data-marpit-svg] > foreignObject[data-marpit-advanced-background="pseudo"]{pointer-events:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background-split]{width:100%;height:100%}
+</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="overview" tabindex="-1" title="Toggle overview view (o)">Toggle overview view</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-class="lead" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" class="lead" style="--class:lead;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-size="16:9">
+<h1 id="%E6%B0%B8%E7%BA%8C%E7%94%9F%E6%B4%BB%E7%90%86%E5%BF%B5-uxui-%E8%A8%AD%E8%A8%88%E5%AF%A6%E5%8B%99">永續生活理念 UX/UI 設計實務</h1>
+<h1 id="information-architecture">Information Architecture</h1>
+<p>許智超<br />
+<a href="mailto:cchsu@mail.nsysu.edu.tw">cchsu@mail.nsysu.edu.tw</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-class="lead" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" class="lead" data-marpit-pagination="2" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--class:lead;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h2 id="%E8%B3%87%E8%A8%8A%E6%9E%B6%E6%A7%8B-information-architecture-ia">資訊架構 (Information Architecture, IA)</h2>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="3" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E4%BB%80%E9%BA%BC%E6%98%AF%E8%B3%87%E8%A8%8A%E6%9E%B6%E6%A7%8B">什麼是資訊架構？</h3>
+<p>資訊架構是數位空間的藍圖，是一種「讓資訊變得有條理」的設計思維。它透過組織、分類、標籤與導航，將龐雜的資料轉化為可理解、可檢索的知識系統。</p>
+<ul>
+<li>如同書本的目錄或大樓的樓層圖。</li>
+<li>讓使用者明確知道「這裡有什麼」、「我現在在哪裡」以及「如何抵達目的地」。</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="4" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E6%A0%B8%E5%BF%83%E5%83%B9%E5%80%BC%E9%99%8D%E4%BD%8E%E6%88%90%E6%9C%AC%E6%8F%90%E5%8D%87%E9%AB%94%E9%A9%97">核心價值：降低成本，提升體驗</h3>
+<p>良好的 IA 設計對使用者與產品具有以下三大價值：</p>
+<ul>
+<li>轉化過載資訊：透過結構化設計，將混亂的資料整理成有邏輯的系統。</li>
+<li>降低搜尋成本：藉由合理的分類與命名，大幅縮減使用者的時間與認知負荷。</li>
+<li>提升使用體驗：確保使用者在「對的時間」找到「對的資訊」，建立與系統一致的心理模型。</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="5" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="79" data-size="16:9" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://images.unsplash.com/photo-1526152505827-d2f3b5b4a52a?q=80&amp;w=1287&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&quot;);"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="5" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="5" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="79" data-size="16:9" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h3 id="%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB%E4%B8%AD%E7%9A%84%E8%B3%87%E8%A8%8A%E6%9E%B6%E6%A7%8B-ia">日常生活中的資訊架構 (IA)</h3>
+<p>資訊架構並非數位產品的專利，它隱身於我們的生活周遭。透過系統化的組織與分類，IA 協助我們在海量資訊中建立秩序，優化決策效率。</p>
+<p>零售空間佈局（超市貨架）：<br />
+透過區域化管理（如生鮮、冷凍、日用品），建立直覺的動線，縮短消費者的尋找路徑。</p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="5" style="" data-marpit-pagination-total="79" data-size="16:9" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="6" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="79" data-size="16:9" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://images.unsplash.com/photo-1741795746633-6536a0d4d4a5?q=80&amp;w=1287&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&quot;);"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="6" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="6" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="79" data-size="16:9" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h3 id="%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB%E4%B8%AD%E7%9A%84%E8%B3%87%E8%A8%8A%E6%9E%B6%E6%A7%8B-ia-1">日常生活中的資訊架構 (IA)</h3>
+<p>知識組織系統（圖書館索引）：<br />
+運用「杜威十進分類法」等標準化邏輯，將龐雜的圖書資源轉化為可檢索的座標，實現精準的館藏管理。</p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="6" style="" data-marpit-pagination-total="79" data-size="16:9" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="7" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<blockquote>
+<p>資訊架構不只是簡單的分類，它是一個動態的設計過程，核心目標是為了讓使用者能精準且快速地找到所需內容。</p>
+</blockquote>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-marpit-scope-rDYpo8O9="" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="8" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E8%B3%87%E8%A8%8A%E6%9E%B6%E6%A7%8B%E7%9A%84%E4%B8%89%E5%A4%A7%E8%A6%81%E7%B4%A0">資訊架構的三大要素</h3>
+<p><img src="https://www.csa.tw/wiki/images/0/0c/User-content-context-of-ia.png" alt="IA-Model" style="width:500px;" /></p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="9" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E6%83%85%E5%A2%83-context">情境 (Context)</h3>
+<p>情境指的是組織機構的目標、預算、人力、文化以及技術限制。我們必須理解組織機構為什麼要建立這個產品，以及在什麼樣的環境下運作。</p>
+<ul>
+<li>目標：組織機構希望透過這個資訊系統達成什麼？是增加銷量、降低客服成本，還是純粹品牌宣傳？</li>
+<li>約束：現有的資料庫結構是否能支援複雜的分類？搜尋引擎的演算法如何運作？</li>
+<li>資源：有多少預算維護內容的更新？</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="10" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E6%83%85%E5%A2%83%E7%AF%84%E4%BE%8B">情境範例</h3>
+<p>以大學課程註冊系統為例：</p>
+<ul>
+<li>目標：確保學生在開學前完成選課，並自動計算學雜費。</li>
+<li>限制與資源：系統必須在特定時間（如選課週）承受極高流量；同時需符合學校的行政法規（如先修課程限制）。</li>
+<li>文化與政治：系所之間的名額分配權重，以及學術政策對選課流程的影響。</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="11" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E5%85%A7%E5%AE%B9-content">內容 (Content)</h3>
+<p>內容是指系統中所包含的所有資訊單元，或是使用者有可能會用到的資訊的統稱。我們需要分析內容的數量、所有權、格式以及結構。</p>
+<ul>
+<li>內容類型：是結構化的資料（如產品規格），還是非結構化的內容（如部落格文章）？</li>
+<li>中繼資料 (Metadata)：我們如何標記內容？這些標籤是否能幫助使用者進行篩選？</li>
+<li>動態性：內容是靜態不變的，還是會隨著使用者行為或時間快速更新？</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="12" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E5%85%A7%E5%AE%B9%E7%AF%84%E4%BE%8B">內容範例</h3>
+<p>以影音串流平台 Netflix 為例。<br />
+其「內容」支柱包含了數萬部影視作品。為了讓使用者不迷失，要為每部影片定義大量的中繼資料，例如：導演、演員、情緒（例如「感人的」、「緊張的」）、畫質等級等。<br />
+這些內容屬性是建立「推薦系統」與「分類瀏覽」的基石，若沒有良好的內容定義，使用者將難以從海量資訊中找到想看的片子。</p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="13" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E7%94%A8%E6%88%B6-users">用戶 (Users)</h3>
+<p>用戶支柱關注的是誰在使用這個系統？他們的尋找行為為何？他們具備多少專業知識？</p>
+<ul>
+<li>尋找行為：用戶是知道自己要什麼（已知尋找），還是隨意逛逛（探索性尋找）？</li>
+<li>心理模型：用戶如何歸類資訊？例如在超市裡，用戶預期「牛奶」會出現在乳品區還是飲品區？</li>
+<li>資訊素養：用戶對於專業術語的理解程度。</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="14" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E7%94%A8%E6%88%B6%E7%AF%84%E4%BE%8B">用戶範例</h3>
+<p>考慮一個醫療資訊網站。<br />
+如果目標用戶是「專業醫生」，IA 可能會使用大量的專業醫學名詞（如：心肌梗塞，Myocardial Infarction）作為導覽標籤；<br />
+但如果目標用戶是「一般病患家屬」，IA 則應調整為更親民的詞彙（如：心臟病發作、胸痛）。<br />
+了解用戶的心理模型，才能確保標籤系統與導覽設計不會讓使用者感到挫折。</p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="15" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E4%B8%89%E5%A4%A7%E8%A6%81%E7%B4%A0%E7%9A%84%E4%BA%A4%E9%9B%86ia-%E7%9A%84%E7%94%9C%E8%9C%9C%E9%BB%9E">三大要素的交集：IA 的甜蜜點</h3>
+<p>資訊架構專家的工作，就是找到這三者的交點。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">要素</th>
+<th style="text-align:left">核心提問</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">情境</td>
+<td style="text-align:left">「我們為什麼要建立這個系統？預算與技術限制是什麼？」</td>
+</tr>
+<tr>
+<td style="text-align:left">內容</td>
+<td style="text-align:left">「我們擁有什麼樣的資料？這些資料該如何分類與標記？」</td>
+</tr>
+<tr>
+<td style="text-align:left">用戶</td>
+<td style="text-align:left">「誰會來用？他們想解決什麼問題？他們的科技能力如何？」</td>
+</tr>
+</tbody>
+</table>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="16" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E8%B3%87%E8%A8%8A%E7%B5%90%E6%A7%8B%E7%9A%84%E5%9B%9B%E5%A4%A7%E6%A0%B8%E5%BF%83%E7%B3%BB%E7%B5%B1">資訊結構的四大核心系統</h3>
+<ul>
+<li>資訊組織系統</li>
+<li>標籤系統</li>
+<li>導覽系統</li>
+<li>搜尋系統</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-class="lead" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" class="lead" data-marpit-pagination="17" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--class:lead;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h2 id="%E8%B3%87%E8%A8%8A%E7%B5%84%E7%B9%94%E7%B3%BB%E7%B5%B1">資訊組織系統</h2>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="18" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E8%B3%87%E8%A8%8A%E7%B5%84%E7%B9%94%E7%B3%BB%E7%B5%B1-1">資訊組織系統</h3>
+<p>資訊組織系統（Organization Systems）是決定使用者能否在茫茫大海中定位資訊的關鍵。作為 IA 專家，我將針對你提到的組織結構與方案進行深入解析。</p>
+<p>組織結構定義了內容單元之間的物理或邏輯關係。選擇正確的結構會直接影響使用者的導覽路徑。</p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="19" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E9%9A%8E%E5%B1%A4%E5%BC%8F%E7%B5%90%E6%A7%8B-hierarchical">階層式結構 (Hierarchical)</h3>
+<p>這是最常見的結構，基於「父子關係」建立。使用者從廣泛的概念開始，逐步深入到具體的細節。</p>
+<ul>
+<li>特點：邏輯清晰，符合人類分類本能。</li>
+<li>範例：企業官網的導覽選單。頂層是「關於我們」，下層分為「公司簡介」、「團隊成員」、「聯絡資訊」。</li>
+<li>潛在問題：如果層級太深（超過四、五層），使用者容易迷失；如果太淺且寬，選單會過於擁擠。</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-marpit-scope-PDN4dah8="" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="20" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E9%9A%8E%E5%B1%A4%E5%BC%8F%E7%B5%90%E6%A7%8B-hierarchical-1">階層式結構 (Hierarchical)</h3>
+<p><img src="images/06-ia-hierarchical.png" alt="IA-Model" style="width:900px;" /></p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="21" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E7%9F%A9%E9%99%A3%E5%BC%8F%E7%B5%90%E6%A7%8B-matrix">矩陣式結構 (Matrix)</h3>
+<p>這種結構允許使用者根據自己的需求，從多個維度同時存取資訊。</p>
+<ul>
+<li>特點：高度靈活性，適合複雜資料。</li>
+<li>範例：電商網站的篩選系統。當你在尋找一雙鞋子時，你可以同時選定「尺寸：27」、「品牌：Nike」與「顏色：黑色」。這三個維度交織在一起，形成一個動態的結果頁面。</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-marpit-scope-F1H3fLVO="" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="22" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E7%9F%A9%E9%99%A3%E5%BC%8F%E7%B5%90%E6%A7%8B-matrix-1">矩陣式結構 (Matrix)</h3>
+<p><img src="images/06-ia-matrix.png" alt="IA-Model" style="width:900px;" /></p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="23" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E7%B7%9A%E6%80%A7%E7%B5%90%E6%A7%8B-sequential">線性結構 (Sequential)</h3>
+<p>這是一種引導式的結構，要求使用者按照特定的順序從一個步驟移動到下一個步驟。</p>
+<ul>
+<li>特點：限制自由度以確保流程完成。</li>
+<li>範例：線上購物結帳流程。使用者必須先填寫「收件資訊」，接著是「付款方式」，最後才是「確認訂單」。你無法在未填寫地址前直接跳到付款頁面。</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-marpit-scope-pRdfoW6u="" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="24" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E7%B7%9A%E6%80%A7%E7%B5%90%E6%A7%8B-sequential-1">線性結構 (Sequential)</h3>
+<p><img src="images/06-ia-sequential.png" alt="IA-Model" style="width:900px;" /></p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="25" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E7%B6%B2%E7%8B%80%E7%B5%90%E6%A7%8B-network">網狀結構 (Network)</h3>
+<p>資訊節點之間透過超連結自由連結，沒有固定的路徑。</p>
+<ul>
+<li>特點：模仿大腦的聯想思維。</li>
+<li>範例：維基百科（Wikipedia）。當你在閱讀「資訊架構」的條目時，裡面可能會有連結指向「使用者體驗」或「圖書館學」，你可以隨意跳轉，沒有固定的起點與終點。</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-marpit-scope-hAW9EtwM="" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="26" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E7%B6%B2%E7%8B%80%E7%B5%90%E6%A7%8B-network-1">網狀結構 (Network)</h3>
+<p><img src="images/06-ia-network.png" alt="IA-Model" style="width:900px;" /></p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="27" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E8%B3%87%E8%A8%8A%E7%B5%84%E7%B9%94%E6%96%B9%E6%A1%88">資訊組織方案</h3>
+<p>組織方案定義了資訊的分組準則。我們通常將其分為「精確型」與「模糊型」。</p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="28" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E7%B2%BE%E7%A2%BA%E5%9E%8B%E7%B5%84%E7%B9%94%E6%96%B9%E6%A1%88">精確型組織方案</h3>
+<p>這種方案將資訊分成互斥且定義明確的組別，使用者通常知道他們要找的具體目標。</p>
+<ul>
+<li>字母順序：適合已知名稱的查詢。例如：手機通訊錄。</li>
+<li>時間順序：適合具備時間關聯性的資訊。例如：部落格的文章列表或新聞檔案庫。</li>
+<li>地理位置：根據空間位置排序。例如：連鎖餐廳的店點查詢（按縣市劃分）。</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="29" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E6%A8%A1%E7%B3%8A%E5%9E%8B%E7%B5%84%E7%B9%94%E6%96%B9%E6%A1%88">模糊型組織方案</h3>
+<p>這種方案將資訊分解為具有主觀性的類別。雖然稱為「模糊」，但對於探索性搜尋（不知道確切關鍵字）的使用者來說非常強大。</p>
+<ul>
+<li>主題方案：根據內容的主旨分類。範例：新聞網站分為政治、財經、運動、娛樂。</li>
+<li>任務方案：根據使用者想要完成的動作分類。範例：銀行 App 劃分為「轉帳」、「繳費」、「理財」。</li>
+<li>用戶群方案：根據特定的目標受眾分類。範例：大學網站分為「在校生」、「教職員」、「校友」。</li>
+<li>隱喻方案：使用直觀的類比來組織。範例：早期電腦介面的「垃圾桶」圖示代表刪除，「資料夾」代表目錄。</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-class="lead" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" class="lead" data-marpit-pagination="30" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--class:lead;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h2 id="%E6%A8%99%E7%B1%A4%E7%B3%BB%E7%B5%B1">標籤系統</h2>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="31" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E4%BB%80%E9%BA%BC%E6%98%AF%E6%A8%99%E7%B1%A4%E7%B3%BB%E7%B5%B1">什麼是標籤系統？</h3>
+<p>標籤系統是指在數位環境中，用來代表類別、選項、連結或內容的語言描述。</p>
+<p>在資訊架構中，標籤系統就像是導覽指標。如果把網站或 App 比喻成一棟大樓，標籤就是門牌和樓層介紹。它決定了使用者能否快速理解「我在哪裡？」以及「我要去的地方在哪？」。例如：</p>
+<p>在一個電商平台，「購物車」是一個標籤。雖然它只是一個圖示加上文字，但它代表了「暫存選購商品的虛擬空間」這個複雜的概念。</p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="32" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E5%A6%82%E4%BD%95%E5%91%BD%E5%90%8D">如何命名？</h3>
+<p>命名的核心原則是以使用者為中心，而非「以公司內部術語為中心」。</p>
+<p>命名策略：</p>
+<ul>
+<li>具體性：標籤應該具備預測性。使用者看到標籤後，應該能準確猜到點擊後會看到什麼。</li>
+<li>語言一致性：決定要用動詞（如：去購物）還是名詞（如：商品列表）。</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="33" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E5%A6%82%E4%BD%95%E5%88%86%E9%A1%9E">如何分類？</h3>
+<ul>
+<li>
+<p>層級式分類：從廣泛到具體。</p>
+</li>
+<li>
+<p>主題式分類：根據內容性質分類。</p>
+</li>
+<li>
+<p>範例：大學官網的命名</p>
+<ul>
+<li>反面教材：使用內部行政名稱，如「教務處二組」（使用者不知道這跟選課有關）。</li>
+<li>正面教材：使用功能性名稱，如「選課與學分查詢」。</li>
+</ul>
+</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="34" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E6%A8%99%E7%B1%A4%E7%9A%84%E6%BA%96%E7%A2%BA%E6%80%A7%E8%88%87%E4%B8%80%E8%87%B4%E6%80%A7">標籤的準確性與一致性</h3>
+<p>這是標籤系統最容易崩壞的地方。如果同一個動作在不同頁面有不同的名字，使用者就會感到困惑。</p>
+<ul>
+<li>
+<p>準確性<br />
+標籤必須誠實。如果標籤寫著「免費下載」，點進去後卻要求註冊或付費，這就是標籤不準確。</p>
+</li>
+<li>
+<p>一致性<br />
+這包含詞彙一致性與視覺一致性。</p>
+<ul>
+<li>如果首頁叫「個人設定」，內頁就不要改叫「帳號資訊」。</li>
+<li>如果主選單使用 16px 的字體，所有同級標籤也應保持一致。</li>
+</ul>
+</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="35" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E6%96%87%E6%9C%AC%E8%88%87%E5%9C%96%E7%A4%BA%E7%9A%84%E6%90%AD%E9%85%8D">文本與圖示的搭配</h3>
+<p>圖示可以增加視覺美感並節省空間，但「圖示是輔助，文本是核心」。除了極少數公認的圖示（如：放大鏡代表搜尋、齒輪代表設定），大多數圖示若沒有文字標籤，都會產生歧義。</p>
+<ul>
+<li>搭配準則：
+<ul>
+<li>圖示應具備聯想力：垃圾桶代表刪除，心形代表收藏。</li>
+<li>文字標籤不可省略：除非你的使用者全都是極高頻率的專家級用戶。</li>
+<li>位置關係：通常圖示在左（或上），文字在右（或下）。</li>
+</ul>
+</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-marpit-scope-MDwjAplq="" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="36" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E6%A8%99%E7%B1%A4%E7%B3%BB%E7%B5%B1%E7%B8%BD%E7%B5%90">標籤系統總結</h3>
+<p>良好的標籤系統應該讓使用者感覺「理所當然」，當他們不需要停下來思考標籤是什麼意思時，你的設計就成功了。</p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-class="lead" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" class="lead" data-marpit-pagination="37" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--class:lead;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h2 id="%E5%B0%8E%E8%A6%BD%E7%B3%BB%E7%B5%B1">導覽系統</h2>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="38" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E5%B0%8E%E8%A6%BD%E7%B3%BB%E7%B5%B1%E7%9A%84%E4%BD%BF%E7%94%A8">導覽系統的使用</h3>
+<p>在網站或應用程式的設計中，導覽系統就像是一份地圖與路標，指引使用者「我現在在哪裡」、「我能去哪裡」以及「我該如何回去」。</p>
+<p>良好的導覽系統能降低使用者的認知負荷，讓資訊架構 變得直觀且易於探索。</p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="39" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E4%B8%BB%E8%A6%81%E5%B0%8E%E8%A6%BD%E7%B3%BB%E7%B5%B1">主要導覽系統</h3>
+<p>這些是構成網站架構的核心，幫助使用者在不同的資訊層級間穿梭。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">類型</th>
+<th style="text-align:left">主要目的</th>
+<th style="text-align:left">常見位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">全域</td>
+<td style="text-align:left">提供網站整體架觀的概觀</td>
+<td style="text-align:left">頂部導覽列 (Header)</td>
+</tr>
+<tr>
+<td style="text-align:left">區域</td>
+<td style="text-align:left">在特定類別中進行深入探索</td>
+<td style="text-align:left">側邊欄或頂部次導覽</td>
+</tr>
+<tr>
+<td style="text-align:left">關聯</td>
+<td style="text-align:left">提供內容相關的延伸路徑</td>
+<td style="text-align:left">內文、側欄推薦區</td>
+</tr>
+</tbody>
+</table>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" data-marpit-scope-LAB3n36C="" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="40" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<p><img src="images/06-nav-01.png" alt="IA-Model" style="width:1000px;" /></p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-marpit-scope-BS9rPyAt="" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="41" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<p><img src="images/06-nav-03.png" alt="IA-Model" style="width:1000px;" /></p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="42" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E5%85%A8%E5%9F%9F%E5%B0%8E%E8%A6%BD">全域導覽</h3>
+<ul>
+<li>定義：出現在網站每一個頁面的導覽元件，通常位於頁面頂部。它代表了網站的頂層目錄，定義了網站的主要內容範疇。</li>
+<li>範例：以 Apple 官網 為例，頂部的橫條 (Store, Mac, iPad, iPhone, Watch...) 就是全域導覽。無論你點進哪一個產品分頁，這個橫條始終存在。</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43" data-marpit-scope-9X8SDtRB="" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="43" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<p><img src="images/06-nav-apple01.png" alt="IA-Model" style="width:1000px;" /></p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="44" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E5%8D%80%E5%9F%9F%E5%B0%8E%E8%A6%BD">區域導覽</h3>
+<ul>
+<li>定義：在特定的內容區域內，提供更深層或同級分類的導覽。它通常與全域導覽互補，幫助使用者在某個主題下進行橫向探索。</li>
+<li>範例：在 Apple 官網 點擊「iPhone」後，全域導覽下方會出現一排新的圖示 (iPhone 15 Pro, iPhone 15, iOS 17...)，這就是區域導覽，它只在 iPhone 這個大分類下有效。</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-marpit-scope-DteriD47="" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="45" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<p><img src="images/06-nav-apple02.png" alt="IA-Model" style="width:1000px;" /></p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="46" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E9%97%9C%E8%81%AF%E5%B0%8E%E8%A6%BD">關聯導覽</h3>
+<ul>
+<li>定義：又稱為內文導覽或相關連結。它不固定在特定的位置，而是根據目前閱讀的內容，提供相關的延伸連結。</li>
+<li>範例：
+<ul>
+<li>維基百科 (Wikipedia) 文章中帶有超連結的關鍵字。</li>
+<li>電商平台商品頁底部的你可能也會喜歡或相關配件。</li>
+</ul>
+</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47" data-marpit-scope-RxZASQmM="" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="47" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<p><img src="images/06-nav-apple03.png" alt="IA-Model" style="width:1000px;" /></p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="48" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E8%BC%94%E5%8A%A9%E5%B0%8E%E8%A6%BD">輔助導覽</h3>
+<p>當主要導覽不足以支撐複雜路徑時，輔助導覽能提供額外的支援，防止使用者迷路。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">類型</th>
+<th style="text-align:left">主要目的</th>
+<th style="text-align:left">常見位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">麵包屑</td>
+<td style="text-align:left">顯示目前路徑並協助回溯</td>
+<td style="text-align:left">標題下方、內容上方</td>
+</tr>
+<tr>
+<td style="text-align:left">網站地圖</td>
+<td style="text-align:left">提供全景式的目錄，協助非線性搜索</td>
+<td style="text-align:left">頁尾連結或獨立導覽頁</td>
+</tr>
+<tr>
+<td style="text-align:left">頁尾</td>
+<td style="text-align:left">收納次要資訊與法律規範</td>
+<td style="text-align:left">頁面最底部</td>
+</tr>
+</tbody>
+</table>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="49" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E9%BA%B5%E5%8C%85%E5%B1%91">麵包屑</h3>
+<ul>
+<li>定義：顯示使用者目前位置在網站架構中的路徑。它是一種回溯機制，讓使用者知道自己從哪裡來，並能快速回到上層目錄。</li>
+<li>範例：電商網站常見的：首頁 &gt; 電子產品 &gt; 相機 &gt; 單眼相機。使用者可以直接點選電子產品跳回該層級。</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="50" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E7%B6%B2%E7%AB%99%E5%9C%B0%E5%9C%96">網站地圖</h3>
+<ul>
+<li>定義：以清單形式列出網站的所有主要頁面。</li>
+<li>範例：在網站最底部的網站導覽連結，點開後會看到像樹狀圖一樣的文字列表，列出所有子部門與服務項目。</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="51" data-marpit-scope-YcwLLFgl="" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="51" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<p><img src="images/06-nav-04.png" alt="IA-Model" style="width:1000px;" /></p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="52" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="52" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E9%A0%81%E5%B0%BE">頁尾</h3>
+<ul>
+<li>定義：位於頁面最底部的區域。它通常包含法律資訊、社群媒體連結，以及一些雖然不是最重要、但使用者偶爾需要快速存取的全域導覽副本。</li>
+<li>範例：許多大型企業網站 (如 Google 或 Microsoft) 的頁尾，會包含關於我們、聯絡我們、隱私權政策以及徵才資訊。</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="53" data-marpit-scope-4EM9XRG1="" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="53" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<p><img src="images/06-nav-02.png" alt="IA-Model" style="width:1000px;" /></p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="54" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-class="lead" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" class="lead" data-marpit-pagination="54" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--class:lead;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h2 id="%E6%90%9C%E5%B0%8B%E7%B3%BB%E7%B5%B1">搜尋系統</h2>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="55" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="55" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<p>在資訊架構的範疇中，<strong>搜尋系統（Search Systems）</strong> 是使用者在無法透過瀏覽快速找到資訊時的關鍵路徑。它不只是個「搜尋框」，而是一套包含語意理解、資料檢索與結果呈現的複雜機制。</p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="56" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="56" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E4%BB%80%E9%BA%BC%E6%99%82%E5%80%99%E9%9C%80%E8%A6%81%E6%90%9C%E5%B0%8B%E5%8A%9F%E8%83%BD">什麼時候需要搜尋功能？</h3>
+<p>並非所有網站都一定要有搜尋功能。通常在以下情境，搜尋系統是必不可少的：</p>
+<ul>
+<li>資料量龐大且多樣：當內容超過數百頁，使用者無法透過選單逐層點選時。例如：Amazon。商品太多，不可能只靠分類選單找到特定的藍牙耳機。</li>
+<li>使用者帶有明確目的：使用者已經知道要找什麼，想直接跳轉。例如：維基百科。使用者想直接查「量子力學」，直接輸入比從「科學」分類點進去快得多。</li>
+<li>導覽系統失效或過於複雜：當資訊分類有重疊，使用者不確定該去哪個目錄找。例如：政府入口網站。補助資訊可能在「社會福利」也可能在「勞工事務」，搜尋能打破分類隔閡。</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="57" data-marpit-scope-da7tQHle="" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="57" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E6%90%9C%E5%B0%8B%E7%B3%BB%E7%B5%B1%E7%9A%84%E7%B5%84%E6%88%90">搜尋系統的組成</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">組件</th>
+<th style="text-align:left">說明</th>
+<th style="text-align:left">範例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">搜尋框</td>
+<td style="text-align:left">使用者的進入點，位置應明顯。</td>
+<td style="text-align:left">網頁右上角或頁面中央的大型輸入框。</td>
+</tr>
+<tr>
+<td style="text-align:left">搜尋引擎</td>
+<td style="text-align:left">後端處理邏輯，包含索引與抓取。</td>
+<td style="text-align:left">Elasticsearch 或 Algolia 引擎。</td>
+</tr>
+<tr>
+<td style="text-align:left">結果頁面</td>
+<td style="text-align:left">展示搜尋後的結果與導覽工具。</td>
+<td style="text-align:left">包含摘要、縮圖與分頁導覽的列表頁。</td>
+</tr>
+</tbody>
+</table>
+<p>有效的搜尋系統能降低使用者的認知負荷，讓他們在混亂的資料中，能精準地找到目標。</p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="58" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="58" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E6%90%9C%E5%B0%8B%E4%BB%8B%E9%9D%A2%E8%A8%AD%E8%A8%88%E7%9A%84%E4%B8%89%E5%A4%A7%E8%A6%81%E7%B4%A0%E8%BC%B8%E5%85%A5%E5%BB%BA%E8%AD%B0">搜尋介面設計的三大要素：輸入建議</h3>
+<p>在使用者輸入過程中即時顯示預測結果。這能減少輸入錯誤，並引導使用者使用系統偏好的關鍵字。</p>
+<ul>
+<li>設計重點： 顯示關鍵字預測、直接顯示內容預覽（如商品圖）。</li>
+<li>範例：
+<ul>
+<li>在 YouTube 搜尋「AI」，下拉選單會出現「AI 音樂製作」、「AI 繪圖教學」等建議，幫助使用者縮小範圍。</li>
+<li>在 Apple 官網 搜尋「iPhone」，建議框會直接顯示最新的 iPhone 機型照片與連結。</li>
+</ul>
+</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="59" data-marpit-scope-qK7LBbsz="" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="59" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<p><img src="images/06-search-01.png" alt="Search" style="width:1000px;" /></p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="60" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="60" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E6%90%9C%E5%B0%8B%E4%BB%8B%E9%9D%A2%E8%A8%AD%E8%A8%88%E7%9A%84%E4%B8%89%E5%A4%A7%E8%A6%81%E7%B4%A0%E7%B5%90%E6%9E%9C%E6%8E%92%E5%BA%8F">搜尋介面設計的三大要素：結果排序</h3>
+<p>搜尋結果不應只是隨機列出，必須根據「相關性（Relevancy）」進行排序。</p>
+<ul>
+<li>設計重點： 考慮關鍵字匹配度、熱門程度、發布時間（如新聞）或個人化偏好。</li>
+<li>範例：
+<ul>
+<li>Google 搜尋：排名第一的通常是權威性最高、點擊率最穩定的網頁。</li>
+<li>Netflix：搜尋「Action」時，排序會優先顯示你可能喜歡的動作片，而不僅僅是按字母順序。</li>
+</ul>
+</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="61" data-marpit-scope-ieSPjg59="" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="61" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<p><img src="images/06-search-02.png" alt="Search" style="width:1000px;" /></p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="62" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="62" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E6%90%9C%E5%B0%8B%E4%BB%8B%E9%9D%A2%E8%A8%AD%E8%A8%88%E7%9A%84%E4%B8%89%E5%A4%A7%E8%A6%81%E7%B4%A0%E7%AF%A9%E9%81%B8%E8%88%87%E5%88%86%E9%A0%81%E5%B0%8E%E8%A6%BD">搜尋介面設計的三大要素：篩選與分頁導覽</h3>
+<p>篩選通常是全域的（如：僅看 4 顆星以上）；分頁導覽則是根據搜尋結果的屬性動態產生的。</p>
+<ul>
+<li>設計重點：讓使用者在大量結果中，透過屬性（顏色、價格、品牌）快速去蕪存菁。</li>
+<li>範例：
+<ul>
+<li>在 Airbnb 搜尋「東京住宿」後：
+<ul>
+<li>篩選：日期、人數。</li>
+<li>分頁導覽：房型（整套房子、獨立房間）、設施（有 WiFi、有廚房）、價格區間。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="63" data-marpit-scope-6HQMbvO6="" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="63" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<p><img src="images/06-search-03.png" alt="Search" style="width:1000px;" /></p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="64" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-class="lead" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" class="lead" data-marpit-pagination="64" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--class:lead;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h2 id="ia-%E5%BB%BA%E7%BD%AE%E8%88%87%E9%A9%97%E8%AD%89">IA 建置與驗證</h2>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="65" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="65" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E5%BB%BA%E7%BD%AE%E8%88%87%E9%A9%97%E8%AD%89%E5%B7%A5%E5%85%B7">建置與驗證工具</h3>
+<p>在構建一個資訊系統時，最核心的挑戰在於確保「開發者想的」與「使用者想的」達成一致。這正是卡片分類法與樹狀測試發揮作用的地方。</p>
+<ul>
+<li>卡片分類法：用於探索階段，幫助我們理解使用者如何對資訊進行歸類，進而建立符合直覺的分類體系。
+<ul>
+<li>開放式卡片分類</li>
+<li>封閉式卡片分類</li>
+</ul>
+</li>
+<li>樹狀測試：用於驗證階段，觀察使用者在層級目錄中尋找資訊的過程，評估導覽結構的有效性。</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="66" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="66" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E9%96%8B%E6%94%BE%E5%BC%8F%E5%8D%A1%E7%89%87%E5%88%86%E9%A1%9E">開放式卡片分類</h3>
+<p>在開放式分類中，參與者會拿到一疊寫有內容標題或功能的卡片，他們需要將這些卡片按照自己的邏輯分組，並為每一組「自行命名」標籤。</p>
+<ul>
+<li>核心目標：了解使用者腦中的分類邏輯與命名偏好。</li>
+<li>適用時機：網站開發初期，或需要重新定義導覽分類時。</li>
+</ul>
+<p>假設我們正在設計一個大型電商平台的首頁。我們給使用者卡片包含：電風扇、除濕機、吸塵器、平底鍋、氣炸鍋。<br />
+使用者 A 可能會將前三者歸類為「生活家電」，後兩者歸類為「廚房用具」。<br />
+使用者 B 則可能將吸塵器與除濕機歸類為「居家環境」，將電風扇、平底鍋、氣炸鍋歸類為「其他」。<br />
+透過分析大量使用者的分類結果，我們能找出最普遍的分類共識。</p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="67" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="67" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E5%B0%81%E9%96%89%E5%BC%8F%E5%8D%A1%E7%89%87%E5%88%86%E9%A1%9E">封閉式卡片分類</h3>
+<p>參與者同樣會拿到卡片，但他們必須將卡片歸類到「既定」的類別框架中，不能自行命名新的標籤。</p>
+<ul>
+<li>核心目標：驗證現有的分類標籤是否清晰、明確。</li>
+<li>適用時機：已經有初步架構，想測試內容放入這些類別是否會讓使用者感到困惑。</li>
+</ul>
+<p>同樣的電商案例，我們已經決定了兩個分類：「家電用品」與「廚房設備」。<br />
+如果使用者將「氣炸鍋」猶豫不決地放進這兩個分類，或者放錯地方，這表示標籤的定義可能重疊，需要進一步調整。</p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="68" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="68" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E6%A8%B9%E7%8B%80%E6%B8%AC%E8%A9%A6">樹狀測試</h3>
+<p>如果說卡片分類是為了「建立架構」，那麼樹狀測試就是為了「驗證架構」。<br />
+樹狀測試通常會去除所有的視覺設計（如顏色、圖示、排版），只呈現純文字的層級目錄。研究員會給使用者一個具體的任務，觀察他們是否能在這棵「資訊樹」中找到目標。</p>
+<ul>
+<li>核心目標：衡量導覽結構的可尋找性與路徑直覺性。</li>
+<li>關鍵指標：成功率（是否找到）、尋找速度（花多久）、路徑直覺度（是否在目錄中上下切換、猶豫）。</li>
+<li>與卡片分類的差異：卡片分類是「由下而上」，從細節內容往上推導分類；而樹狀測試是「由上而下」，從大分類往下去找細節。</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-scope-BNkAYrFX="" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="69" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="79" data-size="16:9" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/06-tree_test.png&quot;);background-size:400px auto;"></figure></div></section></foreignObject><foreignObject width="70%" height="720"><section id="69" data-marpit-scope-BNkAYrFX="" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="69" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="79" data-size="16:9" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<p>資訊架構如右圖，在樹狀測試中，我們會給受測者一個目標，看他們會點選哪條路徑。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">任務情境</th>
+<th style="text-align:left">預設路徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">你想找看看有沒有便宜的二手童書，你會點哪裡？</td>
+<td style="text-align:left">1 &gt; 1.3</td>
+</tr>
+<tr>
+<td style="text-align:left">你想確認你的舊書封底有原子筆劃記，平台還收不收？</td>
+<td style="text-align:left">2 &gt; 2.3</td>
+</tr>
+<tr>
+<td style="text-align:left">你上週寄出的書，想確認平台收到並完成撥款了嗎？</td>
+<td style="text-align:left">3 &gt; 3.2</td>
+</tr>
+<tr>
+<td style="text-align:left">你在下單時發現地址填錯了，想找人即時修改，你會怎麼做？</td>
+<td style="text-align:left">4 &gt; 4.2</td>
+</tr>
+</tbody>
+</table>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-marpit-scope-BNkAYrFX="" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="69" style="" data-marpit-pagination-total="79" data-size="16:9" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="70" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="70" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E9%A9%97%E8%AD%89%E6%B5%81%E7%A8%8B">驗證流程</h3>
+<p>兩者通常會搭配使用：</p>
+<ol>
+<li>透過開放式卡片分類，搜集用戶的心智模型，產出初步的架構草圖。</li>
+<li>整理草圖後，進行封閉式卡片分類，確認類別名稱是否具備代表性。</li>
+<li>建立完整的資訊架構樹狀圖，進行樹狀測試。</li>
+<li>根據樹狀測試的失敗路徑進行修正，直到可尋找性達到理想標準。</li>
+</ol>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="71" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-class="lead" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" class="lead" data-marpit-pagination="71" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--class:lead;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h2 id="%E8%B3%87%E8%A8%8A%E6%9E%B6%E6%A7%8B%E7%94%A2%E5%87%BA">資訊架構產出</h2>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="72" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="72" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E7%B6%B2%E7%AB%99%E5%9C%B0%E5%9C%96-1">網站地圖</h3>
+<p>網站地圖是資訊架構中最具代表性的產出。它是一個視覺化的階層結構圖，用來展示網站或應用程式的導航框架。它的目的在於定義頁面與頁面之間的父子關係與並列關係。</p>
+<p>一個好的網站地圖會標註出：</p>
+<ul>
+<li>主要導航層級（一級、二級、三級頁面）。</li>
+<li>標籤名稱（使用者會看到的文字）。</li>
+<li>特殊的功能模組或外部連結。</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="73" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="73" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E9%9B%BB%E5%AD%90%E5%95%86%E5%8B%99%E5%B9%B3%E5%8F%B0">電子商務平台</h3>
+<p>假設我們正在規劃一個服飾電商，其網站地圖的結構可能如下：</p>
+<ul>
+<li>首頁
+<ul>
+<li>女裝 (一級類別)
+<ul>
+<li>上衣 (二級類別)</li>
+<li>下身 (二級類別)</li>
+</ul>
+</li>
+<li>男裝 (一級類別)</li>
+<li>品牌故事 (一級類別)</li>
+<li>會員中心 (一級類別)
+<ul>
+<li>訂單查詢 (二級類別)</li>
+<li>個人資料修改 (二級類別)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="74" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="74" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="hw07-%E7%B6%B2%E7%AB%99%E5%9C%B0%E5%9C%96">HW07 網站地圖</h3>
+<ul>
+<li>使用 FigJam 建立網站地圖</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="75" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="75" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="%E4%BD%BF%E7%94%A8%E8%80%85%E6%B5%81%E7%A8%8B">使用者流程</h3>
+<p>使用者流程關注的是動態的路徑。當使用者帶著特定目標進入系統時，資訊如何引導他們從起點走向終點。這有助於發現結構中的斷點或邏輯漏洞。</p>
+<p>這通常包含：</p>
+<ul>
+<li>起點（進入點）。</li>
+<li>決策點（例如：是否已登入？）。</li>
+<li>動作頁面（按鈕點擊）。</li>
+<li>終點（任務完成畫面）。</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="76" data-marpit-scope-FQyRGaww="" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="76" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<ul>
+<li><a href="https://zh.wikipedia.org/zh-tw/%E6%B5%81%E7%A8%8B%E5%9B%BE">流程圖常用符號</a></li>
+</ul>
+<p><img src="https://cdn.sanity.io/images/599r6htc/regionalized/1ed7c3cf44293ac1ad87f33f0b0b8d2132ba75bd-2880x1440.png?q=75&amp;fit=max&amp;auto=format&amp;dpr=2" alt="Search" style="width:800px;" /><br />
+From <a href="https://www.figma.com/resource-library/user-flow/">Figma</a></p>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="77" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="77" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h3 id="hw08-%E4%BD%BF%E7%94%A8%E8%80%85%E6%B5%81%E7%A8%8B">HW08 使用者流程</h3>
+<ul>
+<li>使用 FigJam 建立使用者流程</li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="78" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-class="lead" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" class="lead" data-marpit-pagination="78" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--class:lead;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<h2 id="references">References</h2>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="79" data-footer="永續生活理念 UX/UI 設計實務" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+" lang="C" data-marpit-pagination="79" style="--footer:永續生活理念 UX/UI 設計實務;--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section p, li {
+    font-size: 0.9em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section th, td {
+    font-size: 0.65em;
+}
+;" data-marpit-pagination-total="79" data-size="16:9">
+<ul>
+<li><a href="https://medium.com/@EODT/%E8%B3%87%E8%A8%8A%E6%9E%B6%E6%A7%8B-ia-%E6%98%AF%E4%BB%80%E9%BA%BC-5-%E5%80%8B%E5%8E%9F%E5%89%87%E6%89%93%E9%80%A0%E4%B8%8D%E8%BF%B7%E8%B7%AF%E7%9A%84%E7%B6%B2%E7%AB%99%E8%88%87-app-dd9d922913eb">資訊架構(IA) 是什麼？5 個原則打造不迷路的網站與 App</a></li>
+<li><a href="https://useme.medium.com/%E6%B7%BA%E8%AB%87%E8%B3%87%E8%A8%8A%E6%9E%B6%E6%A7%8B%E5%AD%B8-7926827bce27">淺談資訊架構學</a></li>
+</ul>
+<footer>永續生活理念 UX/UI 設計實務</footer>
+</section>
+<script>!function(){"use strict";const t={h1:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:()=>HTMLSpanElement},pre:{proto:()=>HTMLElement,style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},e="data-marp-auto-scaling-wrapper",i="data-marp-auto-scaling-svg",n="data-marp-auto-scaling-container";class s extends HTMLElement{container;containerSize;containerObserver;svg;svgComputedStyle;svgPreserveAspectRatio="xMinYMid meet";wrapper;wrapperSize;wrapperObserver;constructor(){super();const t=t=>([e])=>{const{width:i,height:n}=e.contentRect;this[t]={width:i,height:n},this.updateSVGRect()};this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(t("containerSize")),this.wrapperObserver=new ResizeObserver((...e)=>{t("wrapperSize")(...e),this.flushSvgDisplay()})}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){this.shadowRoot.innerHTML=`\n<style>\n  svg[${i}] { display: block; width: 100%; height: auto; vertical-align: top; }\n  span[${n}] { display: table; white-space: var(--marp-auto-scaling-white-space, nowrap); width: max-content; }\n</style>\n<div ${e}>\n  <svg part="svg" ${i}>\n    <foreignObject><span ${n}><slot></slot></span></foreignObject>\n  </svg>\n</div>\n    `.split(/\n\s*/).join(""),this.wrapper=this.shadowRoot.querySelector(`div[${e}]`)??void 0;const t=this.svg;this.svg=this.wrapper?.querySelector(`svg[${i}]`)??void 0,this.svg!==t&&(this.svgComputedStyle=this.svg?window.getComputedStyle(this.svg):void 0),this.container=this.svg?.querySelector(`span[${n}]`)??void 0,this.observe()}disconnectedCallback(){this.svg=void 0,this.svgComputedStyle=void 0,this.wrapper=void 0,this.container=void 0,this.observe()}attributeChangedCallback(){this.observe()}flushSvgDisplay(){const{svg:t}=this;t&&(t.style.display="inline",requestAnimationFrame(()=>{t.style.display=""}))}observe(){this.containerObserver.disconnect(),this.wrapperObserver.disconnect(),this.wrapper&&this.wrapperObserver.observe(this.wrapper),this.container&&this.containerObserver.observe(this.container),this.svgComputedStyle&&this.observeSVGStyle(this.svgComputedStyle)}observeSVGStyle(t){const e=()=>{const i=(()=>{const e=t.getPropertyValue("--preserve-aspect-ratio");if(e)return e.trim();return`x${(({textAlign:t,direction:e})=>{if(t.endsWith("left"))return"Min";if(t.endsWith("right"))return"Max";if("start"===t||"end"===t){let i="rtl"===e;return"end"===t&&(i=!i),i?"Max":"Min"}return"Mid"})(t)}YMid meet`})();i!==this.svgPreserveAspectRatio&&(this.svgPreserveAspectRatio=i,this.updateSVGRect()),t===this.svgComputedStyle&&requestAnimationFrame(e)};e()}updateSVGRect(){let t=Math.ceil(this.containerSize?.width??0);const e=Math.ceil(this.containerSize?.height??0);void 0!==this.dataset.downscaleOnly&&(t=Math.max(t,this.wrapperSize?.width??0));const i=this.svg?.querySelector(":scope > foreignObject");if(i?.setAttribute("width",`${t}`),i?.setAttribute("height",`${e}`),this.svg&&(this.svg.setAttribute("viewBox",`0 0 ${t} ${e}`),this.svg.setAttribute("preserveAspectRatio",this.svgPreserveAspectRatio),this.svg.style.height=t<=0||e<=0?"0":""),this.container){const t=this.svgPreserveAspectRatio.toLowerCase();this.container.style.marginLeft=t.startsWith("xmid")||t.startsWith("xmax")?"auto":"0",this.container.style.marginRight=t.startsWith("xmi")?"auto":"0"}}}const r=(t,{attrs:e={},style:i})=>class extends t{constructor(...t){super(...t);for(const[t,i]of Object.entries(e))this.hasAttribute(t)||this.setAttribute(t,i);this._shadow()}static get observedAttributes(){return["data-auto-scaling"]}connectedCallback(){this._update()}attributeChangedCallback(){this._update()}_shadow(){if(!this.shadowRoot)try{this.attachShadow({mode:"open"})}catch(t){if(!(t instanceof Error&&"NotSupportedError"===t.name))throw t}return this.shadowRoot}_update(){const t=this._shadow();if(t){const e=i?`<style>:host { ${i} }</style>`:"";let n="<slot></slot>";const{autoScaling:s}=this.dataset;if(void 0!==s){n=`<marp-auto-scaling exportparts="svg:auto-scaling" ${"downscale-only"===s?"data-downscale-only":""}>${n}</marp-auto-scaling>`}t.innerHTML=e+n}}};let o;const a=Symbol(),l=()=>o??(o=!!document.createElement("div",{is:"marp-auto-scaling"}).outerHTML.startsWith("<div is"),o);let c;const d="marpitSVGPolyfill:setZoomFactor,",h=Symbol(),g=Symbol();const p=()=>{const t="Apple Computer, Inc."===navigator.vendor,e=t?[v]:[],i={then:e=>(t?(async()=>{if(void 0===c){const t=document.createElement("canvas");t.width=10,t.height=10;const e=t.getContext("2d"),i=new Image(10,10),n=new Promise(t=>{i.addEventListener("load",()=>t())});i.crossOrigin="anonymous",i.src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%201%201%22%3E%3CforeignObject%20width%3D%221%22%20height%3D%221%22%20requiredExtensions%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3Cdiv%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%20style%3D%22width%3A%201px%3B%20height%3A%201px%3B%20background%3A%20red%3B%20position%3A%20relative%22%3E%3C%2Fdiv%3E%3C%2FforeignObject%3E%3C%2Fsvg%3E",await n,e.drawImage(i,0,0),c=e.getImageData(5,5,1,1).data[3]<128}return c})().then(t=>{null==e||e(t?[v]:[])}):null==e||e([]),i)};return Object.assign(e,i)};let m,u;function v(t){const e="object"==typeof t&&t.target||document,i="object"==typeof t?t.zoom:t;window[g]||(Object.defineProperty(window,g,{configurable:!0,value:!0}),document.body.style.zoom=1.0001,document.body.offsetHeight,document.body.style.zoom=1,window.addEventListener("message",({data:t,origin:e})=>{if(e===window.origin)try{if(t&&"string"==typeof t&&t.startsWith(d)){const[,e]=t.split(","),i=Number.parseFloat(e);Number.isNaN(i)||(u=i)}}catch(t){console.error(t)}}));let n=!1;Array.from(e.querySelectorAll("svg[data-marpit-svg]"),t=>{var e,s,r,o;t.style.transform||(t.style.transform="translateZ(0)");const a=i||u||t.currentScale||1;m!==a&&(m=a,n=a);const l=t.getBoundingClientRect(),{length:c}=t.children;for(let i=0;i<c;i+=1){const n=t.children[i];if(n.getScreenCTM){const t=n.getScreenCTM();if(t){const i=null!==(s=null===(e=n.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==s?s:0,c=null!==(o=null===(r=n.y)||void 0===r?void 0:r.baseVal.value)&&void 0!==o?o:0,d=n.children.length;for(let e=0;e<d;e+=1){const s=n.children[e];if("SECTION"===s.tagName){const{style:e}=s;e.transformOrigin||(e.transformOrigin=`${-i}px ${-c}px`),e.transform=`scale(${a}) matrix(${t.a}, ${t.b}, ${t.c}, ${t.d}, ${t.e-l.left}, ${t.f-l.top}) translateZ(0.0001px)`;break}}}}}}),!1!==n&&Array.from(e.querySelectorAll("iframe"),({contentWindow:t})=>{null==t||t.postMessage(`${d}${n}`,"null"===window.origin?"*":window.origin)})}function w({once:t=!1,target:e=document}={}){const i=function(t=document){if(t[h])return t[h];let e=!0;const i=()=>{e=!1,delete t[h]};Object.defineProperty(t,h,{configurable:!0,value:i});let n=[],s=!1;(async()=>{try{n=await p()}finally{s=!0}})();const r=()=>{for(const e of n)e({target:t});s&&0===n.length||e&&window.requestAnimationFrame(r)};return r(),i}(e);return t?(i(),()=>{}):i}m=1,u=void 0;const b=Symbol(),y=(e=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(((e=document)=>{const i=window[a];i||customElements.define("marp-auto-scaling",s);for(const n of Object.keys(t)){const s=`marp-${n}`,o=t[n].proto();l()&&o!==HTMLElement?i||customElements.define(s,r(o,{style:t[n].style}),{extends:n}):(i||customElements.define(s,r(HTMLElement,t[n])),e.querySelectorAll(`${n}[is="${s}"]`).forEach(t=>{t.outerHTML=t.outerHTML.replace(new RegExp(`^<${n}`,"i"),`<${s}`).replace(new RegExp(`</${n}>$`,"i"),`</${s}>`)}))}window[a]=!0})(e),e[b])return e[b];const i=w({target:e}),n=()=>{i(),delete e[b]},o=Object.assign(n,{cleanup:n,update:()=>y(e)});return Object.defineProperty(e,b,{configurable:!0,value:o}),o},f=document.currentScript;y(f?f.getRootNode():document)}();
+</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="6" tabindex="0"><p>想像你走進一間超市，商品如果是隨機擺放的，你可能得花 30 分鐘才能找到一瓶牛奶。但如果超市內有清楚的分類區（飲料區、乳製品區、冷藏區），並且每個貨架上都有清晰的標籤，那麼你可能 2 分鐘內就能找到你要的商品。
+
+透過合理的分類、分區與命名方式，不僅能讓使用者更快找到所需，也提升整體資訊的可讀性與可操作性。資訊架構，是讓資訊變得有條理的設計關鍵！
+
+這就是資訊架構設計的核心價值，良好的 IA 可以降低使用者尋找資訊的成本，提升使用者的效率，同時等於提升產品或服務的使用體驗。</p></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@4.3.1/lib/bespoke.js.LICENSE.txt */
+!function(){"use strict";function e(e){return e&&e.__esModule&&Object.prototype.hasOwnProperty.call(e,"default")?e.default:e}var t,n,r=(n||(n=1,t={from:function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),o=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,function(e){return"SCRIPT"!==e.nodeName}),i={},a=function(e,t){return(t=t||{}).index=o.indexOf(e),t.slide=e,t},s=function(e,t){i[e]=(i[e]||[]).filter(function(e){return e!==t})},l=function(e,t){return(i[e]||[]).reduce(function(e,n){return e&&!1!==n(t)},!0)},c=function(e,t){o[e]&&(n&&l("deactivate",a(n,t)),n=o[e],l("activate",a(n,t)))},d=function(e,t){var r=o.indexOf(n)+e;l(e>0?"next":"prev",a(n,t))&&c(r,t)},u={off:s,on:function(e,t){return(i[e]||(i[e]=[])).push(t),s.bind(null,e,t)},fire:l,slide:function(e,t){if(!arguments.length)return o.indexOf(n);l("slide",a(o[e],t))&&c(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:o,destroy:function(e){l("destroy",a(n,e)),i={}}};return(t||[]).forEach(function(e){e(u)}),n||c(0),u}}),t),o=e(r);const i=document.body,a=(...e)=>history.replaceState(...e),s="",l="presenter",c="next",d="overview",u=["",l,d,c],f="bespoke-marp-",m=`data-${f}`,g=(e,{protocol:t,host:n,pathname:r,hash:o}=location)=>{const i=e.toString();return`${t}//${n}${r}${i?"?":""}${i}${o}`},p=()=>i.dataset.bespokeView,v=e=>new URLSearchParams(location.search).get(e),h=(e,t={})=>{const n={location,setter:a,...t},r=new URLSearchParams(n.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?r.set(t,n):r.delete(t)}try{n.setter({...window.history.state??{}},"",g(r,n.location))}catch(e){console.error(e)}},w=(()=>{const e="bespoke-marp";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch{return!1}})(),y=e=>{try{return localStorage.getItem(e)}catch{return null}},b=(e,t)=>{try{return localStorage.setItem(e,t),!0}catch{return!1}},k=e=>{try{return localStorage.removeItem(e),!0}catch{return!1}},x=(e,t)=>{const n="aria-hidden";t?e.setAttribute(n,"true"):e.removeAttribute(n)},E=e=>{e.parent.classList.add(`${f}parent`),e.slides.forEach(e=>e.classList.add(`${f}slide`)),e.on("activate",t=>{const n=`${f}active`,r=t.slide,o=r.classList,i=!o.contains(n);if(e.slides.forEach(e=>{e.classList.remove(n),x(e,!0)}),o.add(n),x(r,!1),i){const e=`${n}-ready`;o.add(e),document.body.clientHeight,o.remove(e)}})},$=e=>{let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],o=(r,o)=>{t=r,n=o,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const i=t<r||t===r&&n<=o;e.setAttribute(`${m}fragment`,(i?"":"in")+"active");const a=`${m}current-fragment`;t===r&&n===o?e.setAttribute(a,"current"):e.removeAttribute(a)})}),e.fragmentIndex=o;const i={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:o};e.fire("fragment",i)};e.on("next",({fragment:i=!0})=>{if(i){if(r(1))return o(t,n+1),!1;const i=t+1;e.fragments[i]&&o(i,0)}else{const r=e.fragments[t].length;if(n+1<r)return o(t,r-1),!1;const i=e.fragments[t+1];i&&o(t+1,i.length-1)}}),e.on("prev",({fragment:i=!0})=>{if(r(-1)&&i)return o(t,n-1),!1;const a=t-1;e.fragments[a]&&o(a,e.fragments[a].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const o=e.fragments[t];if(o){const{length:e}=o;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}o(t,r)}),o(0,0)},L=document,S=()=>!(!L.fullscreenEnabled&&!L.webkitFullscreenEnabled),P=()=>!(!L.fullscreenElement&&!L.webkitFullscreenElement),_=e=>{e.fullscreen=()=>{S()&&(async()=>{P()?(L.exitFullscreen||L.webkitExitFullscreen)?.call(L):((e=L.body)=>{(e.requestFullscreen||e.webkitRequestFullscreen)?.call(e)})()})()},document.addEventListener("keydown",t=>{"f"!==t.key&&"F11"!==t.key||t.altKey||t.ctrlKey||t.metaKey||!S()||(e.fullscreen(),t.preventDefault())})},O=`${f}inactive`,T=(e=2e3)=>({parent:t,fire:n})=>{const r=t.classList,o=e=>n(`marp-${e?"":"in"}active`);let i;const a=()=>{i&&clearTimeout(i),i=setTimeout(()=>{r.add(O),o()},e),r.contains(O)&&(r.remove(O),o(!0))};for(const e of["mousedown","mousemove","touchend"])document.addEventListener(e,a);setTimeout(a,0)},I=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"],M=e=>{e.parent.addEventListener("keydown",e=>{if(!e.target)return;const t=e.target;(I.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()})},A=e=>{window.addEventListener("load",()=>{for(const t of e.slides){const e=t.querySelector("marp-auto-scaling, [data-auto-scaling], [data-marp-fitting]");t.setAttribute(`${m}load`,e?"":"hideable")}})},C=({interval:e=250}={})=>t=>{document.addEventListener("keydown",e=>{if(" "===e.key&&e.shiftKey)t.prev();else if("ArrowLeft"===e.key||"ArrowUp"===e.key||"PageUp"===e.key)t.prev({fragment:!e.shiftKey});else if(" "!==e.key||e.shiftKey)if("ArrowRight"===e.key||"ArrowDown"===e.key||"PageDown"===e.key)t.next({fragment:!e.shiftKey});else if("End"===e.key)t.slide(t.slides.length-1,{fragment:-1});else{if("Home"!==e.key)return;t.slide(0)}else t.next();e.preventDefault()});let n,r,o=0;t.parent.addEventListener("wheel",i=>{let a=!1;const s=(e,t)=>{e&&(a=a||((e,t)=>((e,t)=>{const n="X"===t?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]})(e,t)&&((e,t)=>{const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r})(getComputedStyle(e),t))(e,t)),e?.parentElement&&s(e.parentElement,t)};if(0!==i.deltaX&&s(i.target,"X"),0!==i.deltaY&&s(i.target,"Y"),a)return;i.preventDefault();const l=Math.sqrt(i.deltaX**2+i.deltaY**2);if(void 0!==i.wheelDelta){if(void 0===i.webkitForce&&Math.abs(i.wheelDelta)<40)return;if(i.deltaMode===i.DOM_DELTA_PIXEL&&l<4)return}else if(i.deltaMode===i.DOM_DELTA_PIXEL&&l<12)return;r&&clearTimeout(r),r=setTimeout(()=>{n=0},e);const c=Date.now()-o<e,d=l<=n;if(n=l,c||d)return;let u;(i.deltaX>0||i.deltaY>0)&&(u="next"),(i.deltaX<0||i.deltaY<0)&&(u="prev"),u&&(t[u](),o=Date.now())})},D=(e=`.${f}osc`)=>{const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[${m}osc=${JSON.stringify(e)}]`).forEach(n)};if(S()||n("fullscreen",e=>e.style.display="none"),!w){const e=(e,t)=>{e.disabled=!0,e.title=`${t} is disabled due to restricted localStorage.`};n("presenter",t=>e(t,"Presenter view")),n("overview",t=>e(t,"Overview view"))}return e=>{t.addEventListener("click",t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;n&&t.target.blur();const r={fragment:!t.shiftKey};"next"===n?e.next(r):"prev"===n?e.prev(r):"fullscreen"===n?e?.fullscreen():"presenter"===n?e.openPresenterView():"overview"===n&&e.toggleOverviewView()}}),e.parent.appendChild(t),e.on("activate",({index:t})=>{n("page",n=>n.textContent=`Page ${t+1} of ${e.slides.length}`)}),e.on("fragment",({index:t,fragments:r,fragmentIndex:o})=>{n("prev",e=>e.disabled=0===t&&0===o),n("next",n=>n.disabled=t===e.slides.length-1&&o===r.length-1)}),e.on("marp-active",()=>x(t,!1)),e.on("marp-inactive",()=>x(t,!0)),S()&&(e=>{for(const t of["","webkit"])L.addEventListener(t+"fullscreenchange",e)})(()=>n("fullscreen",e=>e.classList.toggle("exit",S()&&P())))}},N=e=>{if(e.syncKey&&"string"==typeof e.syncKey)return!0;throw new Error("The current instance of Bespoke.js is incompatible with Marp bespoke sync plugin.")},B=(e={})=>{const t=e.key||window.history.state?.marpBespokeSyncKey||Math.random().toString(36).slice(2),n=`bespoke-marp-sync-${t}`;var r;r={marpBespokeSyncKey:t},h({},{setter:(e,...t)=>a({...e,...r},...t)});const o=()=>{const e=y(n);return e?JSON.parse(e):Object.create(null)},i=e=>{const t=o(),r={...t,...e(t)};return b(n,JSON.stringify(r)),r},s=()=>{window.removeEventListener("pageshow",s),i(e=>({reference:(e.reference||0)+1}))};return e=>{s(),Object.defineProperty(e,"syncKey",{value:t,enumerable:!0});let r=!0;setTimeout(()=>{e.on("fragment",e=>{r&&i(()=>({index:e.index,fragmentIndex:e.fragmentIndex}))})},0),window.addEventListener("storage",t=>{if(t.key===n&&t.oldValue&&t.newValue){const n=JSON.parse(t.oldValue),o=JSON.parse(t.newValue);if(n.index!==o.index||n.fragmentIndex!==o.fragmentIndex)try{r=!1,e.slide(o.index,{fragment:o.fragmentIndex,forSync:!0})}finally{r=!0}}});const a=()=>{const{reference:e}=o();void 0===e||e<=1?k(n):i(()=>({reference:e-1}))};window.addEventListener("pagehide",e=>{e.persisted&&window.addEventListener("pageshow",s),a()}),e.on("destroy",a)}},K=e=>{w&&document.addEventListener("keydown",t=>{("o"!==t.key||t.altKey||t.ctrlKey||t.metaKey)&&"Escape"!==t.key||(t.preventDefault(),e())})};let q=null;const V=({closeOnSelect:e=!0}={})=>t=>{N(t);const n=n=>{const r=(()=>{if(!q||!q.isConnected){q=document.createElement("div"),q.className=`${f}overview`,q.inert=!0;const n=document.createElement("iframe");n.src=(()=>{const n=new URLSearchParams(location.search);return n.set("view","overview"),n.set("sync",t.syncKey),e&&n.set("closeOnSelect","1"),g(n)})(),q.append(n),document.body.append(q)}return q})(),o=n??!r.dataset.open;setTimeout(()=>{if(r.dataset.open=o?"1":"",r.inert=!o,t.skipTransition=o,o){const e=r.querySelector("iframe");try{e?.contentWindow?.focus()}catch{e?.focus()}}else window.focus()},0)};Object.defineProperties(t,{toggleOverviewView:{enumerable:!0,value:n}}),window.addEventListener("message",e=>{e.origin===window.origin&&"closeOverview"===e.data&&n(!1)}),K(n)},j=e=>{const{title:t}=document;document.title="[Overview]"+(t?` - ${t}`:"");const n=!!v("closeOnSelect"),r=()=>{window.parent.postMessage("closeOverview","null"===window.origin?"*":window.origin)};if(e.slides.forEach((t,o)=>{t.tabIndex=0;const i=()=>{e.slide(o,{fragment:-1}),n&&r()};t.addEventListener("click",i),t.addEventListener("keydown",e=>{"Enter"!==e.key&&" "!==e.key||(e.preventDefault(),i())})}),window.addEventListener("keydown",t=>{const n=e.slide(),r=t=>{const r=t=>{const n=e.slides[t].getBoundingClientRect();return[Math.round((n.left+n.right)/2),Math.round((n.top+n.bottom)/2)]};let o=null,i=n;do{const e=r(i);if(o){if(Math.abs(e[0]-o[0])<2)return i}else o=e;i+=t}while(i>=0&&i<e.slides.length);return n};if("ArrowLeft"===t.key)e.slide(Math.max(n-1,0),{fragment:-1});else if("ArrowRight"===t.key)e.slide(Math.min(n+1,e.slides.length-1),{fragment:-1});else if("ArrowUp"===t.key)e.slide(r(-1),{fragment:-1});else if("ArrowDown"===t.key)e.slide(r(1),{fragment:-1});else if("End"===t.key)e.slide(e.slides.length-1,{fragment:-1});else{if("Home"!==t.key)return;e.slide(0,{fragment:-1})}t.preventDefault();const o=e.slide();e.slides[o]?.focus?.(),e.slides[o]?.scrollIntoView?.({behavior:"smooth",block:"nearest"})}),e.on("slide",({index:t})=>{e.slides[t]?.scrollIntoView?.({behavior:"smooth",block:"nearest"})}),window.parent!==window){K(r);const e=document.createElement("header");e.className=`${f}overview-header`;const t=document.createElement("button");t.className=`${f}overview-close`,t.type="button",t.title="Close overview",t.textContent=t.title,t.addEventListener("click",r),e.append(t),document.body.prepend(e)}},F=()=>{const e=p();return{[s]:V(),[l]:V({closeOnSelect:!1}),[d]:j}[e]},U=e=>{window.addEventListener("message",t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");let o=Number.parseInt(t,10),i=Number.parseInt(n,10)+1;i>=e.fragments[o].length&&(o+=1,i=0),e.slide(o,{fragment:i})}})};var R,X,H,W,J,Y,z,G={exports:{}},Q=(R||(R=1,G.exports=(X=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"],H=function(e){return String(e).replace(/[&<>"']/g,function(e){return"&"+W[e]+";"})},W={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},J="dangerouslySetInnerHTML",Y={className:"class",htmlFor:"for"},z={},function(e,t){var n=[],r="";t=t||{};for(var o=arguments.length;o-- >2;)n.push(arguments[o]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(var i in t)!1!==t[i]&&null!=t[i]&&i!==J&&(r+=" "+(Y[i]?Y[i]:H(i))+'="'+H(t[i])+'"');r+=">"}if(-1===X.indexOf(e)){if(t[J])r+=t[J].__html;else for(;n.length;){var a=n.pop();if(a)if(a.pop)for(var s=a.length;s--;)n.push(a[s]);else r+=!0===z[a]?a:H(a)}r+=e?"</"+e+">":""}return z[r]=!0,r})),G.exports),Z=e(Q);const ee=({children:e})=>Z(null,null,...e),te=`${f}presenter-`,ne={container:`${te}container`,dragbar:`${te}dragbar-container`,next:`${te}next`,nextContainer:`${te}next-container`,noteContainer:`${te}note-container`,noteWrapper:`${te}note-wrapper`,noteButtons:`${te}note-buttons`,infoContainer:`${te}info-container`,infoPageArea:`${te}info-page-area`,infoPage:`${te}info-page`,infoPagePrev:`${te}info-page-prev`,infoPageNext:`${te}info-page-next`,noteButtonsBigger:`${te}note-bigger`,noteButtonsSmaller:`${te}note-smaller`,infoTime:`${te}info-time`,infoTimer:`${te}info-timer`},re=e=>{const{title:t}=document;document.title="[Presenter view]"+(t?` - ${t}`:"");const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=ne.container,t.appendChild(e),t.insertAdjacentHTML("beforeend",Z(ee,null,Z("div",{class:ne.nextContainer},Z("iframe",{class:ne.next,src:"?view=next"})),Z("div",{class:ne.dragbar}),Z("div",{class:ne.noteContainer},Z("div",{class:ne.noteWrapper}),Z("div",{class:ne.noteButtons},Z("button",{class:ne.noteButtonsSmaller,tabindex:"-1",title:"Smaller notes font size"},"Smaller notes font size"),Z("button",{class:ne.noteButtonsBigger,tabindex:"-1",title:"Bigger notes font size"},"Bigger notes font size"))),Z("div",{class:ne.infoContainer},Z("div",{class:ne.infoPageArea},Z("button",{class:ne.infoPagePrev,tabindex:"-1",title:"Previous"},"Previous"),Z("button",{class:ne.infoPage}),Z("button",{class:ne.infoPageNext,tabindex:"-1",title:"Next"},"Next")),Z("time",{class:ne.infoTime,title:"Current time"}),Z("time",{class:ne.infoTimer,title:"Timer"})))),t})(e.parent)),(e=>{let t=!1;r(ne.dragbar).addEventListener("mousedown",()=>{t=!0,r(ne.dragbar).classList.add("active")}),window.addEventListener("mouseup",()=>{t=!1,r(ne.dragbar).classList.remove("active")}),window.addEventListener("mousemove",e=>{if(!t)return;const n=e.clientX/document.documentElement.clientWidth*100;r(ne.container).style.setProperty("--bespoke-marp-presenter-split-ratio",`${Math.max(0,Math.min(100,n))}%`)}),r(ne.nextContainer).addEventListener("click",()=>e.next());const n=r(ne.next),o=(i=n,(e,t)=>i.contentWindow?.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin));var i;n.addEventListener("load",()=>{r(ne.nextContainer).classList.add("active"),o(e.slide(),e.fragmentIndex),e.on("fragment",({index:e,fragmentIndex:t})=>o(e,t))});const a=document.querySelectorAll(".bespoke-marp-note");a.forEach(e=>{e.addEventListener("keydown",e=>e.stopPropagation()),r(ne.noteWrapper).appendChild(e)}),e.on("activate",()=>a.forEach(t=>t.classList.toggle("active",t.dataset.index==e.slide())));let s=0;const l=e=>{s=Math.max(-5,s+e),r(ne.noteContainer).style.setProperty("--bespoke-marp-note-font-scale",(1.2**s).toFixed(4))},c=()=>l(1),d=()=>l(-1),u=r(ne.noteButtonsBigger),f=r(ne.noteButtonsSmaller);u.addEventListener("click",()=>{u.blur(),c()}),f.addEventListener("click",()=>{f.blur(),d()}),document.addEventListener("keydown",e=>{"+"===e.key&&c(),"-"===e.key&&d()},!0);const m=r(ne.infoPage);e.on("activate",({index:t})=>{m.textContent=`${t+1} / ${e.slides.length}`}),m.addEventListener("click",()=>{m.blur(),e.toggleOverviewView()});const g=r(ne.infoPagePrev),p=r(ne.infoPageNext);g.addEventListener("click",t=>{g.blur(),e.prev({fragment:!t.shiftKey})}),p.addEventListener("click",t=>{p.blur(),e.next({fragment:!t.shiftKey})}),e.on("fragment",({index:t,fragments:n,fragmentIndex:r})=>{g.disabled=0===t&&0===r,p.disabled=t===e.slides.length-1&&r===n.length-1});let v=new Date;const h=()=>{const e=new Date,t=e=>`${Math.floor(e)}`.padStart(2,"0"),n=e.getTime()-v.getTime(),o=t(n/1e3%60),i=t(n/1e3/60%60),a=t(n/36e5%24);r(ne.infoTime).textContent=e.toLocaleTimeString(),r(ne.infoTimer).textContent=`${a}:${i}:${o}`};h(),setInterval(h,250),r(ne.infoTimer).addEventListener("click",()=>{v=new Date})})(e)},oe=e=>{N(e),Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:ie},presenterUrl:{enumerable:!0,get:ae}}),w&&document.addEventListener("keydown",t=>{"p"!==t.key||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())})};function ie(){const{max:e,floor:t}=Math,n=e(t(.85*window.innerWidth),640),r=e(t(.85*window.innerHeight),360);return window.open(this.presenterUrl,te+this.syncKey,`width=${n},height=${r},menubar=no,toolbar=no`)}function ae(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),g(e)}const se=e=>{const t=p();return t===c&&e.appendChild(document.createElement("span")),{[s]:oe,[l]:re,[c]:U}[t]},le=e=>{e.on("activate",t=>{document.querySelectorAll(".bespoke-progress-parent > .bespoke-progress-bar").forEach(n=>{n.style.flexBasis=100*t.index/(e.slides.length-1)+"%"})})},ce=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t},de=(e={})=>{const t={history:!0,...e};return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},o=(t={fragment:!0})=>{let n=t.fragment?ce(v("f")||""):null;((t,n)=>{const{min:r,max:o}=Math,{fragments:i,slides:a}=e,s=o(0,r(t,a.length-1)),l=o(0,r(n||0,i[s].length-1));s===e.slide()&&l===e.fragmentIndex||e.slide(s,{fragment:l})})((()=>{if(location.hash){const[t]=location.hash.slice(1).split(":~:");if(/^\d+$/.test(t))return(ce(t)??1)-1;const r=document.getElementById(t)||document.querySelector(`a[name="${CSS.escape(t)}"]`);if(r){const{length:t}=e.slides;for(let o=0;o<t;o+=1)if(e.slides[o].contains(r)){const t=e.fragments?.[o],i=r.closest("[data-marpit-fragment]");if(t&&i){const e=t.indexOf(i);e>=0&&(n=e)}return o}}}return 0})(),n)};e.on("fragment",({index:e,fragmentIndex:r})=>{n||h({f:0===r||r.toString()},{location:{...location,hash:`#${e+1}`},setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})}),setTimeout(()=>{o(),window.addEventListener("hashchange",()=>r(()=>{o({fragment:!1}),h({f:void 0})})),window.addEventListener("popstate",()=>{n||r(()=>o())}),n=!1},0)}},{PI:ue,abs:fe,sqrt:me,atan2:ge}=Math,pe={passive:!0},ve=({slope:e=-.7,swipeThreshold:t=30}={})=>n=>{let r;const o=n.parent,i=e=>{const t=o.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};o.addEventListener("touchstart",({touches:e})=>{r=1===e.length?i(e[0]):void 0},pe),o.addEventListener("touchmove",e=>{if(r)if(1===e.touches.length){e.preventDefault();const t=i(e.touches[0]),n=t.x-r.x,o=t.y-r.y;r.delta=me(fe(n)**2+fe(o)**2),r.radian=ge(n,o)}else r=void 0}),o.addEventListener("touchend",o=>{if(r){if(r.delta&&r.delta>=t&&r.radian){const t=(r.radian-e+ue)%(2*ue)-ue;n[t<0?"next":"prev"](),o.stopPropagation()}r=void 0}},pe)},he=new Map;he.clear(),he.set("none",{backward:{both:void 0,incoming:void 0,outgoing:void 0},forward:{both:void 0,incoming:void 0,outgoing:void 0}});const we={both:"",outgoing:"outgoing-",incoming:"incoming-"},ye={forward:"",backward:"-backward"},be=e=>`--marp-bespoke-transition-animation-${e}`,ke=e=>`--marp-transition-${e}`,xe=be("name"),Ee=be("duration"),$e=e=>new Promise(t=>{const n={},r=document.createElement("div"),o=e=>{r.remove(),t(e)};r.addEventListener("animationstart",()=>o(n)),Object.assign(r.style,{animationName:e,animationDuration:"1s",animationFillMode:"both",animationPlayState:"paused",position:"absolute",pointerEvents:"none"}),document.body.appendChild(r);const i=getComputedStyle(r).getPropertyValue(ke("duration"));i&&Number.parseFloat(i)>=0&&(n.defaultDuration=i),((e,t)=>{requestAnimationFrame(()=>{e.style.animationPlayState="running",requestAnimationFrame(()=>t(void 0))})})(r,o)}),Le=async e=>he.has(e)?he.get(e):(e=>{const t={},n=[];for(const[r,o]of Object.entries(we))for(const[i,a]of Object.entries(ye)){const s=`marp-${o}transition${a}-${e}`;n.push($e(s).then(e=>{t[i]=t[i]||{},t[i][r]=e?{...e,name:s}:void 0}))}return Promise.all(n).then(()=>t)})(e).then(t=>(he.set(e,t),t)),Se=e=>Object.values(e).flatMap(Object.values).every(e=>!e),Pe=(e,{type:t,backward:n})=>{const r=e[n?"backward":"forward"],o=(()=>{const e=r[t],n=e=>({[xe]:e.name});if(e)return n(e);if(r.both){const e=n(r.both);return"incoming"===t&&(e[be("direction")]="reverse"),e}})();return!o&&n?Pe(e,{type:t,backward:!1}):o||{[xe]:"__bespoke_marp_transition_no_animation__"}},_e=e=>{if(e)try{const t=JSON.parse(e);if((e=>{if("object"!=typeof e)return!1;const t=e;return"string"==typeof t.name&&(void 0===t.duration||"string"==typeof t.duration)})(t))return t}catch{}},Oe="_tSId",Te="_tA",Ie="bespoke-marp-transition-warming-up",Me=window.matchMedia("(prefers-reduced-motion: reduce)"),Ae="__bespoke_marp_transition_reduced_outgoing__",Ce="__bespoke_marp_transition_reduced_incoming__",De={forward:{both:void 0,incoming:{name:Ce},outgoing:{name:Ae}},backward:{both:void 0,incoming:{name:Ce},outgoing:{name:Ae}}},Ne=e=>{if(!document.startViewTransition)return;const t=t=>(void 0!==t&&(e._tD=t),e._tD);let n;t(!1),((...e)=>{CSS.registerProperty({name:ke("duration"),syntax:"<time>",inherits:!0,initialValue:"-1s"});const t=[...new Set(e).values()];return Promise.all(t.map(e=>Le(e))).then()})(...Array.from(document.querySelectorAll("section[data-transition], section[data-transition-back]")).flatMap(e=>[e.dataset.transition,e.dataset.transitionBack].flatMap(e=>{const t=_e(e);return[t?.name,t?.builtinFallback?`__builtin__${t.name}`:void 0]}).filter(e=>!!e))).then(()=>{document.querySelectorAll("style").forEach(e=>{e.innerHTML=e.innerHTML.replace(/--marp-transition-duration:[^;}]*[;}]/g,e=>e.slice(0,-1)+"!important"+e.slice(-1))})});const r=(n,{back:r,cond:o})=>i=>{const a=t();if(a)return!!i[Te]||!("object"!=typeof a||(a.skipTransition(),!i.forSync));if(e.skipTransition)return!0;if(!o(i))return!0;const s=e.slides[e.slide()],l=()=>i.back??r,c="data-transition"+(l()?"-back":""),d=s.querySelector(`section[${c}]`);if(!d)return!0;const u=_e(d.getAttribute(c)??void 0);return!u||((async(e,{builtinFallback:t=!0}={})=>{let n=await Le(e);if(Se(n)){if(!t)return;return n=await Le(`__builtin__${e}`),Se(n)?void 0:n}return n})(u.name,{builtinFallback:u.builtinFallback}).then(e=>{if(!e){t(!0);try{n(i)}finally{t(!1)}return}let r=e;Me.matches&&(console.warn("Use a constant animation to transition because preferring reduced motion by viewer has detected."),r=De);const o=document.getElementById(Oe);o&&o.remove();const a=document.createElement("style");a.id=Oe,document.head.appendChild(a),((e,t)=>{const n=[`:root{${ke("direction")}:${t.backward?-1:1};}`,":root:has(.bespoke-marp-inactive){cursor:none;}"],r=t=>{const n=e[t].both?.defaultDuration||e[t].outgoing?.defaultDuration||e[t].incoming?.defaultDuration;return"forward"===t?n:n||r("forward")},o=t.duration||r(t.backward?"backward":"forward");void 0!==o&&n.push(`::view-transition-group(*){${Ee}:${o};}`);const i=e=>Object.entries(e).map(([e,t])=>`${e}:${t};`).join("");return n.push(`::view-transition-old(root){${i(Pe(e,{...t,type:"outgoing"}))}}`,`::view-transition-new(root){${i(Pe(e,{...t,type:"incoming"}))}}`),n})(r,{backward:l(),duration:u.duration}).forEach(e=>a.sheet?.insertRule(e));const s=document.documentElement.classList;s.add(Ie);let c=!1;const d=()=>{c||(n(i),c=!0,s.remove(Ie))},f=()=>{t(!1),a.remove(),s.remove(Ie)};try{t(!0);const e=document.startViewTransition(d);t(e),e.finished.finally(f)}catch(e){console.error(e),d(),f()}}),!1)};e.on("prev",r(t=>e.prev({...t,[Te]:!0}),{back:!0,cond:e=>e.index>0&&!((e.fragment??1)&&n.fragmentIndex>0)})),e.on("next",r(t=>e.next({...t,[Te]:!0}),{cond:t=>t.index+1<e.slides.length&&!(n.fragmentIndex+1<n.fragments.length)})),setTimeout(()=>{e.on("slide",r(t=>e.slide(t.index,{...t,[Te]:!0}),{cond:t=>{const n=e.slide();return t.index!==n&&(t.back=t.index<n,!0)}}))},0),e.on("fragment",e=>{n=e})};let Be;const Ke=()=>(void 0===Be&&(Be="wakeLock"in navigator&&navigator.wakeLock),Be),qe=async()=>{const e=Ke();if(e)try{return await e.request("screen")}catch(e){console.warn(e)}return null},Ve=async()=>{if(!Ke())return;let e;const t=()=>{e&&"visible"===document.visibilityState&&qe()};for(const e of["visibilitychange","fullscreenchange"])document.addEventListener(e,t);return e=await qe(),e};((e=document.getElementById(":$p"))=>{(()=>{const e=v("view");i.dataset.bespokeView=u.some(t=>t&&t===e)?e:""})();const t=(e=>{const t=v(e);return h({[e]:void 0}),t})("sync")||void 0;o.from(e,((...e)=>{const t=u.findIndex(e=>p()===e);return e.map(([e,n])=>e[t]&&n).filter(e=>e)})([[1,1,1,0],B({key:t})],[[1,1,0,1],se(e)],[[1,1,0,0],M],[[1,1,1,1],E],[[1,0,0,0],T()],[[1,1,1,1],A],[[1,1,1,1],de({history:!1})],[[1,1,0,0],C()],[[1,1,1,0],_],[[1,0,0,0],le],[[1,1,0,0],ve()],[[1,0,0,0],D()],[[1,1,1,0],F()],[[1,0,0,0],Ne],[[1,1,1,1],$],[[1,1,1,0],Ve]))})()}();</script></body></html>

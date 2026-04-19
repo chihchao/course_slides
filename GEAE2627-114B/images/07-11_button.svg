@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+<rect width="600" height="400" fill="#f8f9fa"/>
+
+<g font-family="Arial, sans-serif" font-size="15">
+  <!-- Primary -->
+  <text x="80" y="75" fill="#6c757d" font-size="12">Primary (實心)</text>
+  <rect x="80" y="85" width="160" height="44" rx="6" fill="#0d6efd"/>
+  <text x="120" y="112" fill="#ffffff" font-weight="700">確認送出</text>
+
+  <!-- Outline -->
+  <text x="260" y="75" fill="#6c757d" font-size="12">Outline (外框)</text>
+  <rect x="260" y="85" width="160" height="44" rx="6" fill="#ffffff" stroke="#0d6efd" stroke-width="2"/>
+  <text x="308" y="112" fill="#0d6efd" font-weight="700">返回上一步</text>
+
+  <!-- Neutral -->
+  <text x="440" y="75" fill="#6c757d" font-size="12">Neutral (中性)</text>
+  <rect x="440" y="85" width="110" height="44" rx="6" fill="#e9ecef"/>
+  <text x="470" y="112" fill="#495057" font-weight="600">取消</text>
+
+  <!-- Hover state -->
+  <text x="80" y="175" fill="#6c757d" font-size="12">Hover (滑鼠懸停)</text>
+  <rect x="80" y="185" width="160" height="44" rx="6" fill="#084298"/>
+  <text x="120" y="212" fill="#ffffff" font-weight="700">確認送出</text>
+
+  <!-- Loading -->
+  <text x="260" y="175" fill="#6c757d" font-size="12">Loading (載入中)</text>
+  <rect x="260" y="185" width="160" height="44" rx="6" fill="#0d6efd" opacity="0.75"/>
+  <circle cx="290" cy="207" r="8" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="25 10"/>
+  <text x="310" y="212" fill="#ffffff" font-weight="600">處理中...</text>
+
+  <!-- Disabled -->
+  <text x="440" y="175" fill="#6c757d" font-size="12">Disabled</text>
+  <rect x="440" y="185" width="110" height="44" rx="6" fill="#ced4da"/>
+  <text x="475" y="212" fill="#ffffff" font-weight="600">禁用</text>
+
+  <!-- Icon + text -->
+  <text x="80" y="275" fill="#6c757d" font-size="12">Icon Button</text>
+  <rect x="80" y="285" width="180" height="44" rx="6" fill="#198754"/>
+  <circle cx="108" cy="307" r="10" fill="#ffffff" opacity="0.25"/>
+  <polyline points="102,307 107,312 116,302" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <text x="130" y="312" fill="#ffffff" font-weight="700">儲存變更</text>
+
+  <!-- Danger -->
+  <text x="280" y="275" fill="#6c757d" font-size="12">Danger</text>
+  <rect x="280" y="285" width="140" height="44" rx="6" fill="#dc3545"/>
+  <text x="318" y="312" fill="#ffffff" font-weight="700">刪除帳號</text>
+</g>
+
+</svg>

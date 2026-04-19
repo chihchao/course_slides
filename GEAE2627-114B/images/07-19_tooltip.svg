@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+<rect width="600" height="400" fill="#f8f9fa"/>
+
+<g font-family="Arial, sans-serif" font-size="14">
+  <!-- Toolbar with icons -->
+  <rect x="80" y="80" width="440" height="60" rx="6" fill="#ffffff" stroke="#e9ecef"/>
+
+  <!-- Bold icon -->
+  <g transform="translate(110,100)">
+    <text x="0" y="15" fill="#495057" font-weight="900" font-size="18">B</text>
+  </g>
+
+  <!-- Italic -->
+  <g transform="translate(150,100)">
+    <text x="0" y="15" fill="#495057" font-style="italic" font-size="18" font-weight="600">I</text>
+  </g>
+
+  <!-- Underline -->
+  <g transform="translate(190,100)">
+    <text x="0" y="15" fill="#495057" font-size="18" text-decoration="underline">U</text>
+  </g>
+
+  <!-- Image icon (with tooltip) -->
+  <rect x="225" y="98" width="30" height="24" rx="3" fill="#e7f1ff" stroke="#0d6efd" stroke-width="1.5"/>
+  <circle cx="233" cy="106" r="2.5" fill="#0d6efd"/>
+  <polyline points="228,118 237,110 248,120" fill="none" stroke="#0d6efd" stroke-width="1.5"/>
+
+  <!-- Tooltip pointing down to icon -->
+  <rect x="180" y="40" width="140" height="36" rx="4" fill="#212529"/>
+  <text x="250" y="63" text-anchor="middle" fill="#ffffff" font-size="13">插入圖片 (Ctrl+I)</text>
+  <polygon points="235,76 245,76 240,84" fill="#212529"/>
+
+  <!-- Link -->
+  <g transform="translate(275,108)">
+    <circle cx="-3" cy="-2" r="4" fill="none" stroke="#495057" stroke-width="2"/>
+    <circle cx="10" cy="5" r="4" fill="none" stroke="#495057" stroke-width="2"/>
+    <line x1="0" y1="1" x2="7" y2="2" stroke="#495057" stroke-width="2"/>
+  </g>
+
+  <!-- Question mark with tooltip -->
+  <circle cx="450" cy="220" r="16" fill="#ffffff" stroke="#6c757d" stroke-width="2"/>
+  <text x="450" y="226" text-anchor="middle" fill="#6c757d" font-size="16" font-weight="700">?</text>
+
+  <rect x="250" y="260" width="200" height="60" rx="4" fill="#212529"/>
+  <text x="350" y="285" text-anchor="middle" fill="#ffffff" font-size="13">此欄位用於顯示會員的</text>
+  <text x="350" y="305" text-anchor="middle" fill="#ffffff" font-size="13">累積消費金額</text>
+  <polygon points="440,260 455,260 447,250" fill="#212529"/>
+
+  <text x="100" y="200" fill="#495057" font-weight="600">會員消費總額</text>
+  <text x="100" y="226" fill="#6c757d" font-size="13">NT$ 58,900</text>
+</g>
+
+</svg>
