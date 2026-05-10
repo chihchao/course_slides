@@ -1,0 +1,104 @@
+<svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="480" height="300" fill="#f8f8f8" rx="8"/>
+  <text x="240" y="22" text-anchor="middle" font-size="12" fill="#888" font-weight="bold">Wireframe 標註範例（Annotated Wireframe）</text>
+
+  <!-- Main wireframe area -->
+  <rect x="20" y="36" width="270" height="240" rx="6" fill="#fff" stroke="#bbb" stroke-width="1.5"/>
+
+  <!-- Nav -->
+  <rect x="20" y="36" width="270" height="28" rx="6" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+  <rect x="20" y="50" width="270" height="14" fill="#e0e0e0"/>
+  <rect x="32" y="44" width="40" height="12" rx="2" fill="#bbb"/>
+  <rect x="100" y="44" width="25" height="12" rx="2" fill="#bbb"/>
+  <rect x="136" y="44" width="25" height="12" rx="2" fill="#bbb"/>
+  <rect x="230" y="42" width="50" height="16" rx="3" fill="#aaa"/>
+
+  <!-- Hero -->
+  <rect x="32" y="76" width="258" height="80" fill="#e8e8e8"/>
+  <line x1="32" y1="76" x2="290" y2="156" stroke="#ccc" stroke-width="1"/>
+  <line x1="290" y1="76" x2="32" y2="156" stroke="#ccc" stroke-width="1"/>
+  <text x="161" y="120" text-anchor="middle" font-size="10" fill="#bbb">Hero Banner</text>
+
+  <!-- Content -->
+  <rect x="32" y="166" width="80" height="8" rx="2" fill="#ccc"/>
+  <rect x="32" y="180" width="65" height="7" rx="2" fill="#ddd"/>
+  <rect x="32" y="192" width="70" height="7" rx="2" fill="#ddd"/>
+
+  <rect x="132" y="166" width="80" height="8" rx="2" fill="#ccc"/>
+  <rect x="132" y="180" width="65" height="7" rx="2" fill="#ddd"/>
+  <rect x="132" y="192" width="70" height="7" rx="2" fill="#ddd"/>
+
+  <rect x="230" y="166" width="60" height="8" rx="2" fill="#ccc"/>
+  <rect x="230" y="180" width="55" height="7" rx="2" fill="#ddd"/>
+
+  <!-- Footer -->
+  <rect x="20" y="250" width="270" height="26" fill="#ddd"/>
+  <rect x="100" y="258" width="90" height="8" rx="2" fill="#bbb"/>
+
+  <!-- Annotation numbers on wireframe -->
+  <defs>
+    <marker id="ann-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 Z" fill="#cc4444"/>
+    </marker>
+  </defs>
+  <!-- 1: Nav -->
+  <circle cx="156" cy="50" r="8" fill="#cc4444"/>
+  <text x="156" y="54" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">1</text>
+  <!-- 2: Hero -->
+  <circle cx="290" cy="94" r="8" fill="#cc4444"/>
+  <text x="290" y="98" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">2</text>
+  <!-- 3: Content grid -->
+  <circle cx="161" cy="178" r="8" fill="#cc4444"/>
+  <text x="161" y="182" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">3</text>
+  <!-- 4: CTA button -->
+  <circle cx="255" cy="46" r="8" fill="#cc4444"/>
+  <text x="255" y="50" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">4</text>
+  <!-- 5: Footer -->
+  <circle cx="145" cy="263" r="8" fill="#cc4444"/>
+  <text x="145" y="267" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">5</text>
+
+  <!-- Annotation panel -->
+  <rect x="302" y="36" width="166" height="240" rx="6" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <rect x="302" y="36" width="166" height="22" rx="6" fill="#cc4444"/>
+  <rect x="302" y="47" width="166" height="11" fill="#cc4444"/>
+  <text x="385" y="51" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">設計標註</text>
+
+  <!-- Annotation items -->
+  <circle cx="320" cy="72" r="7" fill="#cc4444"/>
+  <text x="320" y="76" text-anchor="middle" font-size="9" fill="#fff">1</text>
+  <text x="334" y="70" font-size="9" font-weight="bold" fill="#333">導覽列</text>
+  <text x="334" y="82" font-size="8" fill="#777">固定置頂，含品牌 Logo</text>
+  <text x="334" y="92" font-size="8" fill="#777">與主要選單連結</text>
+
+  <line x1="310" y1="100" x2="456" y2="100" stroke="#eee" stroke-width="1"/>
+
+  <circle cx="320" cy="116" r="7" fill="#cc4444"/>
+  <text x="320" y="120" text-anchor="middle" font-size="9" fill="#fff">2</text>
+  <text x="334" y="114" font-size="9" font-weight="bold" fill="#333">Hero Banner</text>
+  <text x="334" y="126" font-size="8" fill="#777">全寬圖片，建議尺寸</text>
+  <text x="334" y="136" font-size="8" fill="#777">1440 × 600px</text>
+
+  <line x1="310" y1="144" x2="456" y2="144" stroke="#eee" stroke-width="1"/>
+
+  <circle cx="320" cy="160" r="7" fill="#cc4444"/>
+  <text x="320" y="164" text-anchor="middle" font-size="9" fill="#fff">3</text>
+  <text x="334" y="158" font-size="9" font-weight="bold" fill="#333">內容網格</text>
+  <text x="334" y="170" font-size="8" fill="#777">三欄 Grid Layout</text>
+  <text x="334" y="180" font-size="8" fill="#777">欄距 24px</text>
+
+  <line x1="310" y1="188" x2="456" y2="188" stroke="#eee" stroke-width="1"/>
+
+  <circle cx="320" cy="204" r="7" fill="#cc4444"/>
+  <text x="320" y="208" text-anchor="middle" font-size="9" fill="#fff">4</text>
+  <text x="334" y="202" font-size="9" font-weight="bold" fill="#333">CTA 按鈕</text>
+  <text x="334" y="214" font-size="8" fill="#777">Primary Action，</text>
+  <text x="334" y="224" font-size="8" fill="#777">點擊導向購買流程</text>
+
+  <line x1="310" y1="232" x2="456" y2="232" stroke="#eee" stroke-width="1"/>
+
+  <circle cx="320" cy="248" r="7" fill="#cc4444"/>
+  <text x="320" y="252" text-anchor="middle" font-size="9" fill="#fff">5</text>
+  <text x="334" y="246" font-size="9" font-weight="bold" fill="#333">頁尾 Footer</text>
+  <text x="334" y="258" font-size="8" fill="#777">版權資訊與次要連結</text>
+  <text x="334" y="268" font-size="8" fill="#777">社群媒體圖示</text>
+</svg>

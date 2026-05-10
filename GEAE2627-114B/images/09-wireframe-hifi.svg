@@ -1,0 +1,65 @@
+<svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', Arial, sans-serif">
+  <!-- Background -->
+  <rect width="480" height="320" fill="#f8f8f8" rx="8"/>
+  <text x="240" y="22" text-anchor="middle" font-size="12" fill="#888" font-weight="bold">High-Fidelity Wireframe</text>
+
+  <!-- Browser chrome -->
+  <rect x="20" y="32" width="440" height="272" rx="6" fill="#fff" stroke="#ccc" stroke-width="1.5"/>
+  <rect x="20" y="32" width="440" height="28" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1.5"/>
+  <circle cx="38" cy="46" r="5" fill="#f66"/>
+  <circle cx="54" cy="46" r="5" fill="#fa3"/>
+  <circle cx="70" cy="46" r="5" fill="#4c4"/>
+  <rect x="90" y="38" width="280" height="16" rx="8" fill="#fff" stroke="#d0d0d0" stroke-width="1"/>
+  <text x="230" y="50" text-anchor="middle" font-size="9" fill="#999">www.example.com</text>
+
+  <!-- Nav bar styled -->
+  <rect x="20" y="60" width="440" height="34" fill="#1a1a2e"/>
+  <text x="46" y="82" font-size="13" font-weight="bold" fill="#6688cc" letter-spacing="1">EcoShop</text>
+  <text x="120" y="81" font-size="10" fill="#ccc">首頁</text>
+  <text x="160" y="81" font-size="10" fill="#ccc">商品</text>
+  <text x="200" y="81" font-size="10" fill="#ccc">品牌故事</text>
+  <text x="252" y="81" font-size="10" fill="#ccc">聯絡</text>
+  <rect x="376" y="67" width="68" height="20" rx="10" fill="#6688cc"/>
+  <text x="410" y="81" text-anchor="middle" font-size="10" fill="#fff">立即購買</text>
+
+  <!-- Hero section with gradient -->
+  <defs>
+    <linearGradient id="heroGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#2d4a7a"/>
+    </linearGradient>
+  </defs>
+  <rect x="20" y="94" width="440" height="110" fill="url(#heroGrad)"/>
+  <!-- Hero image placeholder with style -->
+  <rect x="264" y="100" width="180" height="98" rx="4" fill="#2a3a5a" stroke="#4466aa" stroke-width="1"/>
+  <ellipse cx="354" cy="140" rx="30" ry="30" fill="#3a4a6a"/>
+  <text x="354" y="144" text-anchor="middle" font-size="10" fill="#6688cc">📷</text>
+  <text x="354" y="158" text-anchor="middle" font-size="8" fill="#5566aa">產品主圖</text>
+  <!-- Hero text -->
+  <text x="40" y="118" font-size="15" font-weight="bold" fill="#fff">永續生活，從選擇開始</text>
+  <text x="40" y="136" font-size="9" fill="#aabbdd">為地球選擇更好的生活方式</text>
+  <text x="40" y="150" font-size="9" fill="#aabbdd">每一件商品都有其背後的故事</text>
+  <rect x="40" y="162" width="70" height="22" rx="11" fill="#6688cc"/>
+  <text x="75" y="177" text-anchor="middle" font-size="10" fill="#fff">探索商品</text>
+  <rect x="122" y="162" width="70" height="22" rx="11" fill="transparent" stroke="#6688cc" stroke-width="1.5"/>
+  <text x="157" y="177" text-anchor="middle" font-size="10" fill="#6688cc">品牌故事</text>
+
+  <!-- Feature cards -->
+  <rect x="36" y="214" width="120" height="72" rx="6" fill="#fff" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="48" y="222" width="32" height="32" rx="4" fill="#e8f0ff"/>
+  <text x="64" y="242" text-anchor="middle" font-size="14">🌱</text>
+  <text x="56" y="268" font-size="9" font-weight="bold" fill="#333">環保材質</text>
+  <text x="56" y="278" font-size="8" fill="#999">100% 可回收</text>
+
+  <rect x="180" y="214" width="120" height="72" rx="6" fill="#fff" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="192" y="222" width="32" height="32" rx="4" fill="#e8f8ee"/>
+  <text x="208" y="242" text-anchor="middle" font-size="14">♻️</text>
+  <text x="200" y="268" font-size="9" font-weight="bold" fill="#333">碳中和</text>
+  <text x="200" y="278" font-size="8" fill="#999">零排放物流</text>
+
+  <rect x="324" y="214" width="120" height="72" rx="6" fill="#fff" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="336" y="222" width="32" height="32" rx="4" fill="#fff8e8"/>
+  <text x="352" y="242" text-anchor="middle" font-size="14">🤝</text>
+  <text x="344" y="268" font-size="9" font-weight="bold" fill="#333">公平交易</text>
+  <text x="344" y="278" font-size="8" fill="#999">直接產地採購</text>
+</svg>

@@ -1,0 +1,78 @@
+<svg viewBox="0 0 480 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="480" height="240" fill="#f8f8f8" rx="8"/>
+  <text x="240" y="24" text-anchor="middle" font-size="13" fill="#555" font-weight="bold">UX 設計流程中的 Wireframe</text>
+
+  <!-- Step boxes -->
+  <!-- 1. Research -->
+  <rect x="16" y="50" width="72" height="60" rx="6" fill="#e8f0ff" stroke="#6688cc" stroke-width="1.5"/>
+  <text x="52" y="74" text-anchor="middle" font-size="18">🔍</text>
+  <text x="52" y="92" text-anchor="middle" font-size="9" font-weight="bold" fill="#334">使用者</text>
+  <text x="52" y="104" text-anchor="middle" font-size="9" font-weight="bold" fill="#334">研究</text>
+
+  <!-- Arrow -->
+  <line x1="92" y1="80" x2="110" y2="80" stroke="#aab" stroke-width="2" marker-end="url(#arr)"/>
+  <defs>
+    <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 Z" fill="#aab"/>
+    </marker>
+  </defs>
+
+  <!-- 2. IA -->
+  <rect x="114" y="50" width="72" height="60" rx="6" fill="#e8f0ff" stroke="#6688cc" stroke-width="1.5"/>
+  <text x="150" y="74" text-anchor="middle" font-size="18">🗂️</text>
+  <text x="150" y="92" text-anchor="middle" font-size="9" font-weight="bold" fill="#334">資訊</text>
+  <text x="150" y="104" text-anchor="middle" font-size="9" font-weight="bold" fill="#334">架構</text>
+
+  <!-- Arrow -->
+  <line x1="190" y1="80" x2="208" y2="80" stroke="#aab" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- 3. Wireframe (highlighted) -->
+  <rect x="212" y="40" width="80" height="80" rx="8" fill="#1a3a6a" stroke="#6688cc" stroke-width="2.5"/>
+  <text x="252" y="68" text-anchor="middle" font-size="20">✏️</text>
+  <text x="252" y="90" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Wireframe</text>
+  <text x="252" y="104" text-anchor="middle" font-size="9" fill="#aac">線框稿</text>
+  <!-- Highlight ring -->
+  <rect x="208" y="36" width="88" height="88" rx="10" fill="none" stroke="#6688cc" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
+
+  <!-- Arrow -->
+  <line x1="296" y1="80" x2="314" y2="80" stroke="#aab" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- 4. Prototype -->
+  <rect x="318" y="50" width="72" height="60" rx="6" fill="#e8f0ff" stroke="#6688cc" stroke-width="1.5"/>
+  <text x="354" y="74" text-anchor="middle" font-size="18">📱</text>
+  <text x="354" y="92" text-anchor="middle" font-size="9" font-weight="bold" fill="#334">互動</text>
+  <text x="354" y="104" text-anchor="middle" font-size="9" font-weight="bold" fill="#334">原型</text>
+
+  <!-- Arrow -->
+  <line x1="394" y1="80" x2="412" y2="80" stroke="#aab" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- 5. Testing -->
+  <rect x="416" y="50" width="48" height="60" rx="6" fill="#e8f0ff" stroke="#6688cc" stroke-width="1.5"/>
+  <text x="440" y="74" text-anchor="middle" font-size="18">✅</text>
+  <text x="440" y="92" text-anchor="middle" font-size="9" font-weight="bold" fill="#334">測試</text>
+  <text x="440" y="104" text-anchor="middle" font-size="9" font-weight="bold" fill="#334">驗證</text>
+
+  <!-- Benefits of wireframe -->
+  <rect x="16" y="148" width="448" height="72" rx="6" fill="#fff" stroke="#dde" stroke-width="1"/>
+  <text x="240" y="167" text-anchor="middle" font-size="10" font-weight="bold" fill="#334">Wireframe 在流程中的價值</text>
+
+  <circle cx="52" cy="190" r="14" fill="#e8f0ff" stroke="#6688cc" stroke-width="1"/>
+  <text x="52" y="194" text-anchor="middle" font-size="10">💡</text>
+  <text x="52" y="210" text-anchor="middle" font-size="8" fill="#555">快速驗證</text>
+
+  <circle cx="148" cy="190" r="14" fill="#e8f0ff" stroke="#6688cc" stroke-width="1"/>
+  <text x="148" y="194" text-anchor="middle" font-size="10">🔄</text>
+  <text x="148" y="210" text-anchor="middle" font-size="8" fill="#555">迭代容易</text>
+
+  <circle cx="244" cy="190" r="14" fill="#e8f0ff" stroke="#6688cc" stroke-width="1"/>
+  <text x="244" y="194" text-anchor="middle" font-size="10">👥</text>
+  <text x="244" y="210" text-anchor="middle" font-size="8" fill="#555">溝通工具</text>
+
+  <circle cx="340" cy="190" r="14" fill="#e8f0ff" stroke="#6688cc" stroke-width="1"/>
+  <text x="340" y="194" text-anchor="middle" font-size="10">💰</text>
+  <text x="340" y="210" text-anchor="middle" font-size="8" fill="#555">節省成本</text>
+
+  <circle cx="436" cy="190" r="14" fill="#e8f0ff" stroke="#6688cc" stroke-width="1"/>
+  <text x="436" y="194" text-anchor="middle" font-size="10">🎯</text>
+  <text x="436" y="210" text-anchor="middle" font-size="8" fill="#555">聚焦功能</text>
+</svg>

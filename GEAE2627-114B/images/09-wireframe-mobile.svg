@@ -1,0 +1,133 @@
+<svg viewBox="0 0 500 320" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="500" height="320" fill="#f8f8f8" rx="8"/>
+  <text x="250" y="22" text-anchor="middle" font-size="12" fill="#888" font-weight="bold">Mobile Wireframe 範例（電商商品頁）</text>
+
+  <!-- Phone 1: Product List -->
+  <g transform="translate(30,36)">
+    <rect x="0" y="0" width="120" height="270" rx="12" fill="#fff" stroke="#999" stroke-width="2"/>
+    <!-- Status bar -->
+    <rect x="0" y="0" width="120" height="20" rx="12" fill="#e0e0e0"/>
+    <rect x="0" y="10" width="120" height="10" fill="#e0e0e0"/>
+    <!-- Top bar -->
+    <rect x="0" y="20" width="120" height="28" fill="#999999"/>
+    <text x="60" y="38" text-anchor="middle" font-size="10" fill="#fff">商品列表</text>
+    <!-- Search bar -->
+    <rect x="8" y="52" width="104" height="18" rx="9" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
+    <text x="22" y="64" font-size="8" fill="#bbb">🔍 搜尋商品...</text>
+    <!-- Cards -->
+    <rect x="8" y="76" width="48" height="72" rx="4" fill="#f0f0f0"/>
+    <line x1="8" y1="76" x2="56" y2="120" stroke="#ccc" stroke-width="1"/>
+    <line x1="56" y1="76" x2="8" y2="120" stroke="#ccc" stroke-width="1"/>
+    <rect x="8" y="122" width="48" height="7" rx="1" fill="#ddd"/>
+    <rect x="8" y="132" width="32" height="6" rx="1" fill="#aaaaaa" opacity="0.5"/>
+    <rect x="8" y="142" width="28" height="6" rx="1" fill="#ccc"/>
+
+    <rect x="64" y="76" width="48" height="72" rx="4" fill="#f0f0f0"/>
+    <line x1="64" y1="76" x2="112" y2="120" stroke="#ccc" stroke-width="1"/>
+    <line x1="112" y1="76" x2="64" y2="120" stroke="#ccc" stroke-width="1"/>
+    <rect x="64" y="122" width="48" height="7" rx="1" fill="#ddd"/>
+    <rect x="64" y="132" width="32" height="6" rx="1" fill="#aaaaaa" opacity="0.5"/>
+    <rect x="64" y="142" width="28" height="6" rx="1" fill="#ccc"/>
+
+    <rect x="8" y="156" width="48" height="72" rx="4" fill="#f0f0f0"/>
+    <line x1="8" y1="156" x2="56" y2="200" stroke="#ccc" stroke-width="1"/>
+    <line x1="56" y1="156" x2="8" y2="200" stroke="#ccc" stroke-width="1"/>
+    <rect x="8" y="202" width="48" height="7" rx="1" fill="#ddd"/>
+    <rect x="8" y="212" width="32" height="6" rx="1" fill="#aaaaaa" opacity="0.5"/>
+
+    <rect x="64" y="156" width="48" height="72" rx="4" fill="#f0f0f0"/>
+    <line x1="64" y1="156" x2="112" y2="200" stroke="#ccc" stroke-width="1"/>
+    <line x1="112" y1="156" x2="64" y2="200" stroke="#ccc" stroke-width="1"/>
+    <rect x="64" y="202" width="48" height="7" rx="1" fill="#ddd"/>
+    <rect x="64" y="212" width="32" height="6" rx="1" fill="#aaaaaa" opacity="0.5"/>
+
+    <!-- Bottom nav -->
+    <rect x="0" y="236" width="120" height="34" fill="#fff" stroke="#eee" stroke-width="1"/>
+    <text x="16" y="257" text-anchor="middle" font-size="14">🏠</text>
+    <text x="44" y="257" text-anchor="middle" font-size="14">🔍</text>
+    <text x="76" y="257" text-anchor="middle" font-size="14">🛒</text>
+    <text x="104" y="257" text-anchor="middle" font-size="14">👤</text>
+    <text x="60" y="288" text-anchor="middle" font-size="9" fill="#666">商品列表頁</text>
+  </g>
+
+  <!-- Arrow -->
+  <text x="185" y="170" text-anchor="middle" font-size="22" fill="#bbb">›</text>
+
+  <!-- Phone 2: Product Detail -->
+  <g transform="translate(200,36)">
+    <rect x="0" y="0" width="120" height="270" rx="12" fill="#fff" stroke="#999" stroke-width="2"/>
+    <rect x="0" y="0" width="120" height="20" rx="12" fill="#e0e0e0"/>
+    <rect x="0" y="10" width="120" height="10" fill="#e0e0e0"/>
+    <!-- Top bar -->
+    <rect x="0" y="20" width="120" height="28" fill="#999999"/>
+    <text x="10" y="38" font-size="14" fill="#fff">‹</text>
+    <text x="60" y="38" text-anchor="middle" font-size="10" fill="#fff">商品詳情</text>
+    <!-- Product image -->
+    <rect x="0" y="48" width="120" height="90" fill="#e8e8e8"/>
+    <line x1="0" y1="48" x2="120" y2="138" stroke="#ccc" stroke-width="1"/>
+    <line x1="120" y1="48" x2="0" y2="138" stroke="#ccc" stroke-width="1"/>
+    <text x="60" y="96" text-anchor="middle" font-size="9" fill="#bbb">商品圖片</text>
+    <!-- Dots indicator -->
+    <circle cx="50" cy="146" r="3" fill="#aaaaaa"/>
+    <circle cx="60" cy="146" r="3" fill="#ddd"/>
+    <circle cx="70" cy="146" r="3" fill="#ddd"/>
+    <!-- Product info -->
+    <rect x="8" y="154" width="80" height="9" rx="2" fill="#333" opacity="0.7"/>
+    <rect x="8" y="168" width="50" height="8" rx="2" fill="#aaaaaa" opacity="0.7"/>
+    <rect x="8" y="180" width="104" height="6" rx="1" fill="#ddd"/>
+    <rect x="8" y="190" width="90" height="6" rx="1" fill="#ddd"/>
+    <rect x="8" y="200" width="96" height="6" rx="1" fill="#ddd"/>
+    <!-- Options -->
+    <text x="8" y="220" font-size="8" fill="#888">選擇尺寸</text>
+    <rect x="8" y="224" width="22" height="16" rx="3" fill="#999999"/>
+    <text x="19" y="235" text-anchor="middle" font-size="8" fill="#fff">S</text>
+    <rect x="34" y="224" width="22" height="16" rx="3" fill="#eee" stroke="#bbb" stroke-width="1"/>
+    <text x="45" y="235" text-anchor="middle" font-size="8" fill="#555">M</text>
+    <rect x="60" y="224" width="22" height="16" rx="3" fill="#eee" stroke="#bbb" stroke-width="1"/>
+    <text x="71" y="235" text-anchor="middle" font-size="8" fill="#555">L</text>
+    <!-- Add to cart -->
+    <rect x="8" y="244" width="104" height="20" rx="4" fill="#999999"/>
+    <text x="60" y="258" text-anchor="middle" font-size="9" fill="#fff">加入購物車</text>
+    <text x="60" y="288" text-anchor="middle" font-size="9" fill="#666">商品詳細頁</text>
+  </g>
+
+  <!-- Arrow -->
+  <text x="355" y="170" text-anchor="middle" font-size="22" fill="#bbb">›</text>
+
+  <!-- Phone 3: Checkout -->
+  <g transform="translate(370,36)">
+    <rect x="0" y="0" width="120" height="270" rx="12" fill="#fff" stroke="#999" stroke-width="2"/>
+    <rect x="0" y="0" width="120" height="20" rx="12" fill="#e0e0e0"/>
+    <rect x="0" y="10" width="120" height="10" fill="#e0e0e0"/>
+    <rect x="0" y="20" width="120" height="28" fill="#999999"/>
+    <text x="10" y="38" font-size="14" fill="#fff">‹</text>
+    <text x="60" y="38" text-anchor="middle" font-size="10" fill="#fff">結帳</text>
+    <!-- Steps indicator -->
+    <circle cx="20" cy="60" r="6" fill="#aaaaaa"/>
+    <text x="20" y="64" text-anchor="middle" font-size="8" fill="#fff">1</text>
+    <line x1="26" y1="60" x2="38" y2="60" stroke="#ddd" stroke-width="1"/>
+    <circle cx="44" cy="60" r="6" fill="#ddd"/>
+    <text x="44" y="64" text-anchor="middle" font-size="8" fill="#999">2</text>
+    <line x1="50" y1="60" x2="62" y2="60" stroke="#ddd" stroke-width="1"/>
+    <circle cx="68" cy="60" r="6" fill="#ddd"/>
+    <text x="68" y="64" text-anchor="middle" font-size="8" fill="#999">3</text>
+    <!-- Form fields -->
+    <text x="8" y="84" font-size="8" fill="#888">收件人姓名</text>
+    <rect x="8" y="88" width="104" height="18" rx="3" fill="#f8f8f8" stroke="#ddd" stroke-width="1"/>
+    <text x="8" y="118" font-size="8" fill="#888">電話號碼</text>
+    <rect x="8" y="122" width="104" height="18" rx="3" fill="#f8f8f8" stroke="#ddd" stroke-width="1"/>
+    <text x="8" y="152" font-size="8" fill="#888">配送地址</text>
+    <rect x="8" y="156" width="104" height="18" rx="3" fill="#f8f8f8" stroke="#ddd" stroke-width="1"/>
+    <!-- Order summary -->
+    <rect x="8" y="182" width="104" height="50" rx="4" fill="#f0f0f0"/>
+    <text x="60" y="196" text-anchor="middle" font-size="8" font-weight="bold" fill="#333">訂單摘要</text>
+    <rect x="14" y="200" width="50" height="6" rx="1" fill="#ddd"/>
+    <rect x="14" y="210" width="40" height="6" rx="1" fill="#ddd"/>
+    <rect x="80" y="200" width="26" height="6" rx="1" fill="#aaaaaa" opacity="0.5"/>
+    <rect x="80" y="210" width="26" height="6" rx="1" fill="#aaaaaa" opacity="0.5"/>
+    <!-- Continue -->
+    <rect x="8" y="244" width="104" height="20" rx="4" fill="#aaaaaa"/>
+    <text x="60" y="258" text-anchor="middle" font-size="9" fill="#fff">繼續下一步</text>
+    <text x="60" y="288" text-anchor="middle" font-size="9" fill="#666">結帳流程頁</text>
+  </g>
+</svg>

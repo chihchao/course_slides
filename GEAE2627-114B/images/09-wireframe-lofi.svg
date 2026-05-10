@@ -1,0 +1,50 @@
+<svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <!-- Background -->
+  <rect width="480" height="320" fill="#f8f8f8" rx="8"/>
+
+  <!-- Label -->
+  <text x="240" y="22" text-anchor="middle" font-size="12" fill="#888" font-weight="bold">Low-Fidelity Wireframe</text>
+
+  <!-- Browser chrome -->
+  <rect x="20" y="32" width="440" height="272" rx="6" fill="#fff" stroke="#ccc" stroke-width="1.5"/>
+  <!-- Browser bar -->
+  <rect x="20" y="32" width="440" height="28" rx="6" fill="#e8e8e8" stroke="#ccc" stroke-width="1.5"/>
+  <circle cx="38" cy="46" r="5" fill="#f66"/>
+  <circle cx="54" cy="46" r="5" fill="#fa3"/>
+  <circle cx="70" cy="46" r="5" fill="#4c4"/>
+  <rect x="90" y="38" width="280" height="16" rx="8" fill="#fff" stroke="#bbb" stroke-width="1"/>
+
+  <!-- Nav bar -->
+  <rect x="20" y="60" width="440" height="30" fill="#ddd"/>
+  <rect x="36" y="70" width="40" height="10" rx="2" fill="#bbb"/>
+  <rect x="100" y="70" width="30" height="10" rx="2" fill="#bbb"/>
+  <rect x="148" y="70" width="30" height="10" rx="2" fill="#bbb"/>
+  <rect x="196" y="70" width="30" height="10" rx="2" fill="#bbb"/>
+  <rect x="380" y="66" width="60" height="18" rx="3" fill="#aaa"/>
+
+  <!-- Hero image placeholder -->
+  <rect x="36" y="104" width="408" height="100" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+  <line x1="36" y1="104" x2="444" y2="204" stroke="#bbb" stroke-width="1.5"/>
+  <line x1="444" y1="104" x2="36" y2="204" stroke="#bbb" stroke-width="1.5"/>
+  <text x="240" y="158" text-anchor="middle" font-size="12" fill="#aaa">Hero Image</text>
+
+  <!-- Content blocks -->
+  <rect x="36" y="216" width="120" height="10" rx="2" fill="#ccc"/>
+  <rect x="36" y="232" width="90" height="8" rx="2" fill="#ddd"/>
+  <rect x="36" y="246" width="100" height="8" rx="2" fill="#ddd"/>
+  <rect x="36" y="260" width="80" height="8" rx="2" fill="#ddd"/>
+
+  <rect x="180" y="216" width="120" height="10" rx="2" fill="#ccc"/>
+  <rect x="180" y="232" width="90" height="8" rx="2" fill="#ddd"/>
+  <rect x="180" y="246" width="100" height="8" rx="2" fill="#ddd"/>
+  <rect x="180" y="260" width="80" height="8" rx="2" fill="#ddd"/>
+
+  <rect x="324" y="216" width="120" height="10" rx="2" fill="#ccc"/>
+  <rect x="324" y="232" width="90" height="8" rx="2" fill="#ddd"/>
+  <rect x="324" y="246" width="100" height="8" rx="2" fill="#ddd"/>
+  <rect x="324" y="260" width="80" height="8" rx="2" fill="#ddd"/>
+
+  <!-- Footer -->
+  <rect x="20" y="282" width="440" height="22" fill="#ddd"/>
+  <rect x="180" y="287" width="120" height="8" rx="2" fill="#bbb"/>
+</svg>

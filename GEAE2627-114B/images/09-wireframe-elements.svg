@@ -1,0 +1,67 @@
+<svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="480" height="320" fill="#f8f8f8" rx="8"/>
+  <text x="240" y="22" text-anchor="middle" font-size="13" fill="#555" font-weight="bold">Wireframe 常用元素符號</text>
+
+  <!-- Row 1: Image placeholder, Text placeholder, Button -->
+  <!-- Image placeholder -->
+  <rect x="28" y="40" width="90" height="70" rx="4" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+  <line x1="28" y1="40" x2="118" y2="110" stroke="#bbb" stroke-width="1.5"/>
+  <line x1="118" y1="40" x2="28" y2="110" stroke="#bbb" stroke-width="1.5"/>
+  <text x="73" y="128" text-anchor="middle" font-size="10" fill="#666">圖片佔位符</text>
+  <text x="73" y="141" text-anchor="middle" font-size="9" fill="#999">Image Placeholder</text>
+
+  <!-- Icon placeholder -->
+  <circle cx="210" cy="72" r="32" fill="none" stroke="#bbb" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="210" y="68" text-anchor="middle" font-size="18" fill="#bbb">✦</text>
+  <text x="210" y="128" text-anchor="middle" font-size="10" fill="#666">圖示佔位符</text>
+  <text x="210" y="141" text-anchor="middle" font-size="9" fill="#999">Icon Placeholder</text>
+
+  <!-- Button -->
+  <rect x="304" y="52" width="110" height="34" rx="4" fill="#555"/>
+  <text x="359" y="74" text-anchor="middle" font-size="12" fill="#fff">按鈕文字</text>
+  <text x="359" y="128" text-anchor="middle" font-size="10" fill="#666">主要按鈕</text>
+  <text x="359" y="141" text-anchor="middle" font-size="9" fill="#999">Primary Button</text>
+
+  <!-- Row 2: Text lines, Input field, Checkbox group -->
+  <!-- Text lines (content placeholder) -->
+  <rect x="28" y="162" width="90" height="10" rx="2" fill="#ccc"/>
+  <rect x="28" y="178" width="75" height="8" rx="2" fill="#ddd"/>
+  <rect x="28" y="192" width="85" height="8" rx="2" fill="#ddd"/>
+  <rect x="28" y="206" width="65" height="8" rx="2" fill="#ddd"/>
+  <text x="73" y="230" text-anchor="middle" font-size="10" fill="#666">文字內容</text>
+  <text x="73" y="243" text-anchor="middle" font-size="9" fill="#999">Text Content</text>
+
+  <!-- Input field -->
+  <rect x="155" y="162" width="120" height="34" rx="4" fill="#fff" stroke="#bbb" stroke-width="1.5"/>
+  <text x="168" y="184" font-size="10" fill="#bbb">請輸入文字...</text>
+  <text x="215" y="230" text-anchor="middle" font-size="10" fill="#666">輸入欄位</text>
+  <text x="215" y="243" text-anchor="middle" font-size="9" fill="#999">Input Field</text>
+
+  <!-- Navigation/Breadcrumb -->
+  <text x="312" y="180" font-size="10" fill="#6688cc">首頁</text>
+  <text x="344" y="180" font-size="10" fill="#bbb">›</text>
+  <text x="352" y="180" font-size="10" fill="#6688cc">商品</text>
+  <text x="382" y="180" font-size="10" fill="#bbb">›</text>
+  <text x="390" y="180" font-size="10" fill="#aaa">詳細頁</text>
+  <text x="375" y="230" text-anchor="middle" font-size="10" fill="#666">麵包屑導覽</text>
+  <text x="375" y="243" text-anchor="middle" font-size="9" fill="#999">Breadcrumb</text>
+
+  <!-- Row 3 labels / dividers -->
+  <line x1="28" y1="257" x2="452" y2="257" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Annotation arrow -->
+  <line x1="60" y1="278" x2="100" y2="278" stroke="#ff9966" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 Z" fill="#ff9966"/>
+    </marker>
+  </defs>
+  <rect x="28" y="268" width="26" height="20" rx="2" fill="#fff3e0" stroke="#ff9966" stroke-width="1"/>
+  <text x="41" y="282" text-anchor="middle" font-size="8" fill="#cc6633">①</text>
+  <text x="115" y="282" font-size="9" fill="#666">標註說明（Annotation）</text>
+
+  <!-- Red-line markup -->
+  <rect x="260" y="264" width="60" height="26" rx="2" fill="none" stroke="#ff4444" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="290" y="281" text-anchor="middle" font-size="9" fill="#ff4444">規格標注</text>
+  <text x="355" y="282" font-size="9" fill="#666">Redline Annotation</text>
+</svg>
