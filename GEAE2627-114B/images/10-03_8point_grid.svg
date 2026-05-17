@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 320" font-family="sans-serif">
+  <rect width="520" height="320" fill="#f8f9fa" rx="12"/>
+  <text x="260" y="30" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">8 倍數像素系統（8-Point Grid System）</text>
+
+  <!-- Grid visualization on left -->
+  <!-- Grid background -->
+  <rect x="20" y="45" width="232" height="232" rx="6" fill="#fff" stroke="#e5e7eb" stroke-width="1"/>
+  <!-- Grid lines (8px apart, scaled for display) -->
+  <defs>
+    <pattern id="grid8" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#e5e7eb" stroke-width="0.5"/>
+    </pattern>
+    <pattern id="grid32" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M 64 0 L 0 0 0 64" fill="none" stroke="#cbd5e1" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect x="20" y="45" width="232" height="232" fill="url(#grid8)" rx="6"/>
+  <rect x="20" y="45" width="232" height="232" fill="url(#grid32)" rx="6" opacity="0.7"/>
+
+  <!-- Sample UI element on grid -->
+  <!-- Card -->
+  <rect x="44" y="69" width="160" height="120" rx="8" fill="#1a73e8" opacity="0.1" stroke="#1a73e8" stroke-width="1.5"/>
+  <!-- Padding indicators -->
+  <rect x="44" y="69" width="160" height="16" rx="4" fill="#1a73e8" opacity="0.3"/>
+  <text x="124" y="81" text-anchor="middle" font-size="9" fill="#1a73e8" font-weight="bold">16px padding</text>
+  <!-- Button inside card -->
+  <rect x="60" y="109" width="128" height="40" rx="8" fill="#1a73e8"/>
+  <text x="124" y="134" text-anchor="middle" font-size="11" fill="white" font-weight="bold">按鈕 48×40</text>
+  <!-- Gap indicator -->
+  <line x1="124" y1="153" x2="124" y2="165" stroke="#1a73e8" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Spacing ruler left -->
+  <line x1="220" y1="69" x2="220" y2="189" stroke="#ff6b6b" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <line x1="215" y1="69" x2="225" y2="69" stroke="#ff6b6b" stroke-width="1.5"/>
+  <line x1="215" y1="189" x2="225" y2="189" stroke="#ff6b6b" stroke-width="1.5"/>
+  <text x="236" y="130" font-size="9" fill="#ff6b6b" font-weight="bold">120px</text>
+  <text x="236" y="142" font-size="9" fill="#ff6b6b">= 15 × 8</text>
+
+  <!-- Scale on right side -->
+  <text x="280" y="60" font-size="12" fill="#333" font-weight="bold">間距縮放比例</text>
+
+  <!-- Spacing blocks -->
+  <g transform="translate(280, 70)">
+    <!-- 4px -->
+    <rect x="0" y="0" width="4" height="20" rx="2" fill="#bfdbfe"/>
+    <text x="12" y="14" font-size="11" fill="#555">4px — 微間距</text>
+    <!-- 8px -->
+    <rect x="0" y="28" width="8" height="20" rx="2" fill="#93c5fd"/>
+    <text x="16" y="42" font-size="11" fill="#555">8px — 小間距</text>
+    <!-- 16px -->
+    <rect x="0" y="56" width="16" height="20" rx="2" fill="#60a5fa"/>
+    <text x="24" y="70" font-size="11" fill="#555">16px — 模組間距</text>
+    <!-- 24px -->
+    <rect x="0" y="84" width="24" height="20" rx="2" fill="#3b82f6"/>
+    <text x="32" y="98" font-size="11" fill="#555">24px — 組件間距</text>
+    <!-- 32px -->
+    <rect x="0" y="112" width="32" height="20" rx="2" fill="#2563eb"/>
+    <text x="40" y="126" font-size="11" fill="#555">32px — 區塊分隔</text>
+    <!-- 48px -->
+    <rect x="0" y="140" width="48" height="20" rx="2" fill="#1d4ed8"/>
+    <text x="56" y="154" font-size="11" fill="#555">48px — 大型區塊</text>
+    <!-- 64px -->
+    <rect x="0" y="168" width="64" height="20" rx="2" fill="#1e40af"/>
+    <text x="72" y="182" font-size="11" fill="#555">64px — Section 分隔</text>
+  </g>
+
+  <!-- Benefits callout -->
+  <rect x="280" y="270" width="220" height="36" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="390" y="285" text-anchor="middle" font-size="10" fill="#16a34a" font-weight="bold">整除性高：2x / 4x / 8x 完美對齊</text>
+  <text x="390" y="299" text-anchor="middle" font-size="9" fill="#15803d">相容 Material Design、Apple HIG、Bootstrap</text>
+
+  <text x="136" y="292" text-anchor="middle" font-size="10" fill="#999">細格 = 8px（作業基準），粗格 = 32px（模組基準）</text>
+</svg>

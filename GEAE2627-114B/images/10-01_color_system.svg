@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 320" font-family="sans-serif">
+  <!-- Background -->
+  <rect width="520" height="320" fill="#f8f9fa" rx="12"/>
+
+  <!-- Title -->
+  <text x="260" y="32" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">色彩系統（Color System）</text>
+
+  <!-- Primary Colors -->
+  <text x="20" y="62" font-size="11" fill="#666" font-weight="bold">Primary 主色</text>
+  <rect x="20" y="70" width="52" height="52" rx="8" fill="#1a73e8"/>
+  <rect x="80" y="70" width="52" height="52" rx="8" fill="#4a90d9"/>
+  <rect x="140" y="70" width="52" height="52" rx="8" fill="#7ab5ed"/>
+  <rect x="200" y="70" width="52" height="52" rx="8" fill="#b3d4f7"/>
+  <rect x="260" y="70" width="52" height="52" rx="8" fill="#deeefb"/>
+  <text x="46" y="136" text-anchor="middle" font-size="9" fill="#555">700</text>
+  <text x="106" y="136" text-anchor="middle" font-size="9" fill="#555">500</text>
+  <text x="166" y="136" text-anchor="middle" font-size="9" fill="#555">300</text>
+  <text x="226" y="136" text-anchor="middle" font-size="9" fill="#555">100</text>
+  <text x="286" y="136" text-anchor="middle" font-size="9" fill="#555">50</text>
+
+  <!-- Secondary Colors -->
+  <text x="20" y="158" font-size="11" fill="#666" font-weight="bold">Secondary 次要色</text>
+  <rect x="20" y="166" width="52" height="52" rx="8" fill="#7c3aed"/>
+  <rect x="80" y="166" width="52" height="52" rx="8" fill="#a855f7"/>
+  <rect x="140" y="166" width="52" height="52" rx="8" fill="#c4b5fd"/>
+  <rect x="200" y="166" width="52" height="52" rx="8" fill="#ede9fe"/>
+
+  <!-- Neutral Colors -->
+  <text x="330" y="62" font-size="11" fill="#666" font-weight="bold">Neutral 中性色</text>
+  <rect x="330" y="70" width="40" height="40" rx="6" fill="#111827"/>
+  <rect x="378" y="70" width="40" height="40" rx="6" fill="#374151"/>
+  <rect x="426" y="70" width="40" height="40" rx="6" fill="#6b7280"/>
+  <rect x="474" y="70" width="40" height="40" rx="6" fill="#d1d5db"/>
+  <rect x="330" y="118" width="40" height="40" rx="6" fill="#e5e7eb"/>
+  <rect x="378" y="118" width="40" height="40" rx="6" fill="#f3f4f6"/>
+  <rect x="426" y="118" width="40" height="40" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="474" y="118" width="40" height="40" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- Semantic Colors -->
+  <text x="20" y="240" font-size="11" fill="#666" font-weight="bold">Semantic 語意色</text>
+  <!-- Success -->
+  <rect x="20" y="250" width="100" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="20" y="250" width="10" height="46" rx="6" fill="#16a34a"/>
+  <text x="70" y="265" text-anchor="middle" font-size="10" font-weight="bold" fill="#16a34a">Success</text>
+  <text x="70" y="280" text-anchor="middle" font-size="9" fill="#15803d">成功 / 確認</text>
+  <!-- Warning -->
+  <rect x="140" y="250" width="100" height="46" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <rect x="140" y="250" width="10" height="46" rx="6" fill="#ca8a04"/>
+  <text x="190" y="265" text-anchor="middle" font-size="10" font-weight="bold" fill="#ca8a04">Warning</text>
+  <text x="190" y="280" text-anchor="middle" font-size="9" fill="#a16207">警告 / 提示</text>
+  <!-- Error -->
+  <rect x="260" y="250" width="100" height="46" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <rect x="260" y="250" width="10" height="46" rx="6" fill="#dc2626"/>
+  <text x="310" y="265" text-anchor="middle" font-size="10" font-weight="bold" fill="#dc2626">Error</text>
+  <text x="310" y="280" text-anchor="middle" font-size="9" fill="#b91c1c">錯誤 / 危險</text>
+  <!-- Info -->
+  <rect x="380" y="250" width="100" height="46" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="380" y="250" width="10" height="46" rx="6" fill="#2563eb"/>
+  <text x="430" y="265" text-anchor="middle" font-size="10" font-weight="bold" fill="#2563eb">Info</text>
+  <text x="430" y="280" text-anchor="middle" font-size="9" fill="#1d4ed8">資訊 / 說明</text>
+
+  <!-- Footer note -->
+  <text x="260" y="310" text-anchor="middle" font-size="10" fill="#999">語意色傳達功能性意義，而非單純裝飾</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" font-family="sans-serif">
+  <rect width="520" height="300" fill="#f8f9fa" rx="12"/>
+  <text x="260" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">業界指標性設計系統</text>
+
+  <!-- Apple HIG -->
+  <rect x="20" y="44" width="228" height="110" rx="10" fill="#fff" stroke="#e5e7eb" stroke-width="1.5"/>
+  <!-- Apple logo area -->
+  <rect x="20" y="44" width="228" height="36" rx="10" fill="#1c1c1e"/>
+  <rect x="20" y="62" width="228" height="18" fill="#1c1c1e"/>
+  <text x="134" y="68" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">Apple HIG</text>
+  <!-- Content -->
+  <text x="134" y="100" text-anchor="middle" font-size="10" fill="#333" font-weight="bold">Human Interface Guidelines</text>
+  <text x="36" y="116" font-size="9" fill="#555">• 官方設計模板與元件</text>
+  <text x="36" y="129" font-size="9" fill="#555">• 強調平台原生體驗</text>
+  <text x="36" y="142" font-size="9" fill="#555">• 極致流暢的互動設計</text>
+
+  <!-- Google Material Design -->
+  <rect x="272" y="44" width="228" height="110" rx="10" fill="#fff" stroke="#e5e7eb" stroke-width="1.5"/>
+  <rect x="272" y="44" width="228" height="36" rx="10" fill="#1a73e8"/>
+  <rect x="272" y="62" width="228" height="18" fill="#1a73e8"/>
+  <text x="386" y="68" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">Google Material Design 3</text>
+  <text x="386" y="100" text-anchor="middle" font-size="10" fill="#333" font-weight="bold">M3 — Material You</text>
+  <text x="288" y="116" font-size="9" fill="#555">• 開源系統，社群豐富</text>
+  <text x="288" y="129" font-size="9" fill="#555">• 動態色彩主題（Dynamic Color）</text>
+  <text x="288" y="142" font-size="9" fill="#555">• 自適應元件與直覺動態效果</text>
+
+  <!-- IBM Carbon -->
+  <rect x="20" y="168" width="228" height="110" rx="10" fill="#fff" stroke="#e5e7eb" stroke-width="1.5"/>
+  <rect x="20" y="168" width="228" height="36" rx="10" fill="#161616"/>
+  <rect x="20" y="186" width="228" height="18" fill="#161616"/>
+  <text x="134" y="192" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">IBM Carbon</text>
+  <text x="134" y="224" text-anchor="middle" font-size="10" fill="#333" font-weight="bold">Carbon Design System</text>
+  <text x="36" y="240" font-size="9" fill="#555">• 企業級設計系統</text>
+  <text x="36" y="253" font-size="9" fill="#555">• 嚴謹完整的規範</text>
+  <text x="36" y="266" font-size="9" fill="#555">• 開源且高度可客製化</text>
+
+  <!-- Microsoft Fluent -->
+  <rect x="272" y="168" width="228" height="110" rx="10" fill="#fff" stroke="#e5e7eb" stroke-width="1.5"/>
+  <rect x="272" y="168" width="228" height="36" rx="10" fill="#0067b8"/>
+  <rect x="272" y="186" width="228" height="18" fill="#0067b8"/>
+  <text x="386" y="192" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">Microsoft Fluent 2</text>
+  <text x="386" y="224" text-anchor="middle" font-size="10" fill="#333" font-weight="bold">Fluent Design System</text>
+  <text x="288" y="240" font-size="9" fill="#555">• 跨平台介面語言</text>
+  <text x="288" y="253" font-size="9" fill="#555">• 支援 Web 與 iOS/Android</text>
+  <text x="288" y="266" font-size="9" fill="#555">• 現代化且模組化設計</text>
+
+  <!-- Connector line decoration -->
+  <text x="260" y="286" text-anchor="middle" font-size="10" fill="#999">學習大廠開源設計系統，快速掌握高標準的規範邏輯</text>
+</svg>

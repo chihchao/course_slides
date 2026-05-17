@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" font-family="sans-serif">
+  <rect width="520" height="300" fill="#f8f9fa" rx="12"/>
+  <text x="260" y="30" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">圖標網格與關鍵線（Icon Grid &amp; Keylines）</text>
+
+  <!-- 24px grid box -->
+  <text x="80" y="58" text-anchor="middle" font-size="11" fill="#555" font-weight="bold">圖標網格（24×24）</text>
+
+  <!-- Grid with padding zone -->
+  <rect x="32" y="66" width="96" height="96" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <!-- Live area (20x20) -->
+  <rect x="44" y="78" width="72" height="72" rx="4" fill="#dbeafe" stroke="#3b82f6" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="80" y="118" text-anchor="middle" font-size="8" fill="#3b82f6">Live Area 20×20</text>
+  <!-- Grid lines -->
+  <line x1="32" y1="114" x2="128" y2="114" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <line x1="80" y1="66" x2="80" y2="162" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <text x="80" y="175" text-anchor="middle" font-size="9" fill="#6b7280">2px padding zone</text>
+
+  <!-- Keyline shapes -->
+  <text x="230" y="58" text-anchor="middle" font-size="11" fill="#555" font-weight="bold">關鍵線形狀（Keylines）</text>
+
+  <!-- Circle keyline -->
+  <g transform="translate(170, 66)">
+    <rect x="0" y="0" width="70" height="96" rx="6" fill="#fff" stroke="#e5e7eb" stroke-width="1"/>
+    <circle cx="35" cy="42" r="28" fill="none" stroke="#ff6b6b" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <!-- Icon example - clock -->
+    <circle cx="35" cy="42" r="18" fill="none" stroke="#374151" stroke-width="2"/>
+    <line x1="35" y1="42" x2="35" y2="30" stroke="#374151" stroke-width="2" stroke-linecap="round"/>
+    <line x1="35" y1="42" x2="43" y2="42" stroke="#374151" stroke-width="2" stroke-linecap="round"/>
+    <text x="35" y="86" text-anchor="middle" font-size="9" fill="#ff6b6b">圓形</text>
+    <text x="35" y="98" text-anchor="middle" font-size="8" fill="#6b7280">Circle</text>
+  </g>
+
+  <!-- Square keyline -->
+  <g transform="translate(250, 66)">
+    <rect x="0" y="0" width="70" height="96" rx="6" fill="#fff" stroke="#e5e7eb" stroke-width="1"/>
+    <rect x="7" y="14" width="56" height="56" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <!-- Icon example - folder -->
+    <rect x="12" y="26" width="46" height="32" rx="2" fill="none" stroke="#374151" stroke-width="2"/>
+    <path d="M12 30 L12 26 L26 26 L30 22 L58 22 L58 30" fill="none" stroke="#374151" stroke-width="2"/>
+    <text x="35" y="86" text-anchor="middle" font-size="9" fill="#f59e0b">正方形</text>
+    <text x="35" y="98" text-anchor="middle" font-size="8" fill="#6b7280">Square</text>
+  </g>
+
+  <!-- Vertical rectangle keyline -->
+  <g transform="translate(330, 66)">
+    <rect x="0" y="0" width="70" height="96" rx="6" fill="#fff" stroke="#e5e7eb" stroke-width="1"/>
+    <rect x="17" y="8" width="36" height="80" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <!-- Icon example - phone -->
+    <rect x="22" y="16" width="26" height="48" rx="4" fill="none" stroke="#374151" stroke-width="2"/>
+    <circle cx="35" cy="56" r="3" fill="#374151"/>
+    <text x="35" y="98" text-anchor="middle" font-size="9" fill="#8b5cf6">直向</text>
+  </g>
+
+  <!-- Horizontal rectangle keyline -->
+  <g transform="translate(410, 66)">
+    <rect x="0" y="0" width="96" height="96" rx="6" fill="#fff" stroke="#e5e7eb" stroke-width="1"/>
+    <rect x="8" y="26" width="80" height="44" fill="none" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <!-- Icon example - landscape -->
+    <rect x="16" y="30" width="64" height="36" rx="2" fill="none" stroke="#374151" stroke-width="2"/>
+    <path d="M16 52 L36 38 L52 50 L66 42 L80 52" fill="none" stroke="#374151" stroke-width="1.5" stroke-linejoin="round"/>
+    <circle cx="34" cy="38" r="5" fill="none" stroke="#374151" stroke-width="1.5"/>
+    <text x="48" y="86" text-anchor="middle" font-size="9" fill="#16a34a">橫向</text>
+  </g>
+
+  <!-- Bottom legend -->
+  <rect x="20" y="190" width="480" height="88" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="260" y="210" text-anchor="middle" font-size="11" fill="#334155" font-weight="bold">設計原則</text>
+  <!-- Three columns -->
+  <circle cx="50" cy="232" r="5" fill="#ff6b6b"/>
+  <text x="62" y="236" font-size="10" fill="#555">視覺重心一致</text>
+  <text x="62" y="250" font-size="9" fill="#6b7280">每個圖標在視覺上應</text>
+  <text x="62" y="262" font-size="9" fill="#6b7280">有相同的「重量」感</text>
+
+  <circle cx="196" cy="232" r="5" fill="#f59e0b"/>
+  <text x="208" y="236" font-size="10" fill="#555">筆觸粗細統一</text>
+  <text x="208" y="250" font-size="9" fill="#6b7280">同一套圖標使用相同</text>
+  <text x="208" y="262" font-size="9" fill="#6b7280">的線條粗細（如 2px）</text>
+
+  <circle cx="342" cy="232" r="5" fill="#16a34a"/>
+  <text x="354" y="236" font-size="10" fill="#555">填滿 vs 輪廓統一</text>
+  <text x="354" y="250" font-size="9" fill="#6b7280">同層級圖標使用一致</text>
+  <text x="354" y="262" font-size="9" fill="#6b7280">的填滿或輪廓樣式</text>
+</svg>
