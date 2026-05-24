@@ -1,0 +1,2367 @@
+<!DOCTYPE html><html lang="C"><head><title>程式設計概論</title><meta property="og:title" content="程式設計概論"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=overview] button.bespoke-marp-overview-close,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{appearance:none;background-color:initial;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNNDAgNzBIMjBWNTBtMjAgMEwyMCA3MG00MC00MGgyMHYyMG0tMjAgMCAyMC0yMCIgY2xhc3M9ImEiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNMjAgNTBoMjB2MjBtLTIwIDAgMjAtMjBtNDAgMEg2MFYzMG0yMCAwTDYwIDUwIiBjbGFzcz0iYSIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=overview] button.bespoke-marp-overview-close,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-bigger{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODBNNTIgOTBWMTAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-smaller{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4O3J4OjVweDtyeTo1cHg7d2lkdGg6MjVweDtoZWlnaHQ6MjVweH08L3N0eWxlPjwvZGVmcz48cmVjdCB4PSIyMCIgeT0iMjAiIGNsYXNzPSJhIi8+PHJlY3QgeD0iNTUiIHk9IjIwIiBjbGFzcz0iYSIvPjxyZWN0IHg9IjIwIiB5PSI1NSIgY2xhc3M9ImEiLz48cmVjdCB4PSI1NSIgeT0iNTUiIGNsYXNzPSJhIi8+PC9zdmc+") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}@keyframes __bespoke_marp_transition_reduced_outgoing__{0%{opacity:1}to{opacity:0}}@keyframes __bespoke_marp_transition_reduced_incoming__{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{::view-transition-group(*){animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-timing-function:ease}::view-transition-new(*),::view-transition-old(*){animation-delay:0s;animation-direction:var(--marp-bespoke-transition-animation-direction,normal);animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-fill-mode:both;animation-name:var(--marp-bespoke-transition-animation-name,var(--marp-bespoke-transition-animation-name-fallback,__bespoke_marp_transition_no_animation__));mix-blend-mode:normal}::view-transition-old(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_outgoing__;animation-timing-function:ease}::view-transition-new(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_incoming__;animation-timing-function:ease}::view-transition-new(root),::view-transition-old(root){animation-timing-function:linear}::view-transition-new(__bespoke_marp_transition_osc__),::view-transition-old(__bespoke_marp_transition_osc__){animation-duration:0s!important;animation-name:__bespoke_marp_transition_osc__!important}::view-transition-new(__bespoke_marp_transition_osc__){opacity:0!important}.bespoke-marp-transition-warming-up::view-transition-group(*),.bespoke-marp-transition-warming-up::view-transition-new(*),.bespoke-marp-transition-warming-up::view-transition-old(*){animation-play-state:paused!important}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;interactivity:inert;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide:not(.bespoke-marp-active) *{view-transition-name:none!important}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;interactivity:auto;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}}@media screen and (prefers-reduced-motion:reduce){svg.bespoke-marp-slide *{view-transition-name:none!important}}@media screen{[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{inset:0;position:absolute}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:#000000a6;border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;user-select:none;view-transition-name:__bespoke_marp_transition_osc__;white-space:nowrap;will-change:transform;z-index:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:where(*),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:where(*){margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:where(*):where(:first-child),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:where(*):where(:first-child){margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+:where(.bespoke-marp-parent){top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:#0000}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current dragbar next" minmax(140px,1fr) "current dragbar note" 2fr "info    dragbar note" 3em;grid-template-columns:minmax(3px,var(--bespoke-marp-presenter-split-ratio,66%)) 0 minmax(3px,1fr);height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent){grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent) :where(svg.bespoke-marp-slide){height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent) :where(svg.bespoke-marp-slide).bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container{background:#0288d1;cursor:col-resize;grid-area:dragbar;margin-left:-3px;opacity:0;position:relative;transition:opacity .4s linear .1s;width:6px;z-index:10}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container:hover{opacity:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container.active{opacity:1;transition-delay:0s}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:#0000;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;interactivity:inert;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note;position:relative;z-index:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper{display:block;inset:0;position:absolute}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons{background:#000000a6;border-radius:4px;bottom:0;display:flex;gap:4px;margin:12px;opacity:0;padding:6px;pointer-events:none;position:absolute;right:0;transition:opacity .2s linear}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons:focus-within,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper:focus-within+.bespoke-marp-presenter-note-buttons,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container:hover .bespoke-marp-presenter-note-buttons{opacity:1;pointer-events:auto}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{box-sizing:border-box;font-size:calc(1.1em*var(--bespoke-marp-note-font-scale, 1));height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;white-space:pre-wrap;width:calc(100% - 40px);word-wrap:break-word;scrollbar-color:#eeeeee80 #0000;scrollbar-width:thin}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:#0000}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:#eeeeee80;border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;overflow:hidden;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer:hover{cursor:pointer}body[data-bespoke-view=overview]{background:#161616;overflow:auto}body[data-bespoke-view=overview] [data-bespoke-marp-fragment=inactive]{visibility:visible}body[data-bespoke-view=overview] .bespoke-marp-overview-header{backdrop-filter:blur(4px);background:#222222d9;box-shadow:0 3px 10px #00000080;box-sizing:border-box;display:flex;height:48px;inset:0 0 auto;justify-content:flex-end;padding:10px;position:fixed;z-index:1}body[data-bespoke-view=overview] button.bespoke-marp-overview-close{height:28px;line-height:28px;transform:rotate(45deg);width:28px}body[data-bespoke-view=overview] .bespoke-marp-parent{display:grid;gap:40px;grid-template-columns:repeat(auto-fit,minmax(0,240px));justify-content:space-around;padding:30px}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide{--bov-selected:#0000;--bov-focus:#161616;--bov-focus-outline:#0000;background-image:conic-gradient(#161616 0 0),conic-gradient(var(--bov-focus) 0 0),conic-gradient(var(--bov-focus-outline) 0 0),conic-gradient(var(--bov-selected) 0 0);background-position:5px 5px,3px 3px,2px 2px,0 0;background-repeat:no-repeat;background-size:calc(100% - 10px) calc(100% - 10px),calc(100% - 6px) calc(100% - 6px),calc(100% - 4px) calc(100% - 4px),100% 100%;content-visibility:visible;cursor:pointer;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));margin:-6px;padding:6px;interactivity:auto;opacity:1;outline:0;pointer-events:auto;scroll-margin-block:30px;width:100%;z-index:0}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide *,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active *{pointer-events:none;interactivity:inert}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:active,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:focus-visible,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:hover{--bov-focus-outline:#161616}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:focus-visible,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:hover{--bov-focus:#999}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:active{--bov-focus:#eee}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{--bov-selected:#0288d1}body[data-bespoke-view=overview]:has(.bespoke-marp-overview-header) .bespoke-marp-parent{padding-top:78px}body[data-bespoke-view=overview]:has(.bespoke-marp-overview-header) .bespoke-marp-parent svg.bespoke-marp-slide{scroll-margin-top:78px}.bespoke-marp-overview{background:#000000a6;inset:0;opacity:0;pointer-events:none;position:fixed;transition:opacity .1s ease;z-index:10}.bespoke-marp-overview iframe{background:#222;border:0;display:block;height:100%;left:0;position:absolute;top:0;width:100%}.bespoke-marp-overview[data-open="1"]{opacity:1;pointer-events:auto}}@media print{.bespoke-marp-overview,.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@charset "UTF-8";@import "https://fonts.bunny.net/css?family=Lato:400,900|Roboto+Mono:400,700&display=swap";div#\:\$p > svg > foreignObject > section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center;-webkit-text-size-adjust:100%;text-size-adjust:100%}div#\:\$p > svg > foreignObject > section::after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#\:\$p > svg > foreignObject > section:not([data-marpit-pagination])::after{display:none}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:2em;margin-block:0.67em}div#\:\$p > svg > foreignObject > section video::-webkit-media-controls{will-change:transform}@page {size:1280px 720px;margin:0}@media print{html, body{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#\:\$p > svg > foreignObject > section{page-break-before:always;break-before:page}div#\:\$p > svg > foreignObject > section, div#\:\$p > svg > foreignObject > section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;print-color-adjust:exact!important;transition:none!important}div#\:\$p > svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#\:\$p > svg > foreignObject > :where(section){container-type:size}div#\:\$p > svg > foreignObject > section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}/*!
+ * Marp / Marpit Gaia theme.
+ *
+ * @theme gaia
+ * @author Yuki Hattori
+ *
+ * @auto-scaling true
+ * @size 16:9 1280px 720px
+ * @size 4:3 960px 720px
+ */div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) code.hljs{display:block;overflow-x:auto;padding:1em}div#\:\$p > svg > foreignObject > section code.hljs{padding:3px 5px}div#\:\$p > svg > foreignObject > section .hljs{background:#000;color:#f8f8f8}div#\:\$p > svg > foreignObject > section .hljs-comment,div#\:\$p > svg > foreignObject > section .hljs-quote{color:#aeaeae;font-style:italic}div#\:\$p > svg > foreignObject > section .hljs-keyword,div#\:\$p > svg > foreignObject > section .hljs-selector-tag,div#\:\$p > svg > foreignObject > section .hljs-type{color:#e28964}div#\:\$p > svg > foreignObject > section .hljs-string{color:#65b042}div#\:\$p > svg > foreignObject > section .hljs-subst{color:#daefa3}div#\:\$p > svg > foreignObject > section .hljs-link,div#\:\$p > svg > foreignObject > section .hljs-regexp{color:#e9c062}div#\:\$p > svg > foreignObject > section .hljs-name,div#\:\$p > svg > foreignObject > section .hljs-section,div#\:\$p > svg > foreignObject > section .hljs-tag,div#\:\$p > svg > foreignObject > section .hljs-title{color:#89bdff}div#\:\$p > svg > foreignObject > section .hljs-class .hljs-title,div#\:\$p > svg > foreignObject > section .hljs-doctag,div#\:\$p > svg > foreignObject > section .hljs-title.class_{text-decoration:underline}div#\:\$p > svg > foreignObject > section .hljs-bullet,div#\:\$p > svg > foreignObject > section .hljs-number,div#\:\$p > svg > foreignObject > section .hljs-symbol{color:#3387cc}div#\:\$p > svg > foreignObject > section .hljs-params,div#\:\$p > svg > foreignObject > section .hljs-template-variable,div#\:\$p > svg > foreignObject > section .hljs-variable{color:#3e87e3}div#\:\$p > svg > foreignObject > section .hljs-attribute{color:#cda869}div#\:\$p > svg > foreignObject > section .hljs-meta{color:#8996a8}div#\:\$p > svg > foreignObject > section .hljs-formula{background-color:#0e2231;color:#f8f8f8;font-style:italic}div#\:\$p > svg > foreignObject > section .hljs-addition{background-color:#253b22;color:#f8f8f8}div#\:\$p > svg > foreignObject > section .hljs-deletion{background-color:#420e09;color:#f8f8f8}div#\:\$p > svg > foreignObject > section .hljs-selector-class{color:#9b703f}div#\:\$p > svg > foreignObject > section .hljs-selector-id{color:#8b98ab}div#\:\$p > svg > foreignObject > section .hljs-emphasis{font-style:italic}div#\:\$p > svg > foreignObject > section .hljs-strong{font-weight:700}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1),div#\:\$p > svg > foreignObject > section :is(h2, marp-h2),div#\:\$p > svg > foreignObject > section :is(h3, marp-h3),div#\:\$p > svg > foreignObject > section :is(h4, marp-h4),div#\:\$p > svg > foreignObject > section :is(h5, marp-h5),div#\:\$p > svg > foreignObject > section :is(h6, marp-h6){margin:.5em 0 0}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1) strong,div#\:\$p > svg > foreignObject > section :is(h2, marp-h2) strong,div#\:\$p > svg > foreignObject > section :is(h3, marp-h3) strong,div#\:\$p > svg > foreignObject > section :is(h4, marp-h4) strong,div#\:\$p > svg > foreignObject > section :is(h5, marp-h5) strong,div#\:\$p > svg > foreignObject > section :is(h6, marp-h6) strong{font-weight:inherit}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h2, marp-h2)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h3, marp-h3)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h4, marp-h4)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h5, marp-h5)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h6, marp-h6)::part(auto-scaling){max-height:580px}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:1.8em}div#\:\$p > svg > foreignObject > section :is(h2, marp-h2){font-size:1.5em}div#\:\$p > svg > foreignObject > section :is(h3, marp-h3){font-size:1.3em}div#\:\$p > svg > foreignObject > section :is(h4, marp-h4){font-size:1.1em}div#\:\$p > svg > foreignObject > section :is(h5, marp-h5){font-size:1em}div#\:\$p > svg > foreignObject > section :is(h6, marp-h6){font-size:.9em}div#\:\$p > svg > foreignObject > section blockquote,div#\:\$p > svg > foreignObject > section p{margin:1em 0 0}div#\:\$p > svg > foreignObject > section ol>li,div#\:\$p > svg > foreignObject > section ul>li{margin:.3em 0 0}div#\:\$p > svg > foreignObject > section ol>li>p,div#\:\$p > svg > foreignObject > section ul>li>p{margin:.6em 0 0}div#\:\$p > svg > foreignObject > section code{display:inline-block;font-family:Roboto Mono,monospace;font-size:.8em;letter-spacing:0;margin:-.1em .15em;padding:.1em .2em;vertical-align:baseline}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){display:block;margin:1em 0 0;overflow:visible}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) code{box-sizing:border-box;font-size:.7em;margin:0;min-width:100%;padding:.5em}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre)::part(auto-scaling){max-height:calc(580px - 1em)}div#\:\$p > svg > foreignObject > section blockquote{margin:1em 0 0;padding:0 1em;position:relative}div#\:\$p > svg > foreignObject > section blockquote:after,div#\:\$p > svg > foreignObject > section blockquote:before{content:"“";display:block;font-family:Times New Roman,serif;font-weight:700;position:absolute}div#\:\$p > svg > foreignObject > section blockquote:before{left:0;top:0}div#\:\$p > svg > foreignObject > section blockquote:after{bottom:0;right:0;transform:rotate(180deg)}div#\:\$p > svg > foreignObject > section blockquote>:first-child{margin-top:0}div#\:\$p > svg > foreignObject > section mark{background:transparent}div#\:\$p > svg > foreignObject > section table{border-collapse:collapse;border-spacing:0;margin:1em 0 0}div#\:\$p > svg > foreignObject > section table td,div#\:\$p > svg > foreignObject > section table th{border-style:solid;border-width:1px;padding:.2em .4em}div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header,div#\:\$p > svg > foreignObject > section:after{box-sizing:border-box;font-size:66%;height:70px;line-height:50px;overflow:hidden;padding:10px 25px;position:absolute}div#\:\$p > svg > foreignObject > section:after{--marpit-root-font-size:66%}div#\:\$p > svg > foreignObject > section header{top:0}div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header{left:0;right:0}div#\:\$p > svg > foreignObject > section footer{bottom:0}div#\:\$p > svg > foreignObject > section{--color-background:light-dark(#fff8e1, #455a64);--color-background-stripe:light-dark(
+    rgba(69,90,100,.1),
+    rgba(255,248,225,.1)
+  );--color-foreground:light-dark(#455a64, #fff8e1);--color-dimmed:light-dark(
+    #6a7a7d,
+    #dad8c8
+  );--color-highlight:light-dark(#0288d1, #81d4fa);background-color:var(--color-background);background-image:linear-gradient(135deg, hsla(0,0%,53%,0), hsla(0,0%,53%,.02) 50%, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,.05));color:var(--color-foreground);color-scheme:light;font-family:Lato,Avenir Next,Avenir,Trebuchet MS,Segoe UI,sans-serif;font-size:35px;height:720px;letter-spacing:1.25px;line-height:1.35;overflow-wrap:break-word;padding:70px;width:1280px}div#\:\$p > svg > foreignObject > section{--marpit-root-font-size:35px}div#\:\$p > svg > foreignObject > section:after{bottom:0;font-size:80%;right:0}div#\:\$p > svg > foreignObject > section:after{--marpit-root-font-size:80%}div#\:\$p > svg > foreignObject > section a,div#\:\$p > svg > foreignObject > section mark{color:var(--color-highlight)}div#\:\$p > svg > foreignObject > section code{background:var(--color-dimmed);color:var(--color-background)}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1) strong,div#\:\$p > svg > foreignObject > section :is(h2, marp-h2) strong,div#\:\$p > svg > foreignObject > section :is(h3, marp-h3) strong,div#\:\$p > svg > foreignObject > section :is(h4, marp-h4) strong,div#\:\$p > svg > foreignObject > section :is(h5, marp-h5) strong,div#\:\$p > svg > foreignObject > section :is(h6, marp-h6) strong{color:var(--color-highlight)}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){background:var(--color-foreground)}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre)>code{background:transparent}div#\:\$p > svg > foreignObject > section blockquote:after,div#\:\$p > svg > foreignObject > section blockquote:before,div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header,div#\:\$p > svg > foreignObject > section section:after{color:var(--color-dimmed)}div#\:\$p > svg > foreignObject > section table td,div#\:\$p > svg > foreignObject > section table th{border-color:var(--color-foreground)}div#\:\$p > svg > foreignObject > section table thead th{background:var(--color-foreground);color:var(--color-background)}div#\:\$p > svg > foreignObject > section table tbody>tr:nth-child(odd) td,div#\:\$p > svg > foreignObject > section table tbody>tr:nth-child(odd) th{background:var(--color-background-stripe, transparent)}div#\:\$p > svg > foreignObject > section>:first-child,div#\:\$p > svg > foreignObject > section>header:first-child+*{margin-top:0}div#\:\$p > svg > foreignObject > section:where(.invert){color-scheme:dark}div#\:\$p > svg > foreignObject > section:where(.gaia){--color-background:#0288d1;--color-background-stripe:rgba(255,248,225,.1);--color-foreground:#fff8e1;--color-dimmed:#cce2de;--color-highlight:#81d4fa;}div#\:\$p > svg > foreignObject > section:where(.lead){align-items:stretch;flex-flow:column nowrap;place-content:safe center center}div#\:\$p > svg > foreignObject > section:where(.lead) :is(h1, marp-h1),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h2, marp-h2),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h3, marp-h3),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h4, marp-h4),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h5, marp-h5),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h6, marp-h6){text-align:center}div#\:\$p > svg > foreignObject > section:where(.lead) p{text-align:center}div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h1, marp-h1),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h2, marp-h2),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h3, marp-h3),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h4, marp-h4),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h5, marp-h5),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h6, marp-h6),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>p{text-align:left}div#\:\$p > svg > foreignObject > section:where(.lead) ol>li>p,div#\:\$p > svg > foreignObject > section:where(.lead) ul>li>p{text-align:left}div#\:\$p > svg > foreignObject > section:where(.lead) table{margin-left:auto;margin-right:auto}div#\:\$p > svg > foreignObject > section{width:1280px;height:720px}div#\:\$p > svg > foreignObject > :where(section):not([\20 root]){--color-background: #fff;--color-foreground: #333;--color-highlight: #69f;--color-dimmed: #888;}div#\:\$p > svg > foreignObject > section{font-family:'Inter', 'Microsoft JhengHei', sans-serif}div#\:\$p > svg > foreignObject > section p, div#\:\$p > svg > foreignObject > section li{font-size:0.8em}div#\:\$p > svg > foreignObject > section footer{font-size:0.5em}div#\:\$p > svg > foreignObject > section table th, div#\:\$p > svg > foreignObject > section td{font-size:0.75em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-ZswUtcBy] p{text-align:center;font-size:0.8em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-XtFdNyq1] table th, div#\:\$p > svg > foreignObject > section[data-marpit-scope-XtFdNyq1] td{font-size:0.8em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-0Oxg71xO] li{font-size:0.78em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-pX2sKlM0] li{font-size:0.78em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-rn1W8ckD] table th, div#\:\$p > svg > foreignObject > section[data-marpit-scope-rn1W8ckD] td{font-size:0.8em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-cW0We0ye] :is(pre, marp-pre){font-size:0.7em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-cW0We0ye] li{font-size:0.82em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-5EqaKP8W] :is(pre, marp-pre){font-size:0.7em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-5EqaKP8W] li{font-size:0.82em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-3ZT6a4HS] :is(pre, marp-pre){font-size:0.7em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-3ZT6a4HS] li{font-size:0.82em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FzqlfT7x] table th, div#\:\$p > svg > foreignObject > section[data-marpit-scope-FzqlfT7x] td{font-size:0.82em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-ofpU4nVt] :is(pre, marp-pre){font-size:0.72em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-IAzMGjO7] table th, div#\:\$p > svg > foreignObject > section[data-marpit-scope-IAzMGjO7] td{font-size:0.82em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-XjgcpaFF] :is(pre, marp-pre){font-size:0.72em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-GebgBAjh] table th, div#\:\$p > svg > foreignObject > section[data-marpit-scope-GebgBAjh] td{font-size:0.82em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-0Q7xbwV7] :is(pre, marp-pre){font-size:0.72em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-lC0eMPMp] :is(pre, marp-pre){font-size:0.72em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-33mw3vHE] table th, div#\:\$p > svg > foreignObject > section[data-marpit-scope-33mw3vHE] td{font-size:0.82em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-EEPo6dI7] table th, div#\:\$p > svg > foreignObject > section[data-marpit-scope-EEPo6dI7] td{font-size:0.8em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-ZbIBaQpg] table th, div#\:\$p > svg > foreignObject > section[data-marpit-scope-ZbIBaQpg] td{font-size:0.8em}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::after, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::after{display:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction="vertical"]{flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split] > div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split, 50%)}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split="right"] > div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure > figcaption{position:absolute;border:0;clip:rect(0, 0, 0, 0);height:1px;margin:-1px;overflow:hidden;padding:0;white-space:nowrap;width:1px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"], div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"]{background:transparent!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"], div#\:\$p > svg[data-marpit-svg] > foreignObject[data-marpit-advanced-background="pseudo"]{pointer-events:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background-split]{width:100%;height:100%}
+</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="overview" tabindex="-1" title="Toggle overview view (o)">Toggle overview view</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-class="lead" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" class="lead" style="--class:lead;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-size="16:9">
+<h1 id="%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88%E6%A6%82%E8%AB%96">程式設計概論</h1>
+<h1 id="data-analysis-with-ai">Data Analysis with AI</h1>
+<p>許智超<br />
+<a href="mailto:cchsu@mail.nsysu.edu.tw">cchsu@mail.nsysu.edu.tw</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-class="lead" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" class="lead" data-marpit-pagination="2" style="--paginate:true;--class:lead;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h2 id="%E4%BB%80%E9%BA%BC%E6%98%AF%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8">什麼是資料科學？</h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="3" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E7%9A%84%E5%AE%9A%E7%BE%A9">資料科學的定義</h3>
+<blockquote>
+<p>一門結合<strong>統計學</strong>、<strong>程式設計</strong>與<strong>領域知識</strong>，<br />
+從資料中萃取有意義洞見的跨領域學科。</p>
+</blockquote>
+<ul>
+<li>資料科學 ≠ 單純的程式設計</li>
+<li>資料科學 ≠ 單純的統計分析</li>
+<li>資料科學 ＝ 兩者的整合，加上對問題的深度理解</li>
+</ul>
+<p>核心問題：<strong>「資料能告訴我們什麼？」</strong><br />
+核心目標：<strong>將洞察轉化為解決現實問題的決策行動</strong></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-class="pattern" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" class="pattern" data-marpit-pagination="4" style="--paginate:true;--class:pattern;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="41" data-size="16:9" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/data-science-skills-venn.svg&quot;);"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="4" data-paginate="true" data-class="pattern" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" class="pattern" data-marpit-pagination="4" style="--paginate:true;--class:pattern;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="41" data-size="16:9" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right"><div>
+<h3 id="%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E5%AE%B6%E7%9A%84%E4%B8%89%E5%A4%A7%E6%A0%B8%E5%BF%83%E8%83%BD%E5%8A%9B">資料科學家的三大核心能力</h3>
+<ul>
+<li><strong>統計學</strong>：理解資料分佈、相關性與顯著性</li>
+<li><strong>程式設計</strong>：資料處理、自動化與建模實作</li>
+<li><strong>領域知識</strong>：定義有意義的問題，解讀分析結果</li>
+</ul>
+<p>三者交集之處，即為資料科學家的核心定位。</p>
+</div>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-paginate="true" data-class="pattern" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" class="pattern" data-marpit-pagination="4" style="" data-marpit-pagination-total="41" data-size="16:9" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="5" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E7%9A%84%E6%87%89%E7%94%A8%E5%A0%B4%E6%99%AF">資料科學的應用場景</h3>
+<ul>
+<li><strong>醫療健康</strong>：疾病預測、醫療影像輔助診斷</li>
+<li><strong>金融商業</strong>：信用風險評估、詐騙偵測、個人化推薦</li>
+<li><strong>電子商務</strong>：需求預測、客戶分群、A/B 測試</li>
+<li><strong>教育科技</strong>：學習行為分析、適性化學習路徑規劃</li>
+<li><strong>社會科學</strong>：輿情分析、政策影響評估</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="6" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="41" data-size="16:9" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://invisiblecitiestaiwan.wordpress.com/wp-content/uploads/2017/05/ivc_feb12_to-upload-078.jpeg&quot;);background-size:600px auto;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="6" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="6" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="41" data-size="16:9" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h3 id="invisiblecities-%E5%8F%B0%E5%8C%97%E6%B6%88%E6%A5%B5%E7%A9%BA%E9%96%93%E6%B4%BB%E5%8C%96%E5%88%86%E6%9E%90%E7%8F%BE%E7%8B%80">InVisibleCities 台北消極空間活化/分析現狀</h3>
+<ul>
+<li>整合開放資料：人口密度、犯罪熱區、噪音舉報位置</li>
+<li>以 QGIS 疊圖分析找出低活力、低可達性的閒置空間</li>
+<li>將「哪裡需要改善」從主觀判斷轉化為可視化的空間證據</li>
+</ul>
+<blockquote>
+<p>資料 → 洞察 → 行動</p>
+</blockquote>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="6" style="" data-marpit-pagination-total="41" data-size="16:9" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="7" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="41" data-size="16:9" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://bucket-image.inkmaginecms.com/version/hd/1/image/2024/07/6cea8d86-2b39-424a-bda4-6b4271230799.jpg&quot;);background-size:500px auto;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="7" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="7" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="41" data-size="16:9" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h3 id="%E9%83%BD%E5%B8%82%E7%86%B1%E5%B3%B6%E6%95%88%E6%87%89%E9%A0%90%E6%B8%AC%E9%A0%90%E6%B8%AC%E6%9C%AA%E4%BE%86">都市熱島效應預測/預測未來</h3>
+<ul>
+<li>結合衛星熱像、氣象資料與機器學習模型</li>
+<li>預測高溫風險區域的空間分布與季節變化</li>
+<li>協助規劃者決定綠化優先區域與降溫基礎設施配置</li>
+</ul>
+<blockquote>
+<p>資料 → 洞察 → 預測 → 行動</p>
+</blockquote>
+</div>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="7" style="" data-marpit-pagination-total="41" data-size="16:9" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-class="lead" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" class="lead" data-marpit-pagination="8" style="--paginate:true;--class:lead;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h2 id="%E5%A6%82%E4%BD%95%E9%80%B2%E8%A1%8C%E8%B3%87%E6%96%99%E5%88%86%E6%9E%90">如何進行資料分析？</h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-marpit-scope-ZswUtcBy="" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="9" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E8%B3%87%E6%96%99%E5%88%86%E6%9E%90%E7%9A%84%E4%BA%94%E5%A4%A7%E6%AD%A5%E9%A9%9F">資料分析的五大步驟</h3>
+<p><img src="images/data-science-workflow.svg" alt="分析流程" style="width:1200px;" /></p>
+<p>每個步驟皆有對應的 Python 工具，且步驟之間常需<strong>反覆迭代</strong>，而非單向線性流程。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="10" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E6%AD%A5%E9%A9%9F%E4%B8%80%E5%95%8F%E9%A1%8C%E5%AE%9A%E7%BE%A9">步驟一：問題定義</h3>
+<p>分析的方向由問題決定，清楚的定義是一切的起點。</p>
+<ul>
+<li><strong>目的</strong>：描述現況 / 預測趨勢 / 支援決策？</li>
+<li><strong>目標變數</strong>：要分析或預測的核心欄位是什麼？</li>
+<li><strong>限制條件</strong>：資料可取得性、時間成本、隱私規範</li>
+</ul>
+<blockquote>
+<p>提出正確的問題，比找到漂亮的答案更重要。</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-marpit-scope-XtFdNyq1="" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="11" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E6%AD%A5%E9%A9%9F%E4%BA%8C%E8%B3%87%E6%96%99%E6%94%B6%E9%9B%86">步驟二：資料收集</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">來源類型</th>
+<th style="text-align:left">特性</th>
+<th style="text-align:left">範例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">資料庫</td>
+<td style="text-align:left">結構化，整齊、有欄位定義</td>
+<td style="text-align:left">CSV、SQL 資料庫</td>
+</tr>
+<tr>
+<td style="text-align:left">網路爬蟲</td>
+<td style="text-align:left">非結構化、需清理</td>
+<td style="text-align:left">新聞、社群貼文</td>
+</tr>
+<tr>
+<td style="text-align:left">公開資料集</td>
+<td style="text-align:left">現成、品質參差</td>
+<td style="text-align:left">政府資料開放平台</td>
+</tr>
+<tr>
+<td style="text-align:left">API 串接</td>
+<td style="text-align:left">即時、有使用限制</td>
+<td style="text-align:left">氣象、社群媒體資料</td>
+</tr>
+</tbody>
+</table>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-marpit-scope-0Oxg71xO="" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="12" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E5%85%AC%E9%96%8B%E8%B3%87%E6%96%99%E9%9B%86%E4%B8%80">公開資料集（一）</h3>
+<ul>
+<li><a href="https://data.gov.tw/">台灣政府資料開放平台</a></li>
+<li><a href="https://www.stat.gov.tw/default.aspx">中華民國統計資訊網</a></li>
+<li><a href="https://opendatainception.io/">Open Data Inception</a><br />
+全球 2600 多個開放數據門戶，可按地圖查找各國開放資料。</li>
+<li><a href="https://data.oecd.org/">世界經濟合作暨發展組織（OECD）</a><br />
+可依國家與主題搜索人口、稅收、進出口等經濟資料。</li>
+<li><a href="https://data.worldbank.org/">World Bank Open Data</a><br />
+涵蓋全球各國氣候、融資、經濟、教育、人口等數據。</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-marpit-scope-pX2sKlM0="" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="13" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E5%85%AC%E9%96%8B%E8%B3%87%E6%96%99%E9%9B%86%E4%BA%8C">公開資料集（二）</h3>
+<ul>
+<li><a href="https://archive.ics.uci.edu/">UC Irvine Machine Learning Repository</a><br />
+廣泛用於機器學習演算法實驗，提供多種標準資料集，適合學習與研究。</li>
+<li><a href="https://www.kaggle.com/">Kaggle</a><br />
+資料科學與機器學習線上社群平台，提供資料集、競賽與教學課程。</li>
+<li><a href="https://github.com/awesomedata/awesome-public-datasets">GitHub Awesome Public Datasets</a><br />
+高品質開放資料集列表，涵蓋多個主題領域。</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-marpit-scope-rn1W8ckD="" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="14" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E6%AD%A5%E9%A9%9F%E4%B8%89%E8%B3%87%E6%96%99%E6%B8%85%E7%90%86--%E5%B8%B8%E8%A6%8B%E5%93%81%E8%B3%AA%E5%95%8F%E9%A1%8C">步驟三：資料清理 — 常見品質問題</h3>
+<p>真實資料幾乎都有品質問題，清理是分析前的必要程序。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">問題類型</th>
+<th style="text-align:left">說明</th>
+<th style="text-align:left">範例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>缺失值</strong></td>
+<td style="text-align:left">欄位為空（NaN）</td>
+<td style="text-align:left">問卷未填答、感測器斷線</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>重複資料</strong></td>
+<td style="text-align:left">同筆紀錄出現多次</td>
+<td style="text-align:left">系統重複寫入、資料合併錯誤</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>型別錯誤</strong></td>
+<td style="text-align:left">資料型別不符預期</td>
+<td style="text-align:left">日期存為字串、數字夾雜文字</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>異常值</strong></td>
+<td style="text-align:left">數值明顯偏離合理範圍</td>
+<td style="text-align:left">年齡輸入 999、負數金額</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>格式不一致</strong></td>
+<td style="text-align:left">同義資料以不同格式儲存</td>
+<td style="text-align:left">「台北」vs「台北市」vs「Taipei」</td>
+</tr>
+</tbody>
+</table>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-marpit-scope-cW0We0ye="" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="15" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E6%AD%A5%E9%A9%9F%E4%B8%89%E7%BC%BA%E5%A4%B1%E5%80%BC%E8%99%95%E7%90%86">步驟三：缺失值處理</h3>
+<p>缺失值的處理策略取決於<strong>缺失比例</strong>與<strong>欄位重要性</strong>。</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+
+df = pd.read_csv(<span class="hljs-string">&#x27;data.csv&#x27;</span>)
+
+df.isnull().<span class="hljs-built_in">sum</span>()                          <span class="hljs-comment"># 各欄位缺失數量</span>
+df.isnull().mean() * <span class="hljs-number">100</span>                   <span class="hljs-comment"># 各欄位缺失比例（%）</span>
+
+df.dropna()                                <span class="hljs-comment"># 刪除含缺失值的列（缺失少時適用）</span>
+df.dropna(subset=[<span class="hljs-string">&#x27;age&#x27;</span>, <span class="hljs-string">&#x27;income&#x27;</span>])        <span class="hljs-comment"># 僅針對關鍵欄位刪除</span>
+df[<span class="hljs-string">&#x27;age&#x27;</span>].fillna(df[<span class="hljs-string">&#x27;age&#x27;</span>].mean())         <span class="hljs-comment"># 數值欄位：以平均值填補</span>
+df[<span class="hljs-string">&#x27;age&#x27;</span>].fillna(df[<span class="hljs-string">&#x27;age&#x27;</span>].median())       <span class="hljs-comment"># 數值欄位：以中位數填補（較耐異常值）</span>
+df[<span class="hljs-string">&#x27;city&#x27;</span>].fillna(df[<span class="hljs-string">&#x27;city&#x27;</span>].mode()[<span class="hljs-number">0</span>])    <span class="hljs-comment"># 類別欄位：以眾數填補</span>
+df.ffill()                                 <span class="hljs-comment"># 時間序列：以前一筆填補</span>
+</code></pre>
+<ul>
+<li>缺失比例 &gt; 40%：考慮<strong>捨棄該欄位</strong></li>
+<li>缺失有規律（非隨機）時，需特別留意填補方式對分析的影響</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-marpit-scope-5EqaKP8W="" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="16" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E6%AD%A5%E9%A9%9F%E4%B8%89%E9%87%8D%E8%A4%87%E5%80%BC%E5%9E%8B%E5%88%A5%E8%BD%89%E6%8F%9B%E8%88%87%E6%A0%BC%E5%BC%8F%E6%A8%99%E6%BA%96%E5%8C%96">步驟三：重複值、型別轉換與格式標準化</h3>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-comment"># 重複值</span>
+df.duplicated().<span class="hljs-built_in">sum</span>()                           <span class="hljs-comment"># 計算重複列數</span>
+df.drop_duplicates()                            <span class="hljs-comment"># 移除完全重複的列</span>
+df.drop_duplicates(subset=[<span class="hljs-string">&#x27;id&#x27;</span>])               <span class="hljs-comment"># 依特定欄位去重（保留第一筆）</span>
+
+<span class="hljs-comment"># 型別轉換</span>
+df[<span class="hljs-string">&#x27;date&#x27;</span>] = pd.to_datetime(df[<span class="hljs-string">&#x27;date&#x27;</span>])         <span class="hljs-comment"># 字串 → 日期</span>
+df[<span class="hljs-string">&#x27;price&#x27;</span>] = df[<span class="hljs-string">&#x27;price&#x27;</span>].astype(<span class="hljs-built_in">float</span>)         <span class="hljs-comment"># 字串 → 數值</span>
+df[<span class="hljs-string">&#x27;grade&#x27;</span>] = df[<span class="hljs-string">&#x27;grade&#x27;</span>].astype(<span class="hljs-string">&#x27;category&#x27;</span>)    <span class="hljs-comment"># 字串 → 類別型（節省記憶體）</span>
+
+<span class="hljs-comment"># 格式標準化</span>
+df[<span class="hljs-string">&#x27;city&#x27;</span>] = df[<span class="hljs-string">&#x27;city&#x27;</span>].<span class="hljs-built_in">str</span>.strip()             <span class="hljs-comment"># 移除前後空白</span>
+df[<span class="hljs-string">&#x27;city&#x27;</span>] = df[<span class="hljs-string">&#x27;city&#x27;</span>].<span class="hljs-built_in">str</span>.replace(<span class="hljs-string">&#x27;台北市&#x27;</span>, <span class="hljs-string">&#x27;台北&#x27;</span>)  <span class="hljs-comment"># 統一寫法</span>
+df.columns = df.columns.<span class="hljs-built_in">str</span>.lower().<span class="hljs-built_in">str</span>.strip() <span class="hljs-comment"># 欄位名稱標準化</span>
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-marpit-scope-3ZT6a4HS="" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="17" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E6%AD%A5%E9%A9%9F%E4%B8%89%E7%95%B0%E5%B8%B8%E5%80%BC%E5%81%B5%E6%B8%AC%E8%88%87%E8%99%95%E7%90%86">步驟三：異常值偵測與處理</h3>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+
+<span class="hljs-comment"># 方法一：描述統計目視判斷</span>
+df[<span class="hljs-string">&#x27;age&#x27;</span>].describe()
+
+<span class="hljs-comment"># 方法二：IQR（四分位距）法</span>
+Q1 = df[<span class="hljs-string">&#x27;age&#x27;</span>].quantile(<span class="hljs-number">0.25</span>)
+Q3 = df[<span class="hljs-string">&#x27;age&#x27;</span>].quantile(<span class="hljs-number">0.75</span>)
+IQR = Q3 - Q1
+lower, upper = Q1 - <span class="hljs-number">1.5</span> * IQR, Q3 + <span class="hljs-number">1.5</span> * IQR
+df_clean = df[df[<span class="hljs-string">&#x27;age&#x27;</span>].between(lower, upper)]  <span class="hljs-comment"># 保留合理範圍</span>
+
+<span class="hljs-comment"># 方法三：Z-score 法</span>
+<span class="hljs-keyword">from</span> scipy <span class="hljs-keyword">import</span> stats
+z_scores = stats.zscore(df[<span class="hljs-string">&#x27;age&#x27;</span>].dropna())
+df_clean = df[(<span class="hljs-built_in">abs</span>(z_scores) &lt; <span class="hljs-number">3</span>)]              <span class="hljs-comment"># 保留 3σ 以內</span>
+</code></pre>
+<ul>
+<li><strong>刪除</strong>：異常值為資料錯誤（如年齡 = 999）</li>
+<li><strong>截斷（Winsorizing）</strong>：將極端值替換為上下界，保留樣本數</li>
+<li><strong>保留並標記</strong>：異常值本身具有分析意義時（如詐騙偵測）</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-marpit-scope-FzqlfT7x="" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="18" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E6%AD%A5%E9%A9%9F%E5%9B%9B%E6%8E%A2%E7%B4%A2%E5%88%86%E6%9E%90eda-%E7%B5%B1%E8%A8%88%E6%8F%8F%E8%BF%B0">步驟四：探索分析（EDA）— 統計描述</h3>
+<p>建模前先「認識」資料的形狀與特性。</p>
+<p><code>df.describe()</code> 自動計算：</p>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>count</td>
+<td>非空值筆數</td>
+</tr>
+<tr>
+<td>mean</td>
+<td>平均數</td>
+</tr>
+<tr>
+<td>std</td>
+<td>標準差（資料離散程度）</td>
+</tr>
+<tr>
+<td>min / max</td>
+<td>最小值 / 最大值</td>
+</tr>
+<tr>
+<td>25% / 50% / 75%</td>
+<td>四分位數（50% 即中位數）</td>
+</tr>
+</tbody>
+</table>
+<p>重點關注：<strong>分布是否對稱？有無極端值？欄位間是否有線性關係？</strong></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-marpit-scope-ofpU4nVt="" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="19" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E6%AD%A5%E9%A9%9F%E5%9B%9B%E7%B5%B1%E8%A8%88%E6%8F%8F%E8%BF%B0--%E7%A8%8B%E5%BC%8F%E7%A2%BC">步驟四：統計描述 — 程式碼</h3>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python">df.describe()                  <span class="hljs-comment"># 數值欄位統計摘要</span>
+df[<span class="hljs-string">&#x27;category&#x27;</span>].value_counts()  <span class="hljs-comment"># 類別欄位頻率分布</span>
+df.corr()                      <span class="hljs-comment"># 各欄位相關係數矩陣（-1 到 +1）</span>
+df.isnull().<span class="hljs-built_in">sum</span>()              <span class="hljs-comment"># 各欄位空值數量</span>
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-marpit-scope-IAzMGjO7="" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="20" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E6%AD%A5%E9%A9%9F%E5%9B%9B%E8%A6%96%E8%A6%BA%E5%8C%96%E5%91%88%E7%8F%BE">步驟四：視覺化呈現</h3>
+<p>用圖形將資料的模式轉為視覺訊號，讓洞見更易於理解與溝通。</p>
+<table>
+<thead>
+<tr>
+<th>圖表</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>直方圖</td>
+<td>看單一變數的分布（偏態、峰態）</td>
+</tr>
+<tr>
+<td>散佈圖</td>
+<td>看兩變數之間的關聯</td>
+</tr>
+<tr>
+<td>折線圖</td>
+<td>看數值隨時間的趨勢</td>
+</tr>
+<tr>
+<td>箱形圖</td>
+<td>看分布範圍與離群值</td>
+</tr>
+<tr>
+<td>熱力圖</td>
+<td>看多欄位相關係數矩陣</td>
+</tr>
+</tbody>
+</table>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-marpit-scope-XjgcpaFF="" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="21" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E6%AD%A5%E9%A9%9F%E5%9B%9B%E8%A6%96%E8%A6%BA%E5%8C%96%E5%91%88%E7%8F%BE--%E7%A8%8B%E5%BC%8F%E7%A2%BC">步驟四：視覺化呈現 — 程式碼</h3>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+<span class="hljs-keyword">import</span> seaborn <span class="hljs-keyword">as</span> sns
+
+sns.histplot(df[<span class="hljs-string">&#x27;score&#x27;</span>])                    <span class="hljs-comment"># 直方圖：觀察分布形狀</span>
+sns.scatterplot(x=<span class="hljs-string">&#x27;x&#x27;</span>, y=<span class="hljs-string">&#x27;y&#x27;</span>, data=df)      <span class="hljs-comment"># 散佈圖：觀察兩變數關係</span>
+sns.heatmap(df.corr(), annot=<span class="hljs-literal">True</span>)           <span class="hljs-comment"># 熱力圖：一次看所有欄位相關性</span>
+plt.show()
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-marpit-scope-GebgBAjh="" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="22" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E6%AD%A5%E9%A9%9F%E5%9B%9B%E8%B3%87%E6%96%99%E8%BD%89%E5%8C%96transformation">步驟四：資料轉化（Transformation）</h3>
+<p>調整資料的尺度或形式，使其更適合後續建模。</p>
+<table>
+<thead>
+<tr>
+<th>方式</th>
+<th>說明</th>
+<th>適用情境</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>對數轉換</td>
+<td>壓縮數值範圍</td>
+<td>資料嚴重右偏（長尾分布）</td>
+</tr>
+<tr>
+<td>標準化</td>
+<td>均值 0、標準差 1</td>
+<td>各欄位尺度差異大、線性模型</td>
+</tr>
+<tr>
+<td>正規化</td>
+<td>值域壓縮至 [0, 1]</td>
+<td>需要固定值域範圍</td>
+</tr>
+<tr>
+<td>類別編碼</td>
+<td>文字 → 數值</td>
+<td>類別型欄位轉為模型可用的輸入</td>
+</tr>
+</tbody>
+</table>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-marpit-scope-0Q7xbwV7="" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="23" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E6%AD%A5%E9%A9%9F%E5%9B%9B%E8%B3%87%E6%96%99%E8%BD%89%E5%8C%96--%E7%A8%8B%E5%BC%8F%E7%A2%BC">步驟四：資料轉化 — 程式碼</h3>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+<span class="hljs-keyword">from</span> sklearn.preprocessing <span class="hljs-keyword">import</span> StandardScaler, MinMaxScaler
+
+<span class="hljs-comment"># 對數轉換：壓縮右偏分布（如收入、人口）</span>
+df[<span class="hljs-string">&#x27;log_income&#x27;</span>] = np.log1p(df[<span class="hljs-string">&#x27;income&#x27;</span>])
+
+<span class="hljs-comment"># 標準化：均值 0、標準差 1（適合線性模型）</span>
+scaler = StandardScaler()
+df[<span class="hljs-string">&#x27;score_scaled&#x27;</span>] = scaler.fit_transform(df[[<span class="hljs-string">&#x27;score&#x27;</span>]])
+
+<span class="hljs-comment"># 正規化：壓縮至 [0, 1] 區間</span>
+mms = MinMaxScaler()
+df[<span class="hljs-string">&#x27;score_norm&#x27;</span>] = mms.fit_transform(df[[<span class="hljs-string">&#x27;score&#x27;</span>]])
+
+<span class="hljs-comment"># 類別編碼：文字 → 數值（one-hot encoding）</span>
+df = pd.get_dummies(df, columns=[<span class="hljs-string">&#x27;city&#x27;</span>])
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-marpit-scope-lC0eMPMp="" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="24" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E6%AD%A5%E9%A9%9F%E4%BA%94%E5%BB%BA%E6%A8%A1%E8%88%87%E7%B5%90%E6%9E%9C%E8%A7%A3%E8%AE%80">步驟五：建模與結果解讀</h3>
+<p>以機器學習模型從資料中學習規律，並做出預測或分群。</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split
+<span class="hljs-keyword">from</span> sklearn.linear_model <span class="hljs-keyword">import</span> LinearRegression
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=<span class="hljs-number">0.2</span>)
+model = LinearRegression()
+model.fit(X_train, y_train)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;R² = <span class="hljs-subst">{model.score(X_test, y_test):<span class="hljs-number">.3</span>f}</span>&#x27;</span>)
+</code></pre>
+<p>分析結果需回扣<strong>步驟一的問題定義</strong>，才能產生可行動的洞見。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-marpit-scope-33mw3vHE="" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="25" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="python-%E5%B7%A5%E5%85%B7%E5%A5%97%E4%BB%B6%E9%80%9F%E6%9F%A5">Python 工具套件速查</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">套件</th>
+<th style="text-align:left">用途</th>
+<th style="text-align:center">對應步驟</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>pandas</code></td>
+<td style="text-align:left">資料讀取、清理、操作</td>
+<td style="text-align:center">3、4</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>numpy</code></td>
+<td style="text-align:left">數值運算、矩陣處理</td>
+<td style="text-align:center">3、4</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>matplotlib</code></td>
+<td style="text-align:left">基礎繪圖</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>seaborn</code></td>
+<td style="text-align:left">統計圖表（基於 matplotlib）</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>scikit-learn</code></td>
+<td style="text-align:left">機器學習建模與評估</td>
+<td style="text-align:center">5</td>
+</tr>
+</tbody>
+</table>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-marpit-scope-EEPo6dI7="" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="26" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E8%B3%87%E6%96%99%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7%E6%AF%94%E8%BC%83">資料分析工具比較</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">需求情境</th>
+<th style="text-align:left">建議工具</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">商業數據分析</td>
+<td style="text-align:left">Power BI、Tableau、Excel、Python</td>
+</tr>
+<tr>
+<td style="text-align:left">大數據與機器學習</td>
+<td style="text-align:left">Python、R、SAS</td>
+</tr>
+<tr>
+<td style="text-align:left">科學計算與工程分析</td>
+<td style="text-align:left">MATLAB、Python、Julia</td>
+</tr>
+<tr>
+<td style="text-align:left">學術統計研究</td>
+<td style="text-align:left">R、SPSS、SAS、Python</td>
+</tr>
+<tr>
+<td style="text-align:left">SQL 資料庫查詢</td>
+<td style="text-align:left">SQL（MySQL、PostgreSQL）</td>
+</tr>
+</tbody>
+</table>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-paginate="true" data-class="lead" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" class="lead" data-marpit-pagination="27" style="--paginate:true;--class:lead;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h2 id="data-analysis-with-ai-1">Data Analysis with AI</h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="28" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E4%BB%BB%E5%8B%99%E7%9B%AE%E6%A8%99">任務目標</h3>
+<p>利用 AI 提示詞，對<strong>文化部電影票房開放資料</strong>進行完整資料分析，體驗以對話方式驅動分析流程。</p>
+<ul>
+<li>資料來源：<a href="https://data.gov.tw/dataset/94224">https://data.gov.tw/dataset/94224</a></li>
+<li>分析工具：Python（pandas、matplotlib）+ AI 助理</li>
+<li>核心問題：哪些電影最賣座？不同國別地區表現如何？票房趨勢為何？</li>
+<li>學習重點：如何設計有效提示詞，讓 AI 協助你完成從讀取資料到產出報告的完整流程</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-marpit-scope-ZbIBaQpg="" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="29" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E6%9C%89%E6%95%88%E6%8F%90%E7%A4%BA%E8%A9%9E%E7%9A%84%E8%A6%81%E7%B4%A0">有效提示詞的要素</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">要素</th>
+<th style="text-align:left">說明</th>
+<th style="text-align:left">範例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>角色設定</strong></td>
+<td style="text-align:left">告訴 AI 扮演的專業角色</td>
+<td style="text-align:left">「請扮演 Python 資料分析師」</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>脈絡說明</strong></td>
+<td style="text-align:left">提供資料的背景資訊</td>
+<td style="text-align:left">「這是文化部的電影票房資料」</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>任務描述</strong></td>
+<td style="text-align:left">明確說明要執行的工作</td>
+<td style="text-align:left">「請執行資料清洗步驟」</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>輸出指定</strong></td>
+<td style="text-align:left">指定輸出格式或任務拆解</td>
+<td style="text-align:left">「包含：1. 缺失值 2. 型別轉換」</td>
+</tr>
+</tbody>
+</table>
+<p>四個要素<strong>不必全部具備</strong>，但越完整的提示詞通常產出越準確。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="30" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E5%88%86%E6%9E%90%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%E5%9B%9B%E5%80%8B%E6%A0%B8%E5%BF%83%E6%8F%90%E7%A4%BA%E8%A9%9E">分析工作流程：四個核心提示詞</h3>
+<p>透過持續對話，依序完成完整分析任務：</p>
+<ol>
+<li><strong>載入資料</strong> — 讀取 CSV 並預覽欄位結構</li>
+<li><strong>資料清洗</strong> — 處理型別問題與格式不一致</li>
+<li><strong>建議分析方向</strong> — 請 AI 根據欄位提出分析題目</li>
+<li><strong>產出分析報告</strong> — 根據執行結果生成文字摘要</li>
+</ol>
+<p>每個提示詞<strong>接續前一輪對話脈絡</strong>，AI 保有完整的分析記憶。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="31" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E9%A0%90%E5%85%88%E6%BA%96%E5%82%99matplotlib-%E5%AD%97%E9%AB%94%E8%A8%AD%E5%AE%9A">預先準備：matplotlib 字體設定</h3>
+<ul>
+<li>為了讓圖表中的中文能正常顯示，請先下載並安裝適合的中文字體（例如：台北黑體），並在 matplotlib 中設定使用該字體。</li>
+</ul>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python">!wget -nv -O TaipeiSansTCBeta-Regular.ttf https://drive.google.com/uc?<span class="hljs-built_in">id</span>=1eGAsTN1HBpJAkeVM57_C7ccp7hbgSz3_&amp;export=download
+<span class="hljs-keyword">import</span> matplotlib
+matplotlib.font_manager.fontManager.addfont(<span class="hljs-string">&#x27;TaipeiSansTCBeta-Regular.ttf&#x27;</span>)
+matplotlib.rc(<span class="hljs-string">&#x27;font&#x27;</span>, family=<span class="hljs-string">&#x27;Taipei Sans TC Beta&#x27;</span>)
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="32" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E6%8F%90%E7%A4%BA%E8%A9%9E%E4%B8%80%E8%BC%89%E5%85%A5%E8%B3%87%E6%96%99">提示詞一：載入資料</h3>
+<ul>
+<li>任務目標：讓 AI 協助你讀取 CSV 資料，並展示前幾筆紀錄確認資料結構。</li>
+<li>提示詞：</li>
+</ul>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-text">請扮演 Python 資料分析師。請撰寫一段代碼來讀取文化部開放資料的 CSV 檔案，並展示資料的前 5 筆紀錄，讓我確認資料結構。
+網址：`https://opendata.culture.tw/...`
+</code></pre>
+<ul>
+<li>重點：<strong>角色設定</strong> + <strong>具體資料來源</strong> + <strong>指定輸出</strong>（顯示前 5 行）</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="33" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E6%8F%90%E7%A4%BA%E8%A9%9E%E4%BA%8C%E8%B3%87%E6%96%99%E6%B8%85%E6%B4%97">提示詞二：資料清洗</h3>
+<ul>
+<li>任務目標：讓 AI 協助你檢查資料品質問題，並規劃清洗步驟。</li>
+<li>提示詞：</li>
+</ul>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-text">針對目前的 DataFrame，在進行任何清洗動作之前，請先對這份資料進行初步分析，並以繁體中文回答以下內容：
+1. 基本概況：資料共有多少行（rows）與多少欄（columns）？各欄位的資料型態（dtypes）為何？
+2. 資料型態問題：請列出哪些欄位的資料型態不符合預期，例如：數值欄位被讀為字串、數值欄位有「$」「,」或「元」符號，日期欄位格式不正確...。
+3. 缺失值檢查：請列出各欄位中缺失值（Null/NaN）的數量與佔比，並標示出缺失最嚴重的欄位。
+4. 異常偵測：請快速檢查是否有重複的資料列，以及數值欄位中是否有明顯極端異常的數值。
+建議：基於以上觀察，你認為在後續清洗過程中，哪些欄位需要優先處理，理由為何？
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="34" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E6%8F%90%E7%A4%BA%E8%A9%9E%E4%B8%89%E8%B3%87%E6%96%99%E6%B8%85%E6%B4%97--%E5%85%B7%E9%AB%94%E6%AD%A5%E9%A9%9F">提示詞三：資料清洗 — 具體步驟</h3>
+<ul>
+<li>任務目標：讓 AI 規劃一份資料清洗計畫，並在獲得同意後逐步執行。</li>
+<li>提示詞：</li>
+</ul>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-text">基於你剛剛發現的問題（例如：缺失值、型態錯誤、重複值），請為我規劃一份詳細的資料清洗計畫。
+1. 請針對有問題的欄位，逐一提出你建議的清洗方法與理由（例如：該刪除還是補值？）。
+2. 請先不要直接修改資料，把清洗計畫條列出來讓我確認。
+3. 在我回覆『同意』之後，你再開始執行清洗。
+4. 每完成一個清洗步驟，請回報執行結果（例如：已刪除 10 筆重複資料，已將「銷售金額」欄位轉為數值型態）。
+</code></pre>
+<ul>
+<li>注意事項：
+<ul>
+<li>保留原始資料：在清洗時，可以要求 AI：「請不要直接覆蓋原欄位，清洗後的結果請幫我建立新欄位（例如：新增 age_cleaned 欄位），以便我對照。」</li>
+<li>確認資料量變化：清洗完後，一定要看 AI 回報的最終列數。如果原本有 10,000 筆，清洗完只剩 2,000 筆，代表某個刪除條件下得太重了，需要請 AI 倒退回上一步重來。</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="35" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E6%8F%90%E7%A4%BA%E8%A9%9E%E5%9B%9B%E5%88%86%E6%9E%90%E6%96%B9%E5%90%91">提示詞四：分析方向</h3>
+<ul>
+<li>任務目標：初步分析資料內容。</li>
+<li>提示詞：</li>
+</ul>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-text">統計摘要：針對數值型欄位，提供基本的統計描述（平均值、中位數、最大/最小值、標準差）。
+</code></pre>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-text">請針對這份資料進行以下分析，並生成對應的視覺化圖表：
+1. 相關性矩陣：請計算數值欄位之間的相關係數，並繪製熱力圖，幫我標出關聯性最強的 3 組變數對。
+2. 分佈狀況：請選擇 3 個最重要的數值欄位，繪製直方圖或箱型圖來觀察資料的分佈狀況與離群值。
+</code></pre>
+<ul>
+<li>趨勢分析：如果你的資料包含日期資訊，可以進行時間序列的 EDA 分析。</li>
+<li>分群與細分：如果你想了解資料中的細分市場或群體特徵，可以進行資料的分類與細分探索。</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="36" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E6%8F%90%E7%A4%BA%E8%A9%9E%E4%BA%94%E5%88%86%E6%9E%90%E6%96%B9%E5%90%91--ai-%E6%8F%90%E5%87%BA%E5%BB%BA%E8%AD%B0">提示詞五：分析方向 — AI 提出建議</h3>
+<ul>
+<li>任務目標：讓 AI 根據資料內容自動提出有意義的分析方向，幫你找到「下一步該分析什麼」的靈感。</li>
+<li>提示詞：(目的導向型)</li>
+</ul>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-text">這是一份關於 [描述資料內容，例如：這個星期的全國電影票房統計數據] 的資料。
+我的目標是想要 [描述你的目標，例如：提升營收、找出學生學習困難的原因、優化資源配置]。
+請根據我的目標，針對這份資料規劃一份 EDA 分析路徑：
+1. 哪些欄位是我最需要關注的關鍵指標？
+2. 為了達成目標，你建議我進行哪些關鍵的數據比較或視覺化分析？
+3. 有沒有哪些統計角度或是隱藏的變數關係，是常被忽略但可能很重要的？
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="37" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E6%8F%90%E7%A4%BA%E8%A9%9E%E5%85%AD%E5%88%86%E6%9E%90%E6%96%B9%E5%90%91--ai-%E7%94%A2%E5%87%BA%E7%9A%84%E5%BB%BA%E8%AD%B0">提示詞六：分析方向 — AI 產出的建議</h3>
+<ul>
+<li>提示詞：(任務通用型)</li>
+</ul>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-text">這是一份關於 [描述資料內容] 的資料。
+我目前對於這份資料能進行哪些深入分析（EDA）沒有具體頭緒。請你作為數據分析顧問，針對這份資料：
+1. 提出 3-5 個值得探索的洞察方向（例如：趨勢分析、客戶分群、關聯性研究等）。
+2. 說明為什麼這些分析方向對我來說是有價值的。
+3. 如果我採用你的建議，請擬定一個簡單的分析步驟清單。
+請先不要開始執行分析，等我看完你的建議並選擇後，我們再進行下一步。
+</code></pre>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-txext">在不進行任何深入計算前，請憑藉你對數據分析的經驗：
+1. 指出這份資料看起來最『有趣』或『最值得深入研究』的 3 個角度。
+2. 假設你是這份資料的擁有者，你會想要透過數據回答什麼問題？
+3. 完成這些分析後，能對我的決策提供什麼幫助？
+請以『數據偵探』的角度，為我揭示這份資料中可能隱藏的故事。
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="38" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E6%8F%90%E7%A4%BA%E8%A9%9E%E4%B8%83%E5%9F%B7%E8%A1%8C%E5%88%86%E6%9E%90">提示詞七：執行分析</h3>
+<ul>
+<li>任務目標：讓 AI 根據你選定的分析方向，分段執行分析任務，並用繁體中文解讀每個分析結果。</li>
+<li>提示詞：</li>
+</ul>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-text">我認為『[填入 AI 建議的第 1 個方向]』與『[填入 AI 建議的第 2 個方向]』對我最重要。
+請現在依照這兩個方向開始執行分析，請遵循以下規範：
+1. 分段執行：請先執行第一個方向，產出相關統計數據與視覺化圖表，並針對結果進行解讀。
+2. 圖表格式：圖表請使用適合該數據類型的表現方式（例如：時間序列用折線圖、分類比較用長條圖）。
+3. 中文化：圖表的標題、軸標籤（Label）請使用繁體中文（請確保中文字體顯示正常）。
+</code></pre>
+<ul>
+<li>注意事項：
+<ul>
+<li>分段執行：每完成一個分析方向，請先讓 AI 回報結果並解讀，再決定是否繼續下一個分析方向。</li>
+<li>圖表解讀：AI 不僅要產出圖表，還要用繁體中文說明圖表中顯示的趨勢、關聯或異常，幫助你理解數據背後的意義。</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="39" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="%E6%8F%90%E7%A4%BA%E8%A9%9E%E5%85%AB%E7%94%A2%E5%87%BA%E5%88%86%E6%9E%90%E5%A0%B1%E5%91%8A">提示詞八：產出分析報告</h3>
+<ul>
+<li>任務目標：讓 AI 根據剛剛的分析結果，撰寫一份正式的分析報告。</li>
+<li>提示詞：</li>
+</ul>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-text">請你根據剛剛的資料內容、統計數據與視覺化發現，為我撰寫一份正式的分析報告。
+請依照以下結構撰寫，並使用專業且客觀的語氣（繁體中文）：
+1. 執行摘要：以簡潔的文字概述報告的核心發現與價值。
+2. 資料概況：說明分析的資料來源、範圍與清洗後的品質狀況。
+3. 關鍵洞察：請歸納出 3-5 個最具影響力的發現。每個洞察請包含：
+    - 發現描述：具體發生了什麼現象？
+    - 數據支撐：引用剛剛分析出來的關鍵數字或圖表趨勢。
+    - 商業/研究意義：這代表了什麼？（對業務、決策或研究有何啟發？）
+4. 建議與行動方針：基於上述發現，你建議我採取哪些具體的後續行動？
+5. 限制與未來方向：簡單列出本次分析的侷限性，以及建議未來可以補強的數據或分析方向。
+請確保報告重點突出，建議適當使用 Markdown 格式（如粗體、條列式）提升閱讀體驗。
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="40" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h3 id="rp02-%E6%9C%9F%E6%9C%AB%E5%A0%B1%E5%91%8A%E4%BB%A5-ai-%E9%A9%85%E5%8B%95%E8%B3%87%E6%96%99%E5%88%86%E6%9E%90">RP02 期末報告：以 AI 驅動資料分析</h3>
+<ul>
+<li>選擇一份政府公開資料集，設計一系列提示詞，讓 AI 協助你完成從資料清洗到分析報告的完整流程。</li>
+<li>報告內容需包含：
+<ol>
+<li>資料集介紹：資料來源、內容概述、分析目的</li>
+<li>提示詞設計：說明每個提示詞的目的與設計邏輯</li>
+<li>分析結果展示：包含 AI 協助產出的統計數據、圖表與分析報告摘要</li>
+<li>反思與心得：AI 在資料分析過程中的優勢與限制，以及你對未來 AI 驅動分析的看法</li>
+</ol>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-paginate="true" data-theme="gaia" data-style=":root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+" lang="C" data-marpit-pagination="41" style="--paginate:true;--theme:gaia;--style::root {
+    --color-background: #fff;
+    --color-foreground: #333;
+    --color-highlight: #69f;
+    --color-dimmed: #888;
+}
+section {
+  font-family: 'Inter', 'Microsoft JhengHei', sans-serif;
+}
+section p, li {
+    font-size: 0.8em;
+}
+section footer {
+    font-size: 0.5em;
+}
+section table th, td {
+    font-size: 0.75em;
+}
+;" data-marpit-pagination-total="41" data-size="16:9">
+<h2 id="%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99">參考資料</h2>
+<ul>
+<li><a href="https://wesmckinney.com/book/">Python for Data Analysis — Wes McKinney</a></li>
+<li><a href="https://www.kaggle.com/learn/pandas">Kaggle Learn — pandas 教學課程</a></li>
+<li><a href="https://seaborn.pydata.org/">Seaborn 官方文件</a></li>
+<li><a href="https://scikit-learn.org/stable/user_guide.html">scikit-learn 使用者指南</a></li>
+<li><a href="https://data.gov.tw/">政府資料開放平台</a></li>
+</ul>
+</section>
+<script>!function(){"use strict";const t={h1:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:()=>HTMLSpanElement},pre:{proto:()=>HTMLElement,style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},e="data-marp-auto-scaling-wrapper",i="data-marp-auto-scaling-svg",n="data-marp-auto-scaling-container";class s extends HTMLElement{container;containerSize;containerObserver;svg;svgComputedStyle;svgPreserveAspectRatio="xMinYMid meet";wrapper;wrapperSize;wrapperObserver;constructor(){super();const t=t=>([e])=>{const{width:i,height:n}=e.contentRect;this[t]={width:i,height:n},this.updateSVGRect()};this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(t("containerSize")),this.wrapperObserver=new ResizeObserver((...e)=>{t("wrapperSize")(...e),this.flushSvgDisplay()})}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){this.shadowRoot.innerHTML=`\n<style>\n  svg[${i}] { display: block; width: 100%; height: auto; vertical-align: top; }\n  span[${n}] { display: table; white-space: var(--marp-auto-scaling-white-space, nowrap); width: max-content; }\n</style>\n<div ${e}>\n  <svg part="svg" ${i}>\n    <foreignObject><span ${n}><slot></slot></span></foreignObject>\n  </svg>\n</div>\n    `.split(/\n\s*/).join(""),this.wrapper=this.shadowRoot.querySelector(`div[${e}]`)??void 0;const t=this.svg;this.svg=this.wrapper?.querySelector(`svg[${i}]`)??void 0,this.svg!==t&&(this.svgComputedStyle=this.svg?window.getComputedStyle(this.svg):void 0),this.container=this.svg?.querySelector(`span[${n}]`)??void 0,this.observe()}disconnectedCallback(){this.svg=void 0,this.svgComputedStyle=void 0,this.wrapper=void 0,this.container=void 0,this.observe()}attributeChangedCallback(){this.observe()}flushSvgDisplay(){const{svg:t}=this;t&&(t.style.display="inline",requestAnimationFrame(()=>{t.style.display=""}))}observe(){this.containerObserver.disconnect(),this.wrapperObserver.disconnect(),this.wrapper&&this.wrapperObserver.observe(this.wrapper),this.container&&this.containerObserver.observe(this.container),this.svgComputedStyle&&this.observeSVGStyle(this.svgComputedStyle)}observeSVGStyle(t){const e=()=>{const i=(()=>{const e=t.getPropertyValue("--preserve-aspect-ratio");if(e)return e.trim();return`x${(({textAlign:t,direction:e})=>{if(t.endsWith("left"))return"Min";if(t.endsWith("right"))return"Max";if("start"===t||"end"===t){let i="rtl"===e;return"end"===t&&(i=!i),i?"Max":"Min"}return"Mid"})(t)}YMid meet`})();i!==this.svgPreserveAspectRatio&&(this.svgPreserveAspectRatio=i,this.updateSVGRect()),t===this.svgComputedStyle&&requestAnimationFrame(e)};e()}updateSVGRect(){let t=Math.ceil(this.containerSize?.width??0);const e=Math.ceil(this.containerSize?.height??0);void 0!==this.dataset.downscaleOnly&&(t=Math.max(t,this.wrapperSize?.width??0));const i=this.svg?.querySelector(":scope > foreignObject");if(i?.setAttribute("width",`${t}`),i?.setAttribute("height",`${e}`),this.svg&&(this.svg.setAttribute("viewBox",`0 0 ${t} ${e}`),this.svg.setAttribute("preserveAspectRatio",this.svgPreserveAspectRatio),this.svg.style.height=t<=0||e<=0?"0":""),this.container){const t=this.svgPreserveAspectRatio.toLowerCase();this.container.style.marginLeft=t.startsWith("xmid")||t.startsWith("xmax")?"auto":"0",this.container.style.marginRight=t.startsWith("xmi")?"auto":"0"}}}const r=(t,{attrs:e={},style:i})=>class extends t{constructor(...t){super(...t);for(const[t,i]of Object.entries(e))this.hasAttribute(t)||this.setAttribute(t,i);this._shadow()}static get observedAttributes(){return["data-auto-scaling"]}connectedCallback(){this._update()}attributeChangedCallback(){this._update()}_shadow(){if(!this.shadowRoot)try{this.attachShadow({mode:"open"})}catch(t){if(!(t instanceof Error&&"NotSupportedError"===t.name))throw t}return this.shadowRoot}_update(){const t=this._shadow();if(t){const e=i?`<style>:host { ${i} }</style>`:"";let n="<slot></slot>";const{autoScaling:s}=this.dataset;if(void 0!==s){n=`<marp-auto-scaling exportparts="svg:auto-scaling" ${"downscale-only"===s?"data-downscale-only":""}>${n}</marp-auto-scaling>`}t.innerHTML=e+n}}};let o;const a=Symbol(),l=()=>o??(o=!!document.createElement("div",{is:"marp-auto-scaling"}).outerHTML.startsWith("<div is"),o);let c;const d="marpitSVGPolyfill:setZoomFactor,",h=Symbol(),g=Symbol();const p=()=>{const t="Apple Computer, Inc."===navigator.vendor,e=t?[v]:[],i={then:e=>(t?(async()=>{if(void 0===c){const t=document.createElement("canvas");t.width=10,t.height=10;const e=t.getContext("2d"),i=new Image(10,10),n=new Promise(t=>{i.addEventListener("load",()=>t())});i.crossOrigin="anonymous",i.src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%201%201%22%3E%3CforeignObject%20width%3D%221%22%20height%3D%221%22%20requiredExtensions%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3Cdiv%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%20style%3D%22width%3A%201px%3B%20height%3A%201px%3B%20background%3A%20red%3B%20position%3A%20relative%22%3E%3C%2Fdiv%3E%3C%2FforeignObject%3E%3C%2Fsvg%3E",await n,e.drawImage(i,0,0),c=e.getImageData(5,5,1,1).data[3]<128}return c})().then(t=>{null==e||e(t?[v]:[])}):null==e||e([]),i)};return Object.assign(e,i)};let m,u;function v(t){const e="object"==typeof t&&t.target||document,i="object"==typeof t?t.zoom:t;window[g]||(Object.defineProperty(window,g,{configurable:!0,value:!0}),document.body.style.zoom=1.0001,document.body.offsetHeight,document.body.style.zoom=1,window.addEventListener("message",({data:t,origin:e})=>{if(e===window.origin)try{if(t&&"string"==typeof t&&t.startsWith(d)){const[,e]=t.split(","),i=Number.parseFloat(e);Number.isNaN(i)||(u=i)}}catch(t){console.error(t)}}));let n=!1;Array.from(e.querySelectorAll("svg[data-marpit-svg]"),t=>{var e,s,r,o;t.style.transform||(t.style.transform="translateZ(0)");const a=i||u||t.currentScale||1;m!==a&&(m=a,n=a);const l=t.getBoundingClientRect(),{length:c}=t.children;for(let i=0;i<c;i+=1){const n=t.children[i];if(n.getScreenCTM){const t=n.getScreenCTM();if(t){const i=null!==(s=null===(e=n.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==s?s:0,c=null!==(o=null===(r=n.y)||void 0===r?void 0:r.baseVal.value)&&void 0!==o?o:0,d=n.children.length;for(let e=0;e<d;e+=1){const s=n.children[e];if("SECTION"===s.tagName){const{style:e}=s;e.transformOrigin||(e.transformOrigin=`${-i}px ${-c}px`),e.transform=`scale(${a}) matrix(${t.a}, ${t.b}, ${t.c}, ${t.d}, ${t.e-l.left}, ${t.f-l.top}) translateZ(0.0001px)`;break}}}}}}),!1!==n&&Array.from(e.querySelectorAll("iframe"),({contentWindow:t})=>{null==t||t.postMessage(`${d}${n}`,"null"===window.origin?"*":window.origin)})}function w({once:t=!1,target:e=document}={}){const i=function(t=document){if(t[h])return t[h];let e=!0;const i=()=>{e=!1,delete t[h]};Object.defineProperty(t,h,{configurable:!0,value:i});let n=[],s=!1;(async()=>{try{n=await p()}finally{s=!0}})();const r=()=>{for(const e of n)e({target:t});s&&0===n.length||e&&window.requestAnimationFrame(r)};return r(),i}(e);return t?(i(),()=>{}):i}m=1,u=void 0;const b=Symbol(),y=(e=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(((e=document)=>{const i=window[a];i||customElements.define("marp-auto-scaling",s);for(const n of Object.keys(t)){const s=`marp-${n}`,o=t[n].proto();l()&&o!==HTMLElement?i||customElements.define(s,r(o,{style:t[n].style}),{extends:n}):(i||customElements.define(s,r(HTMLElement,t[n])),e.querySelectorAll(`${n}[is="${s}"]`).forEach(t=>{t.outerHTML=t.outerHTML.replace(new RegExp(`^<${n}`,"i"),`<${s}`).replace(new RegExp(`</${n}>$`,"i"),`</${s}>`)}))}window[a]=!0})(e),e[b])return e[b];const i=w({target:e}),n=()=>{i(),delete e[b]},o=Object.assign(n,{cleanup:n,update:()=>y(e)});return Object.defineProperty(e,b,{configurable:!0,value:o}),o},f=document.currentScript;y(f?f.getRootNode():document)}();
+</script></foreignObject></svg></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@4.3.1/lib/bespoke.js.LICENSE.txt */
+!function(){"use strict";function e(e){return e&&e.__esModule&&Object.prototype.hasOwnProperty.call(e,"default")?e.default:e}var t,n,r=(n||(n=1,t={from:function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),o=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,function(e){return"SCRIPT"!==e.nodeName}),i={},a=function(e,t){return(t=t||{}).index=o.indexOf(e),t.slide=e,t},s=function(e,t){i[e]=(i[e]||[]).filter(function(e){return e!==t})},l=function(e,t){return(i[e]||[]).reduce(function(e,n){return e&&!1!==n(t)},!0)},c=function(e,t){o[e]&&(n&&l("deactivate",a(n,t)),n=o[e],l("activate",a(n,t)))},d=function(e,t){var r=o.indexOf(n)+e;l(e>0?"next":"prev",a(n,t))&&c(r,t)},u={off:s,on:function(e,t){return(i[e]||(i[e]=[])).push(t),s.bind(null,e,t)},fire:l,slide:function(e,t){if(!arguments.length)return o.indexOf(n);l("slide",a(o[e],t))&&c(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:o,destroy:function(e){l("destroy",a(n,e)),i={}}};return(t||[]).forEach(function(e){e(u)}),n||c(0),u}}),t),o=e(r);const i=document.body,a=(...e)=>history.replaceState(...e),s="",l="presenter",c="next",d="overview",u=["",l,d,c],f="bespoke-marp-",m=`data-${f}`,g=(e,{protocol:t,host:n,pathname:r,hash:o}=location)=>{const i=e.toString();return`${t}//${n}${r}${i?"?":""}${i}${o}`},p=()=>i.dataset.bespokeView,v=e=>new URLSearchParams(location.search).get(e),h=(e,t={})=>{const n={location,setter:a,...t},r=new URLSearchParams(n.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?r.set(t,n):r.delete(t)}try{n.setter({...window.history.state??{}},"",g(r,n.location))}catch(e){console.error(e)}},w=(()=>{const e="bespoke-marp";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch{return!1}})(),y=e=>{try{return localStorage.getItem(e)}catch{return null}},b=(e,t)=>{try{return localStorage.setItem(e,t),!0}catch{return!1}},k=e=>{try{return localStorage.removeItem(e),!0}catch{return!1}},x=(e,t)=>{const n="aria-hidden";t?e.setAttribute(n,"true"):e.removeAttribute(n)},E=e=>{e.parent.classList.add(`${f}parent`),e.slides.forEach(e=>e.classList.add(`${f}slide`)),e.on("activate",t=>{const n=`${f}active`,r=t.slide,o=r.classList,i=!o.contains(n);if(e.slides.forEach(e=>{e.classList.remove(n),x(e,!0)}),o.add(n),x(r,!1),i){const e=`${n}-ready`;o.add(e),document.body.clientHeight,o.remove(e)}})},$=e=>{let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],o=(r,o)=>{t=r,n=o,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const i=t<r||t===r&&n<=o;e.setAttribute(`${m}fragment`,(i?"":"in")+"active");const a=`${m}current-fragment`;t===r&&n===o?e.setAttribute(a,"current"):e.removeAttribute(a)})}),e.fragmentIndex=o;const i={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:o};e.fire("fragment",i)};e.on("next",({fragment:i=!0})=>{if(i){if(r(1))return o(t,n+1),!1;const i=t+1;e.fragments[i]&&o(i,0)}else{const r=e.fragments[t].length;if(n+1<r)return o(t,r-1),!1;const i=e.fragments[t+1];i&&o(t+1,i.length-1)}}),e.on("prev",({fragment:i=!0})=>{if(r(-1)&&i)return o(t,n-1),!1;const a=t-1;e.fragments[a]&&o(a,e.fragments[a].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const o=e.fragments[t];if(o){const{length:e}=o;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}o(t,r)}),o(0,0)},L=document,S=()=>!(!L.fullscreenEnabled&&!L.webkitFullscreenEnabled),P=()=>!(!L.fullscreenElement&&!L.webkitFullscreenElement),_=e=>{e.fullscreen=()=>{S()&&(async()=>{P()?(L.exitFullscreen||L.webkitExitFullscreen)?.call(L):((e=L.body)=>{(e.requestFullscreen||e.webkitRequestFullscreen)?.call(e)})()})()},document.addEventListener("keydown",t=>{"f"!==t.key&&"F11"!==t.key||t.altKey||t.ctrlKey||t.metaKey||!S()||(e.fullscreen(),t.preventDefault())})},O=`${f}inactive`,T=(e=2e3)=>({parent:t,fire:n})=>{const r=t.classList,o=e=>n(`marp-${e?"":"in"}active`);let i;const a=()=>{i&&clearTimeout(i),i=setTimeout(()=>{r.add(O),o()},e),r.contains(O)&&(r.remove(O),o(!0))};for(const e of["mousedown","mousemove","touchend"])document.addEventListener(e,a);setTimeout(a,0)},I=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"],M=e=>{e.parent.addEventListener("keydown",e=>{if(!e.target)return;const t=e.target;(I.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()})},A=e=>{window.addEventListener("load",()=>{for(const t of e.slides){const e=t.querySelector("marp-auto-scaling, [data-auto-scaling], [data-marp-fitting]");t.setAttribute(`${m}load`,e?"":"hideable")}})},C=({interval:e=250}={})=>t=>{document.addEventListener("keydown",e=>{if(" "===e.key&&e.shiftKey)t.prev();else if("ArrowLeft"===e.key||"ArrowUp"===e.key||"PageUp"===e.key)t.prev({fragment:!e.shiftKey});else if(" "!==e.key||e.shiftKey)if("ArrowRight"===e.key||"ArrowDown"===e.key||"PageDown"===e.key)t.next({fragment:!e.shiftKey});else if("End"===e.key)t.slide(t.slides.length-1,{fragment:-1});else{if("Home"!==e.key)return;t.slide(0)}else t.next();e.preventDefault()});let n,r,o=0;t.parent.addEventListener("wheel",i=>{let a=!1;const s=(e,t)=>{e&&(a=a||((e,t)=>((e,t)=>{const n="X"===t?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]})(e,t)&&((e,t)=>{const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r})(getComputedStyle(e),t))(e,t)),e?.parentElement&&s(e.parentElement,t)};if(0!==i.deltaX&&s(i.target,"X"),0!==i.deltaY&&s(i.target,"Y"),a)return;i.preventDefault();const l=Math.sqrt(i.deltaX**2+i.deltaY**2);if(void 0!==i.wheelDelta){if(void 0===i.webkitForce&&Math.abs(i.wheelDelta)<40)return;if(i.deltaMode===i.DOM_DELTA_PIXEL&&l<4)return}else if(i.deltaMode===i.DOM_DELTA_PIXEL&&l<12)return;r&&clearTimeout(r),r=setTimeout(()=>{n=0},e);const c=Date.now()-o<e,d=l<=n;if(n=l,c||d)return;let u;(i.deltaX>0||i.deltaY>0)&&(u="next"),(i.deltaX<0||i.deltaY<0)&&(u="prev"),u&&(t[u](),o=Date.now())})},D=(e=`.${f}osc`)=>{const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[${m}osc=${JSON.stringify(e)}]`).forEach(n)};if(S()||n("fullscreen",e=>e.style.display="none"),!w){const e=(e,t)=>{e.disabled=!0,e.title=`${t} is disabled due to restricted localStorage.`};n("presenter",t=>e(t,"Presenter view")),n("overview",t=>e(t,"Overview view"))}return e=>{t.addEventListener("click",t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;n&&t.target.blur();const r={fragment:!t.shiftKey};"next"===n?e.next(r):"prev"===n?e.prev(r):"fullscreen"===n?e?.fullscreen():"presenter"===n?e.openPresenterView():"overview"===n&&e.toggleOverviewView()}}),e.parent.appendChild(t),e.on("activate",({index:t})=>{n("page",n=>n.textContent=`Page ${t+1} of ${e.slides.length}`)}),e.on("fragment",({index:t,fragments:r,fragmentIndex:o})=>{n("prev",e=>e.disabled=0===t&&0===o),n("next",n=>n.disabled=t===e.slides.length-1&&o===r.length-1)}),e.on("marp-active",()=>x(t,!1)),e.on("marp-inactive",()=>x(t,!0)),S()&&(e=>{for(const t of["","webkit"])L.addEventListener(t+"fullscreenchange",e)})(()=>n("fullscreen",e=>e.classList.toggle("exit",S()&&P())))}},N=e=>{if(e.syncKey&&"string"==typeof e.syncKey)return!0;throw new Error("The current instance of Bespoke.js is incompatible with Marp bespoke sync plugin.")},B=(e={})=>{const t=e.key||window.history.state?.marpBespokeSyncKey||Math.random().toString(36).slice(2),n=`bespoke-marp-sync-${t}`;var r;r={marpBespokeSyncKey:t},h({},{setter:(e,...t)=>a({...e,...r},...t)});const o=()=>{const e=y(n);return e?JSON.parse(e):Object.create(null)},i=e=>{const t=o(),r={...t,...e(t)};return b(n,JSON.stringify(r)),r},s=()=>{window.removeEventListener("pageshow",s),i(e=>({reference:(e.reference||0)+1}))};return e=>{s(),Object.defineProperty(e,"syncKey",{value:t,enumerable:!0});let r=!0;setTimeout(()=>{e.on("fragment",e=>{r&&i(()=>({index:e.index,fragmentIndex:e.fragmentIndex}))})},0),window.addEventListener("storage",t=>{if(t.key===n&&t.oldValue&&t.newValue){const n=JSON.parse(t.oldValue),o=JSON.parse(t.newValue);if(n.index!==o.index||n.fragmentIndex!==o.fragmentIndex)try{r=!1,e.slide(o.index,{fragment:o.fragmentIndex,forSync:!0})}finally{r=!0}}});const a=()=>{const{reference:e}=o();void 0===e||e<=1?k(n):i(()=>({reference:e-1}))};window.addEventListener("pagehide",e=>{e.persisted&&window.addEventListener("pageshow",s),a()}),e.on("destroy",a)}},K=e=>{w&&document.addEventListener("keydown",t=>{("o"!==t.key||t.altKey||t.ctrlKey||t.metaKey)&&"Escape"!==t.key||(t.preventDefault(),e())})};let q=null;const V=({closeOnSelect:e=!0}={})=>t=>{N(t);const n=n=>{const r=(()=>{if(!q||!q.isConnected){q=document.createElement("div"),q.className=`${f}overview`,q.inert=!0;const n=document.createElement("iframe");n.src=(()=>{const n=new URLSearchParams(location.search);return n.set("view","overview"),n.set("sync",t.syncKey),e&&n.set("closeOnSelect","1"),g(n)})(),q.append(n),document.body.append(q)}return q})(),o=n??!r.dataset.open;setTimeout(()=>{if(r.dataset.open=o?"1":"",r.inert=!o,t.skipTransition=o,o){const e=r.querySelector("iframe");try{e?.contentWindow?.focus()}catch{e?.focus()}}else window.focus()},0)};Object.defineProperties(t,{toggleOverviewView:{enumerable:!0,value:n}}),window.addEventListener("message",e=>{e.origin===window.origin&&"closeOverview"===e.data&&n(!1)}),K(n)},j=e=>{const{title:t}=document;document.title="[Overview]"+(t?` - ${t}`:"");const n=!!v("closeOnSelect"),r=()=>{window.parent.postMessage("closeOverview","null"===window.origin?"*":window.origin)};if(e.slides.forEach((t,o)=>{t.tabIndex=0;const i=()=>{e.slide(o,{fragment:-1}),n&&r()};t.addEventListener("click",i),t.addEventListener("keydown",e=>{"Enter"!==e.key&&" "!==e.key||(e.preventDefault(),i())})}),window.addEventListener("keydown",t=>{const n=e.slide(),r=t=>{const r=t=>{const n=e.slides[t].getBoundingClientRect();return[Math.round((n.left+n.right)/2),Math.round((n.top+n.bottom)/2)]};let o=null,i=n;do{const e=r(i);if(o){if(Math.abs(e[0]-o[0])<2)return i}else o=e;i+=t}while(i>=0&&i<e.slides.length);return n};if("ArrowLeft"===t.key)e.slide(Math.max(n-1,0),{fragment:-1});else if("ArrowRight"===t.key)e.slide(Math.min(n+1,e.slides.length-1),{fragment:-1});else if("ArrowUp"===t.key)e.slide(r(-1),{fragment:-1});else if("ArrowDown"===t.key)e.slide(r(1),{fragment:-1});else if("End"===t.key)e.slide(e.slides.length-1,{fragment:-1});else{if("Home"!==t.key)return;e.slide(0,{fragment:-1})}t.preventDefault();const o=e.slide();e.slides[o]?.focus?.(),e.slides[o]?.scrollIntoView?.({behavior:"smooth",block:"nearest"})}),e.on("slide",({index:t})=>{e.slides[t]?.scrollIntoView?.({behavior:"smooth",block:"nearest"})}),window.parent!==window){K(r);const e=document.createElement("header");e.className=`${f}overview-header`;const t=document.createElement("button");t.className=`${f}overview-close`,t.type="button",t.title="Close overview",t.textContent=t.title,t.addEventListener("click",r),e.append(t),document.body.prepend(e)}},F=()=>{const e=p();return{[s]:V(),[l]:V({closeOnSelect:!1}),[d]:j}[e]},U=e=>{window.addEventListener("message",t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");let o=Number.parseInt(t,10),i=Number.parseInt(n,10)+1;i>=e.fragments[o].length&&(o+=1,i=0),e.slide(o,{fragment:i})}})};var R,X,H,W,J,Y,z,G={exports:{}},Q=(R||(R=1,G.exports=(X=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"],H=function(e){return String(e).replace(/[&<>"']/g,function(e){return"&"+W[e]+";"})},W={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},J="dangerouslySetInnerHTML",Y={className:"class",htmlFor:"for"},z={},function(e,t){var n=[],r="";t=t||{};for(var o=arguments.length;o-- >2;)n.push(arguments[o]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(var i in t)!1!==t[i]&&null!=t[i]&&i!==J&&(r+=" "+(Y[i]?Y[i]:H(i))+'="'+H(t[i])+'"');r+=">"}if(-1===X.indexOf(e)){if(t[J])r+=t[J].__html;else for(;n.length;){var a=n.pop();if(a)if(a.pop)for(var s=a.length;s--;)n.push(a[s]);else r+=!0===z[a]?a:H(a)}r+=e?"</"+e+">":""}return z[r]=!0,r})),G.exports),Z=e(Q);const ee=({children:e})=>Z(null,null,...e),te=`${f}presenter-`,ne={container:`${te}container`,dragbar:`${te}dragbar-container`,next:`${te}next`,nextContainer:`${te}next-container`,noteContainer:`${te}note-container`,noteWrapper:`${te}note-wrapper`,noteButtons:`${te}note-buttons`,infoContainer:`${te}info-container`,infoPageArea:`${te}info-page-area`,infoPage:`${te}info-page`,infoPagePrev:`${te}info-page-prev`,infoPageNext:`${te}info-page-next`,noteButtonsBigger:`${te}note-bigger`,noteButtonsSmaller:`${te}note-smaller`,infoTime:`${te}info-time`,infoTimer:`${te}info-timer`},re=e=>{const{title:t}=document;document.title="[Presenter view]"+(t?` - ${t}`:"");const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=ne.container,t.appendChild(e),t.insertAdjacentHTML("beforeend",Z(ee,null,Z("div",{class:ne.nextContainer},Z("iframe",{class:ne.next,src:"?view=next"})),Z("div",{class:ne.dragbar}),Z("div",{class:ne.noteContainer},Z("div",{class:ne.noteWrapper}),Z("div",{class:ne.noteButtons},Z("button",{class:ne.noteButtonsSmaller,tabindex:"-1",title:"Smaller notes font size"},"Smaller notes font size"),Z("button",{class:ne.noteButtonsBigger,tabindex:"-1",title:"Bigger notes font size"},"Bigger notes font size"))),Z("div",{class:ne.infoContainer},Z("div",{class:ne.infoPageArea},Z("button",{class:ne.infoPagePrev,tabindex:"-1",title:"Previous"},"Previous"),Z("button",{class:ne.infoPage}),Z("button",{class:ne.infoPageNext,tabindex:"-1",title:"Next"},"Next")),Z("time",{class:ne.infoTime,title:"Current time"}),Z("time",{class:ne.infoTimer,title:"Timer"})))),t})(e.parent)),(e=>{let t=!1;r(ne.dragbar).addEventListener("mousedown",()=>{t=!0,r(ne.dragbar).classList.add("active")}),window.addEventListener("mouseup",()=>{t=!1,r(ne.dragbar).classList.remove("active")}),window.addEventListener("mousemove",e=>{if(!t)return;const n=e.clientX/document.documentElement.clientWidth*100;r(ne.container).style.setProperty("--bespoke-marp-presenter-split-ratio",`${Math.max(0,Math.min(100,n))}%`)}),r(ne.nextContainer).addEventListener("click",()=>e.next());const n=r(ne.next),o=(i=n,(e,t)=>i.contentWindow?.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin));var i;n.addEventListener("load",()=>{r(ne.nextContainer).classList.add("active"),o(e.slide(),e.fragmentIndex),e.on("fragment",({index:e,fragmentIndex:t})=>o(e,t))});const a=document.querySelectorAll(".bespoke-marp-note");a.forEach(e=>{e.addEventListener("keydown",e=>e.stopPropagation()),r(ne.noteWrapper).appendChild(e)}),e.on("activate",()=>a.forEach(t=>t.classList.toggle("active",t.dataset.index==e.slide())));let s=0;const l=e=>{s=Math.max(-5,s+e),r(ne.noteContainer).style.setProperty("--bespoke-marp-note-font-scale",(1.2**s).toFixed(4))},c=()=>l(1),d=()=>l(-1),u=r(ne.noteButtonsBigger),f=r(ne.noteButtonsSmaller);u.addEventListener("click",()=>{u.blur(),c()}),f.addEventListener("click",()=>{f.blur(),d()}),document.addEventListener("keydown",e=>{"+"===e.key&&c(),"-"===e.key&&d()},!0);const m=r(ne.infoPage);e.on("activate",({index:t})=>{m.textContent=`${t+1} / ${e.slides.length}`}),m.addEventListener("click",()=>{m.blur(),e.toggleOverviewView()});const g=r(ne.infoPagePrev),p=r(ne.infoPageNext);g.addEventListener("click",t=>{g.blur(),e.prev({fragment:!t.shiftKey})}),p.addEventListener("click",t=>{p.blur(),e.next({fragment:!t.shiftKey})}),e.on("fragment",({index:t,fragments:n,fragmentIndex:r})=>{g.disabled=0===t&&0===r,p.disabled=t===e.slides.length-1&&r===n.length-1});let v=new Date;const h=()=>{const e=new Date,t=e=>`${Math.floor(e)}`.padStart(2,"0"),n=e.getTime()-v.getTime(),o=t(n/1e3%60),i=t(n/1e3/60%60),a=t(n/36e5%24);r(ne.infoTime).textContent=e.toLocaleTimeString(),r(ne.infoTimer).textContent=`${a}:${i}:${o}`};h(),setInterval(h,250),r(ne.infoTimer).addEventListener("click",()=>{v=new Date})})(e)},oe=e=>{N(e),Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:ie},presenterUrl:{enumerable:!0,get:ae}}),w&&document.addEventListener("keydown",t=>{"p"!==t.key||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())})};function ie(){const{max:e,floor:t}=Math,n=e(t(.85*window.innerWidth),640),r=e(t(.85*window.innerHeight),360);return window.open(this.presenterUrl,te+this.syncKey,`width=${n},height=${r},menubar=no,toolbar=no`)}function ae(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),g(e)}const se=e=>{const t=p();return t===c&&e.appendChild(document.createElement("span")),{[s]:oe,[l]:re,[c]:U}[t]},le=e=>{e.on("activate",t=>{document.querySelectorAll(".bespoke-progress-parent > .bespoke-progress-bar").forEach(n=>{n.style.flexBasis=100*t.index/(e.slides.length-1)+"%"})})},ce=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t},de=(e={})=>{const t={history:!0,...e};return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},o=(t={fragment:!0})=>{let n=t.fragment?ce(v("f")||""):null;((t,n)=>{const{min:r,max:o}=Math,{fragments:i,slides:a}=e,s=o(0,r(t,a.length-1)),l=o(0,r(n||0,i[s].length-1));s===e.slide()&&l===e.fragmentIndex||e.slide(s,{fragment:l})})((()=>{if(location.hash){const[t]=location.hash.slice(1).split(":~:");if(/^\d+$/.test(t))return(ce(t)??1)-1;const r=document.getElementById(t)||document.querySelector(`a[name="${CSS.escape(t)}"]`);if(r){const{length:t}=e.slides;for(let o=0;o<t;o+=1)if(e.slides[o].contains(r)){const t=e.fragments?.[o],i=r.closest("[data-marpit-fragment]");if(t&&i){const e=t.indexOf(i);e>=0&&(n=e)}return o}}}return 0})(),n)};e.on("fragment",({index:e,fragmentIndex:r})=>{n||h({f:0===r||r.toString()},{location:{...location,hash:`#${e+1}`},setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})}),setTimeout(()=>{o(),window.addEventListener("hashchange",()=>r(()=>{o({fragment:!1}),h({f:void 0})})),window.addEventListener("popstate",()=>{n||r(()=>o())}),n=!1},0)}},{PI:ue,abs:fe,sqrt:me,atan2:ge}=Math,pe={passive:!0},ve=({slope:e=-.7,swipeThreshold:t=30}={})=>n=>{let r;const o=n.parent,i=e=>{const t=o.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};o.addEventListener("touchstart",({touches:e})=>{r=1===e.length?i(e[0]):void 0},pe),o.addEventListener("touchmove",e=>{if(r)if(1===e.touches.length){e.preventDefault();const t=i(e.touches[0]),n=t.x-r.x,o=t.y-r.y;r.delta=me(fe(n)**2+fe(o)**2),r.radian=ge(n,o)}else r=void 0}),o.addEventListener("touchend",o=>{if(r){if(r.delta&&r.delta>=t&&r.radian){const t=(r.radian-e+ue)%(2*ue)-ue;n[t<0?"next":"prev"](),o.stopPropagation()}r=void 0}},pe)},he=new Map;he.clear(),he.set("none",{backward:{both:void 0,incoming:void 0,outgoing:void 0},forward:{both:void 0,incoming:void 0,outgoing:void 0}});const we={both:"",outgoing:"outgoing-",incoming:"incoming-"},ye={forward:"",backward:"-backward"},be=e=>`--marp-bespoke-transition-animation-${e}`,ke=e=>`--marp-transition-${e}`,xe=be("name"),Ee=be("duration"),$e=e=>new Promise(t=>{const n={},r=document.createElement("div"),o=e=>{r.remove(),t(e)};r.addEventListener("animationstart",()=>o(n)),Object.assign(r.style,{animationName:e,animationDuration:"1s",animationFillMode:"both",animationPlayState:"paused",position:"absolute",pointerEvents:"none"}),document.body.appendChild(r);const i=getComputedStyle(r).getPropertyValue(ke("duration"));i&&Number.parseFloat(i)>=0&&(n.defaultDuration=i),((e,t)=>{requestAnimationFrame(()=>{e.style.animationPlayState="running",requestAnimationFrame(()=>t(void 0))})})(r,o)}),Le=async e=>he.has(e)?he.get(e):(e=>{const t={},n=[];for(const[r,o]of Object.entries(we))for(const[i,a]of Object.entries(ye)){const s=`marp-${o}transition${a}-${e}`;n.push($e(s).then(e=>{t[i]=t[i]||{},t[i][r]=e?{...e,name:s}:void 0}))}return Promise.all(n).then(()=>t)})(e).then(t=>(he.set(e,t),t)),Se=e=>Object.values(e).flatMap(Object.values).every(e=>!e),Pe=(e,{type:t,backward:n})=>{const r=e[n?"backward":"forward"],o=(()=>{const e=r[t],n=e=>({[xe]:e.name});if(e)return n(e);if(r.both){const e=n(r.both);return"incoming"===t&&(e[be("direction")]="reverse"),e}})();return!o&&n?Pe(e,{type:t,backward:!1}):o||{[xe]:"__bespoke_marp_transition_no_animation__"}},_e=e=>{if(e)try{const t=JSON.parse(e);if((e=>{if("object"!=typeof e)return!1;const t=e;return"string"==typeof t.name&&(void 0===t.duration||"string"==typeof t.duration)})(t))return t}catch{}},Oe="_tSId",Te="_tA",Ie="bespoke-marp-transition-warming-up",Me=window.matchMedia("(prefers-reduced-motion: reduce)"),Ae="__bespoke_marp_transition_reduced_outgoing__",Ce="__bespoke_marp_transition_reduced_incoming__",De={forward:{both:void 0,incoming:{name:Ce},outgoing:{name:Ae}},backward:{both:void 0,incoming:{name:Ce},outgoing:{name:Ae}}},Ne=e=>{if(!document.startViewTransition)return;const t=t=>(void 0!==t&&(e._tD=t),e._tD);let n;t(!1),((...e)=>{CSS.registerProperty({name:ke("duration"),syntax:"<time>",inherits:!0,initialValue:"-1s"});const t=[...new Set(e).values()];return Promise.all(t.map(e=>Le(e))).then()})(...Array.from(document.querySelectorAll("section[data-transition], section[data-transition-back]")).flatMap(e=>[e.dataset.transition,e.dataset.transitionBack].flatMap(e=>{const t=_e(e);return[t?.name,t?.builtinFallback?`__builtin__${t.name}`:void 0]}).filter(e=>!!e))).then(()=>{document.querySelectorAll("style").forEach(e=>{e.innerHTML=e.innerHTML.replace(/--marp-transition-duration:[^;}]*[;}]/g,e=>e.slice(0,-1)+"!important"+e.slice(-1))})});const r=(n,{back:r,cond:o})=>i=>{const a=t();if(a)return!!i[Te]||!("object"!=typeof a||(a.skipTransition(),!i.forSync));if(e.skipTransition)return!0;if(!o(i))return!0;const s=e.slides[e.slide()],l=()=>i.back??r,c="data-transition"+(l()?"-back":""),d=s.querySelector(`section[${c}]`);if(!d)return!0;const u=_e(d.getAttribute(c)??void 0);return!u||((async(e,{builtinFallback:t=!0}={})=>{let n=await Le(e);if(Se(n)){if(!t)return;return n=await Le(`__builtin__${e}`),Se(n)?void 0:n}return n})(u.name,{builtinFallback:u.builtinFallback}).then(e=>{if(!e){t(!0);try{n(i)}finally{t(!1)}return}let r=e;Me.matches&&(console.warn("Use a constant animation to transition because preferring reduced motion by viewer has detected."),r=De);const o=document.getElementById(Oe);o&&o.remove();const a=document.createElement("style");a.id=Oe,document.head.appendChild(a),((e,t)=>{const n=[`:root{${ke("direction")}:${t.backward?-1:1};}`,":root:has(.bespoke-marp-inactive){cursor:none;}"],r=t=>{const n=e[t].both?.defaultDuration||e[t].outgoing?.defaultDuration||e[t].incoming?.defaultDuration;return"forward"===t?n:n||r("forward")},o=t.duration||r(t.backward?"backward":"forward");void 0!==o&&n.push(`::view-transition-group(*){${Ee}:${o};}`);const i=e=>Object.entries(e).map(([e,t])=>`${e}:${t};`).join("");return n.push(`::view-transition-old(root){${i(Pe(e,{...t,type:"outgoing"}))}}`,`::view-transition-new(root){${i(Pe(e,{...t,type:"incoming"}))}}`),n})(r,{backward:l(),duration:u.duration}).forEach(e=>a.sheet?.insertRule(e));const s=document.documentElement.classList;s.add(Ie);let c=!1;const d=()=>{c||(n(i),c=!0,s.remove(Ie))},f=()=>{t(!1),a.remove(),s.remove(Ie)};try{t(!0);const e=document.startViewTransition(d);t(e),e.finished.finally(f)}catch(e){console.error(e),d(),f()}}),!1)};e.on("prev",r(t=>e.prev({...t,[Te]:!0}),{back:!0,cond:e=>e.index>0&&!((e.fragment??1)&&n.fragmentIndex>0)})),e.on("next",r(t=>e.next({...t,[Te]:!0}),{cond:t=>t.index+1<e.slides.length&&!(n.fragmentIndex+1<n.fragments.length)})),setTimeout(()=>{e.on("slide",r(t=>e.slide(t.index,{...t,[Te]:!0}),{cond:t=>{const n=e.slide();return t.index!==n&&(t.back=t.index<n,!0)}}))},0),e.on("fragment",e=>{n=e})};let Be;const Ke=()=>(void 0===Be&&(Be="wakeLock"in navigator&&navigator.wakeLock),Be),qe=async()=>{const e=Ke();if(e)try{return await e.request("screen")}catch(e){console.warn(e)}return null},Ve=async()=>{if(!Ke())return;let e;const t=()=>{e&&"visible"===document.visibilityState&&qe()};for(const e of["visibilitychange","fullscreenchange"])document.addEventListener(e,t);return e=await qe(),e};((e=document.getElementById(":$p"))=>{(()=>{const e=v("view");i.dataset.bespokeView=u.some(t=>t&&t===e)?e:""})();const t=(e=>{const t=v(e);return h({[e]:void 0}),t})("sync")||void 0;o.from(e,((...e)=>{const t=u.findIndex(e=>p()===e);return e.map(([e,n])=>e[t]&&n).filter(e=>e)})([[1,1,1,0],B({key:t})],[[1,1,0,1],se(e)],[[1,1,0,0],M],[[1,1,1,1],E],[[1,0,0,0],T()],[[1,1,1,1],A],[[1,1,1,1],de({history:!1})],[[1,1,0,0],C()],[[1,1,1,0],_],[[1,0,0,0],le],[[1,1,0,0],ve()],[[1,0,0,0],D()],[[1,1,1,0],F()],[[1,0,0,0],Ne],[[1,1,1,1],$],[[1,1,1,0],Ve]))})()}();</script></body></html>
